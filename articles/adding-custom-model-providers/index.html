@@ -1,0 +1,387 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Adding Custom Model Providers - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>Adding Custom Model Providers</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Administration </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> intermediate </span> <span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> For Admins </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> How-To </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Models </span> </div> <article class="content" data-astro-cid-xw3clhsd><p>SecureAI runs on OpenWebUI, which supports connecting to multiple LLM providers simultaneously. This guide walks you through adding OpenAI, Anthropic, Azure OpenAI, and local model providers so your team has access to the right models for their work.</p>
+<h2>Prerequisites</h2>
+<p>Before you begin, ensure you have:</p>
+<ul>
+<li><strong>Admin access</strong> to your SecureAI instance.</li>
+<li><strong>API credentials</strong> for the provider(s) you want to add (API key, endpoint URL, etc.).</li>
+<li>An understanding of your organization&#39;s <strong>model usage policy</strong> — which providers are approved, budget limits, and any data residency requirements.</li>
+</ul>
+<h2>Supported Provider Types</h2>
+<p>SecureAI supports four categories of model providers:</p>
+<table>
+<thead>
+<tr>
+<th>Provider Type</th>
+<th>Examples</th>
+<th>Connection Method</th>
+<th>Data Leaves Your Network?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>OpenAI-compatible</strong></td>
+<td>OpenAI, Groq, Together AI, Fireworks</td>
+<td>API key + endpoint</td>
+<td>Yes (sent to provider)</td>
+</tr>
+<tr>
+<td><strong>Anthropic</strong></td>
+<td>Claude models via Anthropic API</td>
+<td>API key + endpoint</td>
+<td>Yes (sent to Anthropic)</td>
+</tr>
+<tr>
+<td><strong>Azure OpenAI</strong></td>
+<td>GPT models via Azure</td>
+<td>API key + Azure endpoint + deployment name</td>
+<td>Yes (sent to your Azure tenant)</td>
+</tr>
+<tr>
+<td><strong>Local / self-hosted</strong></td>
+<td>Ollama, vLLM, llama.cpp, LocalAI</td>
+<td>Endpoint URL (no API key needed if on same network)</td>
+<td>No (stays on your infrastructure)</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Data residency note</strong>: For organizations with strict data policies, local models or Azure OpenAI (deployed in your own tenant) keep all data within your controlled infrastructure.</p>
+</blockquote>
+<h2>Adding an OpenAI-Compatible Provider</h2>
+<p>This covers OpenAI itself and any provider that uses the OpenAI API format (Groq, Together AI, Fireworks, Mistral, etc.).</p>
+<h3>Step 1: Get Your API Key</h3>
+<ol>
+<li>Go to your provider&#39;s dashboard (e.g., <a href="https://platform.openai.com">platform.openai.com</a> for OpenAI).</li>
+<li>Navigate to <strong>API Keys</strong> and generate a new key.</li>
+<li>Copy the key immediately — most providers only show it once.</li>
+</ol>
+<blockquote>
+<p><strong>Security</strong>: Store API keys securely. Never share them in chat, email, or commit them to version control.</p>
+</blockquote>
+<h3>Step 2: Configure the Provider in SecureAI</h3>
+<ol>
+<li>Log in to SecureAI as an administrator.</li>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Connections</strong>.</li>
+<li>Under <strong>OpenAI API</strong>, click <strong>Add Connection</strong> (or edit the existing one).</li>
+<li>Fill in the following fields:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>API Base URL</strong></td>
+<td><code>https://api.openai.com/v1</code></td>
+<td>Change for non-OpenAI providers (see table below)</td>
+</tr>
+<tr>
+<td><strong>API Key</strong></td>
+<td>Your API key</td>
+<td>Stored encrypted in SecureAI&#39;s database</td>
+</tr>
+</tbody></table>
+<ol start="5">
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<h3>Common OpenAI-Compatible Endpoints</h3>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>API Base URL</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OpenAI</td>
+<td><code>https://api.openai.com/v1</code></td>
+</tr>
+<tr>
+<td>Groq</td>
+<td><code>https://api.groq.com/openai/v1</code></td>
+</tr>
+<tr>
+<td>Together AI</td>
+<td><code>https://api.together.xyz/v1</code></td>
+</tr>
+<tr>
+<td>Fireworks</td>
+<td><code>https://api.fireworks.ai/inference/v1</code></td>
+</tr>
+<tr>
+<td>Mistral</td>
+<td><code>https://api.mistral.ai/v1</code></td>
+</tr>
+</tbody></table>
+<h3>Step 3: Verify the Connection</h3>
+<ol>
+<li>After saving, go to <strong>Admin Panel &gt; Settings &gt; Connections</strong>.</li>
+<li>Click <strong>Verify</strong> next to your new connection.</li>
+<li>SecureAI will attempt to list available models from the provider.</li>
+<li>If successful, you will see the available models listed. If not, check the troubleshooting section below.</li>
+</ol>
+<h2>Adding Anthropic as a Provider</h2>
+<p>Anthropic&#39;s Claude models use a different API format than OpenAI.</p>
+<h3>Step 1: Get Your API Key</h3>
+<ol>
+<li>Go to <a href="https://console.anthropic.com">console.anthropic.com</a>.</li>
+<li>Navigate to <strong>API Keys</strong> and create a new key.</li>
+<li>Copy the key.</li>
+</ol>
+<h3>Step 2: Configure in SecureAI</h3>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Connections</strong>.</li>
+<li>Under <strong>Anthropic API</strong>, click <strong>Add Connection</strong>.</li>
+<li>Fill in:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>API Base URL</strong></td>
+<td><code>https://api.anthropic.com</code></td>
+</tr>
+<tr>
+<td><strong>API Key</strong></td>
+<td>Your Anthropic API key</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<h3>Step 3: Verify</h3>
+<p>Click <strong>Verify</strong> next to the Anthropic connection. You should see available Claude models (e.g., Claude Sonnet, Claude Opus, Claude Haiku).</p>
+<h2>Adding Azure OpenAI</h2>
+<p>Azure OpenAI requires a few additional configuration details because models are deployed to your own Azure tenant.</p>
+<h3>Step 1: Gather Your Azure Credentials</h3>
+<p>From the Azure Portal, you need:</p>
+<table>
+<thead>
+<tr>
+<th>Credential</th>
+<th>Where to Find It</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Endpoint URL</strong></td>
+<td>Azure Portal &gt; your OpenAI resource &gt; <strong>Keys and Endpoint</strong> (e.g., <code>https://your-resource.openai.azure.com/</code>)</td>
+</tr>
+<tr>
+<td><strong>API Key</strong></td>
+<td>Same page — Key 1 or Key 2</td>
+</tr>
+<tr>
+<td><strong>Deployment Name</strong></td>
+<td>Azure Portal &gt; your OpenAI resource &gt; <strong>Model Deployments</strong></td>
+</tr>
+<tr>
+<td><strong>API Version</strong></td>
+<td>Use the latest stable version (e.g., <code>2024-06-01</code>)</td>
+</tr>
+</tbody></table>
+<h3>Step 2: Configure in SecureAI</h3>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Connections</strong>.</li>
+<li>Under <strong>OpenAI API</strong>, click <strong>Add Connection</strong>.</li>
+<li>Fill in:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>API Base URL</strong></td>
+<td><code>https://your-resource.openai.azure.com/openai/deployments/your-deployment-name/</code></td>
+</tr>
+<tr>
+<td><strong>API Key</strong></td>
+<td>Your Azure OpenAI key</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Important</strong>: The API Base URL for Azure includes your resource name and deployment name. Replace <code>your-resource</code> and <code>your-deployment-name</code> with your actual values.</p>
+</blockquote>
+<ol start="4">
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<h3>Step 3: Verify</h3>
+<p>Click <strong>Verify</strong> to confirm SecureAI can reach your Azure deployment. If using private endpoints or VNet restrictions, ensure your SecureAI instance has network access to the Azure resource.</p>
+<h2>Adding Local or Self-Hosted Models</h2>
+<p>Local models run on your own infrastructure — no API key needed, and no data leaves your network. This is the preferred option for organizations with strict data residency requirements.</p>
+<h3>Option A: Ollama</h3>
+<p><a href="https://ollama.com">Ollama</a> is the most common way to run local models with OpenWebUI.</p>
+<ol>
+<li>Install Ollama on a server accessible from your SecureAI instance.</li>
+<li>Pull the models you want:<pre><code>ollama pull llama3.1
+ollama pull mistral
+ollama pull codellama
+</code></pre>
+</li>
+<li>Ensure Ollama is running and accessible (default: <code>http://localhost:11434</code>).</li>
+<li>In SecureAI, navigate to <strong>Admin Panel &gt; Settings &gt; Connections</strong>.</li>
+<li>Under <strong>Ollama API</strong>, configure:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>API Base URL</strong></td>
+<td><code>http://your-ollama-host:11434</code></td>
+</tr>
+</tbody></table>
+<ol start="6">
+<li>Click <strong>Save</strong> and <strong>Verify</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Network note</strong>: If Ollama runs on a different host than SecureAI, ensure the firewall allows traffic on port 11434 and Ollama is configured to accept external connections (<code>OLLAMA_HOST=0.0.0.0</code>).</p>
+</blockquote>
+<h3>Option B: vLLM or Other OpenAI-Compatible Servers</h3>
+<p>If you are running vLLM, llama.cpp server, or LocalAI:</p>
+<ol>
+<li>Start your model server and note the endpoint (e.g., <code>http://your-server:8000/v1</code>).</li>
+<li>In SecureAI, navigate to <strong>Admin Panel &gt; Settings &gt; Connections</strong>.</li>
+<li>Under <strong>OpenAI API</strong>, add a connection with:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>API Base URL</strong></td>
+<td><code>http://your-server:8000/v1</code></td>
+</tr>
+<tr>
+<td><strong>API Key</strong></td>
+<td>Leave blank or enter a placeholder if required</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>Click <strong>Save</strong> and <strong>Verify</strong>.</li>
+</ol>
+<h2>Managing Multiple Providers</h2>
+<p>You can connect multiple providers simultaneously. SecureAI aggregates models from all configured providers into a single model selector for users.</p>
+<h3>Setting Model Visibility</h3>
+<p>Not every model needs to be visible to every user. After adding providers:</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Models</strong>.</li>
+<li>You will see all available models from all connected providers.</li>
+<li>Use the <strong>Enabled</strong> toggle to show or hide models from the user-facing model selector.</li>
+<li>Optionally, set a <strong>Display Name</strong> to give models user-friendly names (e.g., &quot;Fast Model&quot; instead of &quot;gpt-4o-mini&quot;).</li>
+</ol>
+<h3>Setting a Default Model</h3>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Models</strong>.</li>
+<li>Select a model and click <strong>Set as Default</strong>.</li>
+<li>This model will be pre-selected for new conversations across your organization.</li>
+</ol>
+<p>Choose a model that balances cost and capability for typical use cases. See the <a href="/articles/model-comparison-and-selection-guide">Model Comparison and Selection Guide</a> for guidance.</p>
+<h3>Cost Considerations</h3>
+<table>
+<thead>
+<tr>
+<th>Provider Type</th>
+<th>Billing Model</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OpenAI / Anthropic</td>
+<td>Per-token (input + output)</td>
+</tr>
+<tr>
+<td>Azure OpenAI</td>
+<td>Per-token or provisioned throughput</td>
+</tr>
+<tr>
+<td>Local models</td>
+<td>Infrastructure cost only (no per-token charges)</td>
+</tr>
+</tbody></table>
+<p>Monitor usage in <strong>Admin Panel &gt; Dashboard &gt; Usage Statistics</strong> to track per-provider costs.</p>
+<h2>API Key Rotation</h2>
+<p>API keys should be rotated periodically for security.</p>
+<ol>
+<li>Generate a new key in your provider&#39;s dashboard.</li>
+<li>In SecureAI, navigate to <strong>Admin Panel &gt; Settings &gt; Connections</strong>.</li>
+<li>Update the API key field with the new key.</li>
+<li>Click <strong>Save</strong> and <strong>Verify</strong> to confirm the new key works.</li>
+<li>Revoke the old key in your provider&#39;s dashboard.</li>
+</ol>
+<blockquote>
+<p><strong>Tip</strong>: Schedule key rotation quarterly or according to your organization&#39;s security policy. Rotating keys does not interrupt active user sessions — the new key takes effect on the next API call.</p>
+</blockquote>
+<h2>Troubleshooting</h2>
+<h3>&quot;Connection failed&quot; when verifying a provider</h3>
+<table>
+<thead>
+<tr>
+<th>Possible Cause</th>
+<th>Resolution</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Incorrect API key</td>
+<td>Double-check the key in your provider&#39;s dashboard. Regenerate if necessary.</td>
+</tr>
+<tr>
+<td>Wrong API Base URL</td>
+<td>Verify the URL matches the provider&#39;s documentation. Check for trailing slashes.</td>
+</tr>
+<tr>
+<td>Network restrictions</td>
+<td>Ensure your SecureAI server can reach the provider&#39;s endpoint (check firewall, proxy, DNS).</td>
+</tr>
+<tr>
+<td>Provider outage</td>
+<td>Check the provider&#39;s status page (e.g., status.openai.com).</td>
+</tr>
+</tbody></table>
+<h3>Models not appearing after adding a provider</h3>
+<ol>
+<li>Verify the connection shows a green status in <strong>Connections</strong>.</li>
+<li>Refresh the page.</li>
+<li>Check that models are not disabled in <strong>Admin Panel &gt; Settings &gt; Models</strong>.</li>
+<li>For Azure OpenAI, confirm the deployment name in the API Base URL matches an active deployment.</li>
+</ol>
+<h3>&quot;Unauthorized&quot; or &quot;Invalid API key&quot; errors</h3>
+<ul>
+<li>Confirm the API key has not been revoked or expired.</li>
+<li>For Azure, ensure you are using the correct key (Key 1 or Key 2) and that the resource is active.</li>
+<li>For Anthropic, verify your account has an active billing plan.</li>
+</ul>
+<h3>Local model connection times out</h3>
+<ul>
+<li>Verify the model server is running (<code>curl http://your-host:11434/api/tags</code> for Ollama).</li>
+<li>Check that the SecureAI server can reach the model server on the specified port.</li>
+<li>If using Docker, ensure containers are on the same network or the port is exposed.</li>
+</ul>
+<h3>Slow responses from a provider</h3>
+<ul>
+<li>Check the provider&#39;s status page for degraded performance.</li>
+<li>For local models, verify the host has sufficient GPU/CPU resources. Monitor utilization during requests.</li>
+<li>Consider switching users to a faster provider for time-sensitive tasks.</li>
+</ul>
+<h2>Related Articles</h2>
+<ul>
+<li><a href="/articles/model-comparison-and-selection-guide">Model Comparison and Selection Guide</a></li>
+<li><a href="/admin/configuring-model-parameters">Configuring Model Parameters</a></li>
+<li><a href="/admin/setting-default-model">Setting a Default Model for Your Organization</a></li>
+<li><a href="/admin/api-rate-limiting-and-quotas">API Rate Limiting and Quotas</a></li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

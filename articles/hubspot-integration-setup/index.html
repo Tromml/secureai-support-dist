@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HubSpot Integration Setup - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>HubSpot Integration Setup</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Integrations </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span> <span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Integrations </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> hubspot </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> crm </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> oauth </span> </div> <article class="content" data-astro-cid-xw3clhsd><p>SecureAI can connect to your HubSpot CRM to pull customer data, vehicle history, and service records into your AI conversations. This guide covers how to set up the OAuth connection, what data SecureAI can access, and practical use cases for automotive aftermarket shops.</p>
+<h2>Prerequisites</h2>
+<p>Before setting up the HubSpot integration, you need:</p>
+<ul>
+<li><strong>SecureAI admin access</strong> -- only administrators can configure integrations.</li>
+<li><strong>HubSpot account</strong> with Super Admin or App Marketplace permissions.</li>
+<li><strong>HubSpot plan</strong> that supports API access (Professional or Enterprise). Starter plans have limited API access that may not cover all features described here.</li>
+</ul>
+<h2>Setting Up the OAuth Connection</h2>
+<p>SecureAI uses OAuth 2.0 to connect to HubSpot. This means SecureAI never stores your HubSpot password -- it uses a revocable access token instead.</p>
+<h3>Step 1: Open Integration Settings</h3>
+<ol>
+<li>Log in to SecureAI as an administrator.</li>
+<li>Navigate to <strong>Admin Panel &gt; Integrations &gt; CRM Connections</strong>.</li>
+<li>Click <strong>Add Connection</strong> and select <strong>HubSpot</strong> from the list.</li>
+</ol>
+<h3>Step 2: Authorize SecureAI in HubSpot</h3>
+<ol>
+<li>Click <strong>Connect to HubSpot</strong>. You will be redirected to HubSpot&#39;s authorization page.</li>
+<li>Sign in to your HubSpot account if prompted.</li>
+<li>Review the permissions SecureAI is requesting (see &quot;Data Access Scopes&quot; below).</li>
+<li>Click <strong>Grant Access</strong>.</li>
+<li>You will be redirected back to SecureAI with a confirmation message.</li>
+</ol>
+<h3>Step 3: Verify the Connection</h3>
+<p>After authorization, the Integrations page should show HubSpot as <strong>Connected</strong> with a green status indicator. You can verify by clicking <strong>Test Connection</strong> -- SecureAI will attempt to read a sample contact record and confirm the API is responding.</p>
+<p>If the connection test fails:</p>
+<ul>
+<li>Check that your HubSpot plan supports API access.</li>
+<li>Verify that the HubSpot user who authorized the connection has sufficient permissions.</li>
+<li>Check your network firewall or proxy settings if SecureAI is hosted on-premise.</li>
+</ul>
+<h3>Revoking Access</h3>
+<p>To disconnect SecureAI from HubSpot:</p>
+<ol>
+<li>In SecureAI: <strong>Admin Panel &gt; Integrations &gt; CRM Connections &gt; HubSpot &gt; Disconnect</strong>.</li>
+<li>In HubSpot: <strong>Settings &gt; Account Setup &gt; Integrations &gt; Connected Apps</strong> -- find SecureAI and click <strong>Uninstall</strong>. This revokes the OAuth token from the HubSpot side.</li>
+</ol>
+<p>Always revoke from both sides to ensure a clean disconnection.</p>
+<h2>Data Access Scopes</h2>
+<p>When you authorize the connection, SecureAI requests access to the following HubSpot data:</p>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>What SecureAI Can Read</th>
+<th>What SecureAI Cannot Do</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Contacts</strong></td>
+<td>Names, emails, phone numbers, company associations</td>
+<td>Create, edit, or delete contacts</td>
+</tr>
+<tr>
+<td><strong>Companies</strong></td>
+<td>Company names, domains, industry, associated contacts</td>
+<td>Modify company records</td>
+</tr>
+<tr>
+<td><strong>Deals</strong></td>
+<td>Deal names, stages, amounts, associated contacts and companies</td>
+<td>Create or modify deals</td>
+</tr>
+<tr>
+<td><strong>Custom Properties</strong></td>
+<td>Any custom contact or company properties you have defined</td>
+<td>Change property definitions</td>
+</tr>
+<tr>
+<td><strong>Notes and Activities</strong></td>
+<td>Activity timeline, logged calls, emails, notes on records</td>
+<td>Create activities or send emails</td>
+</tr>
+</tbody></table>
+<p>SecureAI has <strong>read-only access</strong>. It cannot modify, create, or delete any records in your HubSpot account. This is enforced at the OAuth scope level -- even if a bug existed in SecureAI, the HubSpot API would reject any write attempts.</p>
+<h3>Custom Property Access</h3>
+<p>If your shop uses custom HubSpot properties (e.g., &quot;Vehicle VIN&quot;, &quot;Fleet Size&quot;, &quot;Preferred Parts Brand&quot;), SecureAI can read these automatically. No additional configuration is needed -- custom properties are included in the Contacts and Companies scopes.</p>
+<h2>Use Cases for Automotive Aftermarket</h2>
+<h3>Customer Lookup During Chat</h3>
+<p>When a customer calls or messages with a parts question, you can pull their HubSpot record directly into the SecureAI conversation.</p>
+<p><strong>Prompt:</strong></p>
+<pre><code>Look up the HubSpot contact for john.smith@abcfleet.com.
+What vehicles do we have on file for this customer?
+</code></pre>
+<p>SecureAI returns the contact record, associated company, and any vehicle-related custom properties. You can then ask follow-up questions with that context already loaded.</p>
+<h3>Service History Context</h3>
+<p>If your shop logs service activities in HubSpot, SecureAI can pull that history to inform parts recommendations.</p>
+<p><strong>Prompt:</strong></p>
+<pre><code>Pull the activity history for ABC Fleet Management in HubSpot.
+Based on their recent service records, what recurring parts
+needs should I anticipate for their next visit?
+</code></pre>
+<p>SecureAI reads the activity timeline and uses the context to make informed suggestions rather than generic recommendations.</p>
+<h3>Deal-Based Parts Preparation</h3>
+<p>For shops that track jobs as HubSpot deals, SecureAI can read the deal details to prepare parts lists.</p>
+<p><strong>Prompt:</strong></p>
+<pre><code>Look up deal &quot;Fleet Brake Service - ABC Fleet&quot; in HubSpot.
+What vehicles are associated with this deal? Generate a
+parts list for front brake service on each vehicle.
+</code></pre>
+<h3>Bulk Customer Outreach Preparation</h3>
+<p>Use SecureAI to analyze your HubSpot contact list for service opportunities.</p>
+<p><strong>Prompt:</strong></p>
+<pre><code>From our HubSpot contacts, which customers have vehicles
+with more than 60,000 miles that haven&#39;t had a service
+activity logged in the last 6 months? Summarize as a
+list I can use for a service reminder campaign.
+</code></pre>
+<p>SecureAI reads the relevant contact properties and activity data, then returns a filtered summary. You still build and send the campaign in HubSpot or your email tool -- SecureAI just does the analysis.</p>
+<h2>Data Privacy and Security</h2>
+<h3>What Data Leaves HubSpot</h3>
+<p>When SecureAI queries HubSpot, the API returns only the specific records and fields requested. Data flows from HubSpot to SecureAI over an encrypted HTTPS connection.</p>
+<h3>Data Retention</h3>
+<p>SecureAI does not store HubSpot data permanently. CRM data pulled during a conversation is:</p>
+<ul>
+<li>Available within that conversation session.</li>
+<li>Subject to your organization&#39;s SecureAI data retention policy (see &quot;Configuring Data Retention Policies&quot;).</li>
+<li>Not indexed, cached, or used to train AI models.</li>
+</ul>
+<h3>Access Control</h3>
+<p>Only SecureAI users with the <strong>CRM Integration</strong> permission can query HubSpot data in their conversations. Administrators can assign this permission per user or per role in <strong>Admin Panel &gt; User Management &gt; Permissions</strong>.</p>
+<p>Users without this permission will see a &quot;CRM access not enabled&quot; message if they attempt a HubSpot query.</p>
+<h3>Audit Trail</h3>
+<p>All HubSpot data queries are logged in the SecureAI audit log with:</p>
+<ul>
+<li>Who made the query (SecureAI user)</li>
+<li>What was queried (HubSpot object type and filters)</li>
+<li>When the query was made (timestamp)</li>
+</ul>
+<p>Administrators can review CRM query activity in <strong>Admin Panel &gt; Audit Log &gt; Filter by: CRM Queries</strong>.</p>
+<h2>Troubleshooting</h2>
+<h3>&quot;Connection expired&quot; Error</h3>
+<p>HubSpot OAuth tokens expire periodically. SecureAI automatically refreshes tokens, but if you see this error:</p>
+<ol>
+<li>Go to <strong>Admin Panel &gt; Integrations &gt; HubSpot</strong>.</li>
+<li>Click <strong>Reconnect</strong>. You will be redirected to HubSpot to re-authorize.</li>
+<li>This is a re-authorization, not a new setup -- your configuration is preserved.</li>
+</ol>
+<h3>&quot;Insufficient permissions&quot; on Specific Queries</h3>
+<p>If SecureAI can connect but fails on certain queries (e.g., reading deals), the HubSpot user who authorized the connection may not have access to that data in HubSpot. HubSpot enforces its own permissions on top of the OAuth scopes.</p>
+<p><strong>Fix:</strong> Have a HubSpot Super Admin re-authorize the connection, or adjust the authorizing user&#39;s HubSpot permissions.</p>
+<h3>Slow Query Responses</h3>
+<p>Large HubSpot accounts (10,000+ contacts) may see slower responses on broad queries. To improve performance:</p>
+<ul>
+<li>Use specific filters: &quot;Look up contact <a href="mailto:john@example.com">john@example.com</a>&quot; instead of &quot;Show me all contacts.&quot;</li>
+<li>Query by company or deal rather than scanning all contacts.</li>
+<li>Avoid open-ended queries like &quot;Show me everything in HubSpot.&quot;</li>
+</ul>
+<h3>Data Not Appearing in SecureAI</h3>
+<p>If recently added HubSpot records do not appear in SecureAI queries:</p>
+<ul>
+<li>HubSpot API changes propagate within a few minutes. Wait and retry.</li>
+<li>Verify the record exists in HubSpot&#39;s UI with the expected properties.</li>
+<li>Check that the authorizing user has access to the specific record in HubSpot (team-level permissions).</li>
+</ul>
+<h2>Current Limitations</h2>
+<ul>
+<li><strong>Read-only access</strong>: SecureAI cannot create, update, or delete HubSpot records. All CRM modifications must be done directly in HubSpot.</li>
+<li><strong>No real-time sync</strong>: SecureAI queries HubSpot on demand. It does not maintain a live mirror of your CRM data.</li>
+<li><strong>No HubSpot Marketing Hub</strong>: The integration covers CRM (contacts, companies, deals) only. Marketing Hub features (email campaigns, forms, workflows) are not accessible.</li>
+<li><strong>Single HubSpot account</strong>: Each SecureAI instance connects to one HubSpot account. Multi-account support is not currently available.</li>
+</ul>
+<h2>Related Topics</h2>
+<ul>
+<li>Configuring Data Retention Policies</li>
+<li>Shop Management System Integration</li>
+<li>Parts Ordering Platform Integration</li>
+<li>Setting user roles and permissions</li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

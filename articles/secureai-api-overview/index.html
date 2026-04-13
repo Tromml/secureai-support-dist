@@ -1,0 +1,493 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SecureAI API Overview - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>SecureAI API Overview</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Developer Docs </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span> <span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> API </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> developer </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> rest </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> rate-limits </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> endpoints </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> integration </span> </div> <article class="content" data-astro-cid-xw3clhsd><p>SecureAI provides a REST API that gives you programmatic access to conversations, knowledge bases, assistants, models, and administrative functions. Whether you are automating workflows, building custom integrations, or embedding AI capabilities into your own applications, the API is the foundation.</p>
+<p>This guide covers what the API can do, how it is organized, rate limits, error handling, and versioning. For authentication setup, see the <a href="api-authentication-guide.md">API Authentication Guide</a>. For embedding and integration patterns, see <a href="embedding-secureai-in-your-applications.md">Embedding SecureAI in Your Applications</a>.</p>
+<h2>Base URL</h2>
+<p>All API requests use your SecureAI instance&#39;s base URL:</p>
+<pre><code>https://your-secureai-instance.com/api/v1
+</code></pre>
+<p>Self-hosted deployments use whatever domain or IP address your instance is running on. If you are unsure, check with your administrator.</p>
+<h2>API Capabilities</h2>
+<p>The API is organized around resources. Each resource supports standard CRUD operations plus resource-specific actions.</p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Endpoint</th>
+<th>What You Can Do</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Chats</strong></td>
+<td><code>/chats</code></td>
+<td>Create, list, search, archive, and delete conversations</td>
+</tr>
+<tr>
+<td><strong>Chat Completions</strong></td>
+<td><code>/chat/completions</code></td>
+<td>Send messages and receive AI responses (streaming and non-streaming)</td>
+</tr>
+<tr>
+<td><strong>Knowledge Bases</strong></td>
+<td><code>/knowledge</code></td>
+<td>Create, update, list, and delete knowledge bases; upload and manage documents</td>
+</tr>
+<tr>
+<td><strong>Assistants</strong></td>
+<td><code>/assistants</code></td>
+<td>Create, configure, list, and manage custom assistants with system prompts and tool bindings</td>
+</tr>
+<tr>
+<td><strong>Models</strong></td>
+<td><code>/models</code></td>
+<td>List available AI models, check model status, and view model capabilities</td>
+</tr>
+<tr>
+<td><strong>Users</strong></td>
+<td><code>/users</code></td>
+<td>List users, update roles, manage permissions (admin only)</td>
+</tr>
+<tr>
+<td><strong>Documents</strong></td>
+<td><code>/documents</code></td>
+<td>Upload, list, and delete files attached to knowledge bases</td>
+</tr>
+<tr>
+<td><strong>Prompts</strong></td>
+<td><code>/prompts</code></td>
+<td>Create, list, and manage saved prompt templates</td>
+</tr>
+<tr>
+<td><strong>Tools</strong></td>
+<td><code>/tools</code></td>
+<td>Register, list, and manage custom tools available to assistants</td>
+</tr>
+<tr>
+<td><strong>Configs</strong></td>
+<td><code>/configs</code></td>
+<td>Read and update system configuration (admin only)</td>
+</tr>
+<tr>
+<td><strong>Audit Logs</strong></td>
+<td><code>/auditlogs</code></td>
+<td>Query user activity and system events (admin only)</td>
+</tr>
+</tbody></table>
+<h2>Request Format</h2>
+<p>All requests use JSON for request and response bodies.</p>
+<p><strong>Required headers</strong>:</p>
+<pre><code>Authorization: Bearer &lt;your-api-key&gt;
+Content-Type: application/json
+</code></pre>
+<p><strong>Example</strong> -- list your conversations:</p>
+<pre><code class="language-bash">curl -X GET https://your-secureai-instance.com/api/v1/chats \
+  -H &quot;Authorization: Bearer sk-your-api-key-here&quot; \
+  -H &quot;Content-Type: application/json&quot;
+</code></pre>
+<p><strong>Example</strong> -- send a message and get a completion:</p>
+<pre><code class="language-bash">curl -X POST https://your-secureai-instance.com/api/v1/chat/completions \
+  -H &quot;Authorization: Bearer sk-your-api-key-here&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#39;{
+    &quot;model&quot;: &quot;gpt-4&quot;,
+    &quot;messages&quot;: [
+      {&quot;role&quot;: &quot;system&quot;, &quot;content&quot;: &quot;You are a helpful automotive parts assistant.&quot;},
+      {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;What brake pads fit a 2019 Honda Civic?&quot;}
+    ]
+  }&#39;
+</code></pre>
+<h2>Response Format</h2>
+<p>Successful responses return a JSON object with the resource data. List endpoints return paginated results.</p>
+<p><strong>Single resource</strong>:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;chat-abc123&quot;,
+  &quot;title&quot;: &quot;Brake pad compatibility&quot;,
+  &quot;created_at&quot;: &quot;2026-03-15T10:30:00Z&quot;,
+  &quot;updated_at&quot;: &quot;2026-03-15T10:35:00Z&quot;
+}
+</code></pre>
+<p><strong>List response</strong>:</p>
+<pre><code class="language-json">{
+  &quot;data&quot;: [
+    { &quot;id&quot;: &quot;chat-abc123&quot;, &quot;title&quot;: &quot;Brake pad compatibility&quot; },
+    { &quot;id&quot;: &quot;chat-def456&quot;, &quot;title&quot;: &quot;OEM cross-reference&quot; }
+  ],
+  &quot;total&quot;: 42,
+  &quot;page&quot;: 1,
+  &quot;page_size&quot;: 20
+}
+</code></pre>
+<h3>Pagination</h3>
+<p>List endpoints accept <code>page</code> and <code>page_size</code> query parameters:</p>
+<pre><code>GET /api/v1/chats?page=2&amp;page_size=50
+</code></pre>
+<ul>
+<li><code>page</code> defaults to <code>1</code>.</li>
+<li><code>page_size</code> defaults to <code>20</code>. Maximum is <code>100</code>.</li>
+</ul>
+<h2>Streaming Responses</h2>
+<p>The chat completions endpoint supports server-sent events (SSE) for streaming responses token by token. This is useful for building real-time chat interfaces.</p>
+<p>To enable streaming, set <code>&quot;stream&quot;: true</code> in your request:</p>
+<pre><code class="language-bash">curl -X POST https://your-secureai-instance.com/api/v1/chat/completions \
+  -H &quot;Authorization: Bearer sk-your-api-key-here&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#39;{
+    &quot;model&quot;: &quot;gpt-4&quot;,
+    &quot;messages&quot;: [
+      {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Explain catalytic converter replacement.&quot;}
+    ],
+    &quot;stream&quot;: true
+  }&#39;
+</code></pre>
+<p>Each event in the stream follows this format:</p>
+<pre><code>data: {&quot;id&quot;:&quot;resp-123&quot;,&quot;object&quot;:&quot;chat.completion.chunk&quot;,&quot;choices&quot;:[{&quot;delta&quot;:{&quot;content&quot;:&quot;A catalytic&quot;}}]}
+
+data: {&quot;id&quot;:&quot;resp-123&quot;,&quot;object&quot;:&quot;chat.completion.chunk&quot;,&quot;choices&quot;:[{&quot;delta&quot;:{&quot;content&quot;:&quot; converter&quot;}}]}
+
+data: [DONE]
+</code></pre>
+<p>The stream ends with <code>data: [DONE]</code>.</p>
+<h2>Authentication</h2>
+<p>Every API request must include a valid authentication credential. SecureAI supports two methods:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>API keys</strong></td>
+<td>Server-to-server integrations, scripts, automation</td>
+</tr>
+<tr>
+<td><strong>OAuth 2.0</strong></td>
+<td>User-facing applications, delegated access</td>
+</tr>
+</tbody></table>
+<p>For full details on generating keys, OAuth flows, token refresh, and security best practices, see the <a href="api-authentication-guide.md">API Authentication Guide</a>.</p>
+<h2>Rate Limits</h2>
+<p>SecureAI enforces rate limits to protect system stability and ensure fair usage across all users.</p>
+<h3>Default Limits</h3>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Requests per Minute</th>
+<th>Requests per Day</th>
+<th>Concurrent Requests</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Free</strong></td>
+<td>10</td>
+<td>500</td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>60</td>
+<td>10,000</td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Professional</strong></td>
+<td>120</td>
+<td>50,000</td>
+<td>25</td>
+</tr>
+<tr>
+<td><strong>Enterprise</strong></td>
+<td>Custom</td>
+<td>Custom</td>
+<td>Custom</td>
+</tr>
+</tbody></table>
+<p>Chat completion requests (which consume AI model tokens) have separate, lower limits than metadata-only requests like listing chats or users.</p>
+<h3>Rate Limit Headers</h3>
+<p>Every API response includes headers that tell you your current rate limit status:</p>
+<pre><code>X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 45
+X-RateLimit-Reset: 1711234567
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>X-RateLimit-Limit</code></td>
+<td>Maximum requests allowed in the current window</td>
+</tr>
+<tr>
+<td><code>X-RateLimit-Remaining</code></td>
+<td>Requests remaining in the current window</td>
+</tr>
+<tr>
+<td><code>X-RateLimit-Reset</code></td>
+<td>Unix timestamp when the window resets</td>
+</tr>
+</tbody></table>
+<h3>Handling Rate Limits</h3>
+<p>When you exceed the limit, the API returns a <code>429 Too Many Requests</code> response:</p>
+<pre><code class="language-json">{
+  &quot;error&quot;: {
+    &quot;type&quot;: &quot;rate_limit_exceeded&quot;,
+    &quot;message&quot;: &quot;Rate limit exceeded. Retry after 23 seconds.&quot;,
+    &quot;retry_after&quot;: 23
+  }
+}
+</code></pre>
+<p><strong>Best practices for handling rate limits</strong>:</p>
+<ul>
+<li><strong>Check headers proactively.</strong> Monitor <code>X-RateLimit-Remaining</code> and slow down before hitting zero.</li>
+<li><strong>Implement exponential backoff.</strong> On a 429 response, wait the <code>retry_after</code> duration, then retry with increasing delays (e.g., 1s, 2s, 4s).</li>
+<li><strong>Queue requests.</strong> For batch operations, use a queue that respects your per-minute limit rather than firing all requests simultaneously.</li>
+<li><strong>Cache responses.</strong> If you repeatedly fetch the same data (e.g., model list, assistant configurations), cache the result and use <code>If-None-Match</code> / <code>ETag</code> headers to avoid unnecessary requests.</li>
+</ul>
+<h2>Error Handling</h2>
+<p>The API uses standard HTTP status codes. Error responses include a JSON body with details.</p>
+<h3>Status Codes</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+<th>Common Cause</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>200</code></td>
+<td>Success</td>
+<td>Request completed</td>
+</tr>
+<tr>
+<td><code>201</code></td>
+<td>Created</td>
+<td>Resource created successfully</td>
+</tr>
+<tr>
+<td><code>204</code></td>
+<td>No Content</td>
+<td>Resource deleted successfully</td>
+</tr>
+<tr>
+<td><code>400</code></td>
+<td>Bad Request</td>
+<td>Invalid JSON, missing required field, invalid parameter value</td>
+</tr>
+<tr>
+<td><code>401</code></td>
+<td>Unauthorized</td>
+<td>Missing or invalid API key / token</td>
+</tr>
+<tr>
+<td><code>403</code></td>
+<td>Forbidden</td>
+<td>Valid credentials but insufficient permissions</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>Not Found</td>
+<td>Resource does not exist or you do not have access</td>
+</tr>
+<tr>
+<td><code>409</code></td>
+<td>Conflict</td>
+<td>Duplicate resource (e.g., duplicate slug or name)</td>
+</tr>
+<tr>
+<td><code>422</code></td>
+<td>Unprocessable Entity</td>
+<td>Request is well-formed but semantically invalid</td>
+</tr>
+<tr>
+<td><code>429</code></td>
+<td>Too Many Requests</td>
+<td>Rate limit exceeded</td>
+</tr>
+<tr>
+<td><code>500</code></td>
+<td>Internal Server Error</td>
+<td>Unexpected server error -- retry or contact support</td>
+</tr>
+<tr>
+<td><code>503</code></td>
+<td>Service Unavailable</td>
+<td>Server is temporarily overloaded or under maintenance</td>
+</tr>
+</tbody></table>
+<h3>Error Response Format</h3>
+<pre><code class="language-json">{
+  &quot;error&quot;: {
+    &quot;type&quot;: &quot;validation_error&quot;,
+    &quot;message&quot;: &quot;The &#39;model&#39; field is required.&quot;,
+    &quot;details&quot;: {
+      &quot;field&quot;: &quot;model&quot;,
+      &quot;constraint&quot;: &quot;required&quot;
+    }
+  }
+}
+</code></pre>
+<p><strong>Tips for debugging errors</strong>:</p>
+<ul>
+<li>Read the <code>message</code> field -- it usually tells you exactly what to fix.</li>
+<li>For <code>400</code> errors, check that your JSON is valid and all required fields are present.</li>
+<li>For <code>401</code> errors, verify your API key is correct and has not been revoked.</li>
+<li>For <code>403</code> errors, check that your user role has permission for the requested action. Some endpoints (user management, configs, audit logs) require admin privileges.</li>
+</ul>
+<h2>Versioning</h2>
+<p>The API is versioned via the URL path (<code>/api/v1/</code>). The current and only version is <strong>v1</strong>.</p>
+<p>When breaking changes are introduced, a new version (e.g., <code>/api/v2/</code>) will be released. The previous version will remain available for a deprecation period of at least 6 months with advance notice.</p>
+<p>Non-breaking changes (new fields in responses, new optional parameters, new endpoints) are added to the current version without a version bump.</p>
+<h2>Webhooks</h2>
+<p>SecureAI can send webhook notifications to your application when certain events occur. Webhooks are configured in <strong>Admin Panel &gt; Settings &gt; Webhooks</strong>.</p>
+<h3>Available Events</h3>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Trigger</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>chat.created</code></td>
+<td>A new conversation is started</td>
+</tr>
+<tr>
+<td><code>chat.completed</code></td>
+<td>An AI response is generated</td>
+</tr>
+<tr>
+<td><code>document.uploaded</code></td>
+<td>A file is uploaded to a knowledge base</td>
+</tr>
+<tr>
+<td><code>document.indexed</code></td>
+<td>A document finishes indexing and is searchable</td>
+</tr>
+<tr>
+<td><code>user.created</code></td>
+<td>A new user account is created</td>
+</tr>
+<tr>
+<td><code>user.role_changed</code></td>
+<td>A user&#39;s role is updated</td>
+</tr>
+</tbody></table>
+<h3>Webhook Payload</h3>
+<pre><code class="language-json">{
+  &quot;event&quot;: &quot;document.indexed&quot;,
+  &quot;timestamp&quot;: &quot;2026-03-15T10:35:00Z&quot;,
+  &quot;data&quot;: {
+    &quot;document_id&quot;: &quot;doc-xyz789&quot;,
+    &quot;knowledge_base_id&quot;: &quot;kb-abc123&quot;,
+    &quot;filename&quot;: &quot;brake-pads-catalog-2026.pdf&quot;,
+    &quot;status&quot;: &quot;indexed&quot;,
+    &quot;page_count&quot;: 47
+  }
+}
+</code></pre>
+<p>SecureAI signs webhook payloads with a shared secret so you can verify they are authentic. The signature is sent in the <code>X-SecureAI-Signature</code> header.</p>
+<h2>SDKs and Client Libraries</h2>
+<p>While the REST API works with any HTTP client, official and community SDKs simplify common operations:</p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Package</th>
+<th>Install</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Python</strong></td>
+<td><code>secureai-python</code></td>
+<td><code>pip install secureai-python</code></td>
+</tr>
+<tr>
+<td><strong>JavaScript / TypeScript</strong></td>
+<td><code>secureai-js</code></td>
+<td><code>npm install secureai-js</code></td>
+</tr>
+</tbody></table>
+<p><strong>Python example</strong>:</p>
+<pre><code class="language-python">from secureai import SecureAIClient
+
+client = SecureAIClient(
+    base_url=&quot;https://your-secureai-instance.com&quot;,
+    api_key=&quot;sk-your-api-key-here&quot;
+)
+
+# Send a message
+response = client.chat.completions.create(
+    model=&quot;gpt-4&quot;,
+    messages=[
+        {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;What oil filter fits a 2020 Toyota Camry?&quot;}
+    ]
+)
+
+print(response.choices[0].message.content)
+</code></pre>
+<p><strong>JavaScript example</strong>:</p>
+<pre><code class="language-javascript">import { SecureAIClient } from &quot;secureai-js&quot;;
+
+const client = new SecureAIClient({
+  baseUrl: &quot;https://your-secureai-instance.com&quot;,
+  apiKey: &quot;sk-your-api-key-here&quot;,
+});
+
+const response = await client.chat.completions.create({
+  model: &quot;gpt-4&quot;,
+  messages: [
+    { role: &quot;user&quot;, content: &quot;What oil filter fits a 2020 Toyota Camry?&quot; },
+  ],
+});
+
+console.log(response.choices[0].message.content);
+</code></pre>
+<h2>Common Integration Patterns</h2>
+<h3>Parts Lookup Automation</h3>
+<p>Automate parts compatibility checks by sending structured queries:</p>
+<pre><code class="language-bash">curl -X POST https://your-secureai-instance.com/api/v1/chat/completions \
+  -H &quot;Authorization: Bearer sk-your-api-key-here&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#39;{
+    &quot;model&quot;: &quot;gpt-4&quot;,
+    &quot;messages&quot;: [
+      {
+        &quot;role&quot;: &quot;system&quot;,
+        &quot;content&quot;: &quot;You are a parts compatibility expert. Return results as JSON with fields: part_number, manufacturer, compatible, notes.&quot;
+      },
+      {
+        &quot;role&quot;: &quot;user&quot;,
+        &quot;content&quot;: &quot;Is Bosch BP1087 compatible with a 2021 Ford F-150?&quot;
+      }
+    ]
+  }&#39;
+</code></pre>
+<h3>Knowledge Base Upload Pipeline</h3>
+<p>Automate document ingestion into a knowledge base:</p>
+<pre><code class="language-bash"># 1. Upload a document
+curl -X POST https://your-secureai-instance.com/api/v1/knowledge/kb-abc123/documents \
+  -H &quot;Authorization: Bearer sk-your-api-key-here&quot; \
+  -F &quot;file=@brake-catalog-2026.pdf&quot;
+
+# 2. Check indexing status
+curl -X GET https://your-secureai-instance.com/api/v1/knowledge/kb-abc123/documents/doc-xyz789 \
+  -H &quot;Authorization: Bearer sk-your-api-key-here&quot;
+</code></pre>
+<h3>Batch Chat Export</h3>
+<p>Export all conversations for a date range for compliance or analytics:</p>
+<pre><code class="language-bash">curl -X GET &quot;https://your-secureai-instance.com/api/v1/chats?created_after=2026-03-01&amp;created_before=2026-03-15&amp;page_size=100&quot; \
+  -H &quot;Authorization: Bearer sk-your-api-key-here&quot;
+</code></pre>
+<h2>Next Steps</h2>
+<ul>
+<li><strong><a href="api-authentication-guide.md">API Authentication Guide</a></strong> -- Set up API keys or OAuth credentials.</li>
+<li><strong><a href="embedding-secureai-in-your-applications.md">Embedding SecureAI in Your Applications</a></strong> -- Build chat widgets, custom tools, and automation pipelines.</li>
+<li><strong><a href="understanding-token-usage-and-costs.md">Understanding Token Usage and Costs</a></strong> -- Monitor API usage and optimize costs.</li>
+<li><strong><a href="integration-overview.md">Integration Overview</a></strong> -- See all available integrations and connection options.</li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

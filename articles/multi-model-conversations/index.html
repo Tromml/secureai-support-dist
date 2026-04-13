@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Multi-Model Conversations in SecureAI - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>Multi-Model Conversations in SecureAI</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Using SecureAI </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span> <span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> chat-basics </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> multi-model </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> model-switching </span> </div> <article class="content" data-astro-cid-xw3clhsd><p>SecureAI gives you access to multiple AI models through the OpenWebUI interface. You can switch between models mid-conversation, compare outputs side by side, and pick the best response for each task. This guide explains when and how to use multi-model conversations effectively.</p>
+<h2>Why Use Multiple Models?</h2>
+<p>Different models have different strengths. In the automotive aftermarket context:</p>
+<ul>
+<li><strong>Faster models</strong> are better for quick lookups like part numbers, basic fitment checks, and simple questions.</li>
+<li><strong>Larger models</strong> handle complex tasks better: multi-step diagnostics, interpreting ambiguous catalog data, or analyzing uploaded documents.</li>
+<li><strong>Specialized models</strong> (when available) may have deeper knowledge of specific parts databases or manufacturer catalogs.</li>
+</ul>
+<p>Switching models lets you match the tool to the task without starting a new conversation.</p>
+<h2>How to Switch Models Mid-Conversation</h2>
+<h3>Using the Model Selector</h3>
+<ol>
+<li>Look for the model selector dropdown at the top of the chat interface (or next to the message input, depending on your OpenWebUI version).</li>
+<li>Click the dropdown and choose a different model.</li>
+<li>Type your next message. It will be processed by the newly selected model.</li>
+</ol>
+<p>The conversation history stays intact. The new model can see all previous messages in the thread, regardless of which model generated them.</p>
+<h3>What Happens When You Switch</h3>
+<ul>
+<li>The new model receives the full conversation context (your messages and all previous responses).</li>
+<li>The new model does not know which model produced earlier responses. It treats them as part of the conversation.</li>
+<li>Response style, formatting, and level of detail may change because each model has its own behavior.</li>
+</ul>
+<h2>Comparing Model Outputs</h2>
+<p>When you need to verify a critical result — like a safety-related part cross-reference or a diagnostic conclusion — you can ask the same question to two models and compare.</p>
+<h3>Side-by-Side Comparison Pattern</h3>
+<ol>
+<li>Ask your question with Model A selected.</li>
+<li>Switch to Model B.</li>
+<li>Ask the same question again (copy-paste or rephrase).</li>
+<li>Compare the two responses for consistency.</li>
+</ol>
+<p><strong>Example:</strong></p>
+<pre><code>[Model A selected]
+What is the correct brake pad part number for a 2021 Toyota Camry SE
+with the 2.5L engine? Include OEM and aftermarket options.
+</code></pre>
+<p>Switch to Model B and repeat:</p>
+<pre><code>[Model B selected]
+What is the correct brake pad part number for a 2021 Toyota Camry SE
+with the 2.5L engine? Include OEM and aftermarket options.
+</code></pre>
+<p>If both models agree on the OEM part number, you have higher confidence in the result. If they disagree, investigate further — check your catalog or ask one model to verify the other&#39;s answer.</p>
+<h3>When to Compare</h3>
+<ul>
+<li><strong>Safety-critical parts</strong>: Brakes, steering, suspension. A wrong part number can cause real harm.</li>
+<li><strong>Ambiguous fitment</strong>: When a vehicle has multiple sub-models or mid-year changes.</li>
+<li><strong>High-value orders</strong>: When the cost of a return or incorrect part is significant.</li>
+<li><strong>Unfamiliar applications</strong>: Vehicles or part categories you do not work with regularly.</li>
+</ul>
+<h2>Practical Workflows</h2>
+<h3>Quick Lookup, Then Deep Dive</h3>
+<p>Start with a fast model for the initial lookup, then switch to a more capable model if you need deeper analysis.</p>
+<pre><code>[Fast model]
+What oil filter fits a 2023 Honda CR-V 1.5T?
+</code></pre>
+<p>If the answer is straightforward, you are done. If the result seems incomplete or you need cross-references:</p>
+<pre><code>[Switch to larger model]
+The previous response listed one OEM filter. Can you also provide
+aftermarket equivalents from Wix, Mann, and Purolator, and note any
+differences in filter media or bypass valve pressure?
+</code></pre>
+<p>The larger model sees the full conversation and can build on the earlier answer.</p>
+<h3>Second Opinion on a Diagnosis</h3>
+<p>If you are using SecureAI to help diagnose a vehicle issue, get a second opinion by switching models.</p>
+<pre><code>[Model A]
+Customer reports a P0442 code on a 2019 Subaru Outback 2.5i.
+What are the most likely causes and recommended diagnostic steps?
+</code></pre>
+<pre><code>[Switch to Model B]
+Review the diagnostic steps above. Would you change the order or add
+any checks specific to the 2019 Outback platform?
+</code></pre>
+<h3>Comparing Catalog Interpretations</h3>
+<p>When an uploaded catalog page is ambiguous, different models may parse it differently.</p>
+<pre><code>[Model A]
+I uploaded a page from the Dorman catalog. What part numbers are listed
+for 2018-2022 Ford F-150 exhaust manifold studs?
+</code></pre>
+<pre><code>[Switch to Model B]
+Look at the same uploaded catalog page. What part numbers do you see
+for 2018-2022 Ford F-150 exhaust manifold studs? Do your results match
+the previous response?
+</code></pre>
+<h2>Tips for Best Results</h2>
+<ul>
+<li><strong>Keep context clean.</strong> If you switch models frequently in one conversation, the context can get long and confusing. Start a new conversation if the thread becomes cluttered.</li>
+<li><strong>Label your requests.</strong> When comparing, explicitly ask the second model to compare against the earlier response. This makes differences easier to spot.</li>
+<li><strong>Use the same prompt.</strong> When comparing outputs, copy-paste the exact same question to both models. Rewording can change results.</li>
+<li><strong>Note which model you trust for which task.</strong> Over time you will learn which models are strongest for parts lookup vs. diagnostics vs. document analysis.</li>
+<li><strong>Do not over-compare.</strong> For routine lookups with a clear answer, one model is enough. Save multi-model comparison for high-stakes or ambiguous cases.</li>
+</ul>
+<h2>Common Issues</h2>
+<h3>The New Model Contradicts the Previous One</h3>
+<p>This is normal. Models have different training data and reasoning approaches. When you see a contradiction:</p>
+<ol>
+<li>Check which answer aligns with your catalog or known data.</li>
+<li>Ask the second model to explain its reasoning.</li>
+<li>If still uncertain, verify against your physical catalog or parts database.</li>
+</ol>
+<h3>The New Model Ignores Previous Context</h3>
+<p>If a model seems to disregard earlier messages after a switch:</p>
+<ul>
+<li>The conversation may be too long. Summarize the key facts and ask again.</li>
+<li>Some models handle long context better than others. Try rephrasing with the essential details.</li>
+</ul>
+<h3>Not Sure Which Model to Use</h3>
+<p>Start with the default model. If the response is too slow for your workflow, try a faster model. If the response lacks detail or accuracy, try a larger model. There is no single best model for all tasks.</p>
+<h2>Related Topics</h2>
+<ul>
+<li>Starting a new conversation</li>
+<li>Using conversation history</li>
+<li>Basic parts lookup queries</li>
+<li>Uploading documents for analysis</li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

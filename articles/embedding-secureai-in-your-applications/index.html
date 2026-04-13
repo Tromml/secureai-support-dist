@@ -1,0 +1,527 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Embedding SecureAI in Your Applications - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>Embedding SecureAI in Your Applications</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Developer Docs </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span> <span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> API </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> embedding </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> custom-tools </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> automation </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> developer </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> integration </span> </div> <article class="content" data-astro-cid-xw3clhsd><p>SecureAI is not just a standalone chat interface. Its REST API and embeddable components let you bring AI-powered chat directly into your own applications, build custom tools that extend what assistants can do, and automate repetitive workflows. This guide covers all three capabilities with practical examples for automotive aftermarket teams.</p>
+<h2>Prerequisites</h2>
+<p>Before you begin, make sure you have:</p>
+<ul>
+<li>A SecureAI instance with API access enabled (check with your administrator).</li>
+<li>An API key or OAuth credentials. See the <a href="api-authentication-guide.md">API Authentication Guide</a> for setup instructions.</li>
+<li>Familiarity with REST APIs and your application&#39;s technology stack.</li>
+</ul>
+<h2>Embedding the Chat Widget</h2>
+<p>The fastest way to add SecureAI to your application is the embeddable chat widget. It drops a floating chat button into any web page, giving users access to SecureAI conversations without leaving your application.</p>
+<h3>Basic Embed</h3>
+<p>Add the following snippet to your HTML, just before the closing <code>&lt;/body&gt;</code> tag:</p>
+<pre><code class="language-html">&lt;script&gt;
+  window.SECUREAI_CONFIG = {
+    instanceUrl: &quot;https://your-secureai-instance.com&quot;,
+    apiKey: &quot;sk-your-api-key-here&quot;,
+    position: &quot;bottom-right&quot;,
+    title: &quot;Parts Assistant&quot;
+  };
+&lt;/script&gt;
+&lt;script src=&quot;https://your-secureai-instance.com/embed/chat-widget.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>The widget renders a chat button in the specified corner. When clicked, it opens a conversation panel styled to match the SecureAI interface.</p>
+<p><strong>Configuration options:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>instanceUrl</code></td>
+<td>string</td>
+<td>required</td>
+<td>Your SecureAI instance URL</td>
+</tr>
+<tr>
+<td><code>apiKey</code></td>
+<td>string</td>
+<td>required</td>
+<td>API key for authentication</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>string</td>
+<td><code>&quot;bottom-right&quot;</code></td>
+<td>Widget position: <code>&quot;bottom-right&quot;</code>, <code>&quot;bottom-left&quot;</code></td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>string</td>
+<td><code>&quot;Chat&quot;</code></td>
+<td>Header text shown in the chat panel</td>
+</tr>
+<tr>
+<td><code>model</code></td>
+<td>string</td>
+<td>instance default</td>
+<td>Model to use for conversations</td>
+</tr>
+<tr>
+<td><code>assistantId</code></td>
+<td>string</td>
+<td>none</td>
+<td>Lock the widget to a specific assistant</td>
+</tr>
+<tr>
+<td><code>theme</code></td>
+<td>string</td>
+<td><code>&quot;auto&quot;</code></td>
+<td><code>&quot;light&quot;</code>, <code>&quot;dark&quot;</code>, or <code>&quot;auto&quot;</code> (follows system preference)</td>
+</tr>
+<tr>
+<td><code>welcomeMessage</code></td>
+<td>string</td>
+<td>none</td>
+<td>Initial message shown when the chat panel opens</td>
+</tr>
+</tbody></table>
+<h3>Locking to an Assistant</h3>
+<p>For focused use cases, pin the widget to a specific assistant. This is useful when you want the embedded chat to always use your parts lookup assistant or diagnostic assistant rather than the general-purpose chat.</p>
+<pre><code class="language-html">&lt;script&gt;
+  window.SECUREAI_CONFIG = {
+    instanceUrl: &quot;https://your-secureai-instance.com&quot;,
+    apiKey: &quot;sk-your-api-key-here&quot;,
+    assistantId: &quot;asst_parts_lookup_v2&quot;,
+    title: &quot;Parts Lookup&quot;,
+    welcomeMessage: &quot;Hi! I can help you find parts by OEM number, VIN, or description. What are you looking for?&quot;
+  };
+&lt;/script&gt;
+&lt;script src=&quot;https://your-secureai-instance.com/embed/chat-widget.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h3>Iframe Embed</h3>
+<p>If you need more control over layout, embed SecureAI as an iframe instead of using the widget:</p>
+<pre><code class="language-html">&lt;iframe
+  src=&quot;https://your-secureai-instance.com/embed/chat?api_key=sk-your-api-key-here&amp;assistant=asst_parts_lookup_v2&quot;
+  width=&quot;100%&quot;
+  height=&quot;600&quot;
+  style=&quot;border: 1px solid #e2e8f0; border-radius: 8px;&quot;
+  allow=&quot;clipboard-write&quot;
+&gt;&lt;/iframe&gt;
+</code></pre>
+<p>The iframe embed supports the same configuration options as query parameters (<code>model</code>, <code>assistant</code>, <code>theme</code>, <code>welcome_message</code>).</p>
+<h3>Security Considerations for Embedding</h3>
+<ul>
+<li><strong>Never expose API keys in client-side code for production applications.</strong> Use a backend proxy that adds the API key server-side, or use OAuth tokens scoped to the current user.</li>
+<li><strong>Restrict API key permissions.</strong> Create a dedicated key with only the scopes needed for chat (e.g., <code>chat:read</code>, <code>chat:write</code>). Do not reuse admin keys.</li>
+<li><strong>Use Content Security Policy (CSP) headers</strong> to control which domains can embed your SecureAI instance.</li>
+<li><strong>Set CORS origins</strong> in your SecureAI admin panel to allow only your application&#39;s domain.</li>
+</ul>
+<h2>Using the Chat API Directly</h2>
+<p>For full control over the user experience, call the chat API from your application code instead of using the embed widget.</p>
+<h3>Sending a Message</h3>
+<pre><code class="language-bash">curl -X POST https://your-secureai-instance.com/api/v1/chats/new \
+  -H &quot;Authorization: Bearer sk-your-api-key-here&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#39;{
+    &quot;model&quot;: &quot;gpt-4o&quot;,
+    &quot;messages&quot;: [
+      {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;What brake pads fit a 2019 Honda Civic EX?&quot;}
+    ]
+  }&#39;
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;chat_abc123&quot;,
+  &quot;model&quot;: &quot;gpt-4o&quot;,
+  &quot;message&quot;: {
+    &quot;role&quot;: &quot;assistant&quot;,
+    &quot;content&quot;: &quot;For a 2019 Honda Civic EX, the following brake pad options are compatible:\n\n**Front brake pads:**\n- OEM: Honda 45022-TBA-A01\n- Aftermarket: Bosch BC1764, Wagner ThermoQuiet QC1764\n\n**Rear brake pads:**\n- OEM: Honda 43022-TBA-A01\n- Aftermarket: Bosch BC1336, Wagner ThermoQuiet QC1336\n\nThese fit all 2019 Civic trims (LX, EX, EX-L, Sport, Touring) with standard brakes.&quot;
+  }
+}
+</code></pre>
+<h3>Streaming Responses</h3>
+<p>For real-time display in your application, use server-sent events (SSE) streaming:</p>
+<pre><code class="language-bash">curl -X POST https://your-secureai-instance.com/api/v1/chats/new \
+  -H &quot;Authorization: Bearer sk-your-api-key-here&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -H &quot;Accept: text/event-stream&quot; \
+  -d &#39;{
+    &quot;model&quot;: &quot;gpt-4o&quot;,
+    &quot;messages&quot;: [
+      {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;What brake pads fit a 2019 Honda Civic EX?&quot;}
+    ],
+    &quot;stream&quot;: true
+  }&#39;
+</code></pre>
+<p>Each chunk arrives as an SSE event:</p>
+<pre><code>data: {&quot;delta&quot;: {&quot;content&quot;: &quot;For a &quot;}}
+data: {&quot;delta&quot;: {&quot;content&quot;: &quot;2019 Honda &quot;}}
+data: {&quot;delta&quot;: {&quot;content&quot;: &quot;Civic EX, &quot;}}
+...
+data: [DONE]
+</code></pre>
+<h3>Continuing a Conversation</h3>
+<p>To maintain context across multiple messages, include the conversation ID:</p>
+<pre><code class="language-bash">curl -X POST https://your-secureai-instance.com/api/v1/chats/chat_abc123 \
+  -H &quot;Authorization: Bearer sk-your-api-key-here&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#39;{
+    &quot;model&quot;: &quot;gpt-4o&quot;,
+    &quot;messages&quot;: [
+      {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Which of those are ceramic?&quot;}
+    ]
+  }&#39;
+</code></pre>
+<h3>Using an Assistant via API</h3>
+<p>To route API conversations through a specific assistant (with its system prompt, knowledge bases, and tools):</p>
+<pre><code class="language-bash">curl -X POST https://your-secureai-instance.com/api/v1/chats/new \
+  -H &quot;Authorization: Bearer sk-your-api-key-here&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#39;{
+    &quot;assistant_id&quot;: &quot;asst_parts_lookup_v2&quot;,
+    &quot;messages&quot;: [
+      {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Cross-reference Bosch BC1764 to ACDelco&quot;}
+    ]
+  }&#39;
+</code></pre>
+<p>The assistant&#39;s model, system prompt, and attached knowledge bases are applied automatically.</p>
+<h2>Building Custom Tools</h2>
+<p>Custom tools let assistants call external APIs and perform actions beyond text generation. A tool is a Python function that SecureAI executes when the assistant determines it is needed during a conversation.</p>
+<h3>How Tools Work</h3>
+<ol>
+<li>You define a tool as a Python class with a <code>Valves</code> configuration and one or more callable methods.</li>
+<li>An administrator installs the tool in SecureAI (Admin Panel &gt; Tools).</li>
+<li>When a user asks a question that matches the tool&#39;s description, the assistant calls the tool automatically.</li>
+<li>The tool executes, returns structured data, and the assistant incorporates the result into its response.</li>
+</ol>
+<h3>Tool Structure</h3>
+<p>Every custom tool follows this pattern:</p>
+<pre><code class="language-python">&quot;&quot;&quot;
+title: Parts Inventory Lookup
+description: Checks real-time parts inventory from your shop management system.
+author: Your Name
+version: 0.1.0
+&quot;&quot;&quot;
+
+from pydantic import BaseModel, Field
+import requests
+
+
+class Tools:
+    class Valves(BaseModel):
+        &quot;&quot;&quot;Configuration values set by the administrator.&quot;&quot;&quot;
+        api_url: str = Field(
+            default=&quot;https://sms.example.com/api/v1&quot;,
+            description=&quot;Shop management system API URL&quot;
+        )
+        api_key: str = Field(
+            default=&quot;&quot;,
+            description=&quot;API key for the shop management system&quot;
+        )
+
+    def __init__(self):
+        self.valves = self.Valves()
+
+    def check_inventory(
+        self,
+        part_number: str,
+        __user__: dict = {}
+    ) -&gt; str:
+        &quot;&quot;&quot;
+        Check real-time inventory for a specific part number.
+
+        :param part_number: The OEM or aftermarket part number to look up.
+        :return: Inventory status including quantity, price, and location.
+        &quot;&quot;&quot;
+        response = requests.get(
+            f&quot;{self.valves.api_url}/inventory&quot;,
+            params={&quot;part_number&quot;: part_number},
+            headers={&quot;Authorization&quot;: f&quot;Bearer {self.valves.api_key}&quot;},
+            timeout=10
+        )
+        response.raise_for_status()
+        data = response.json()
+
+        if not data.get(&quot;results&quot;):
+            return f&quot;No inventory found for part number {part_number}.&quot;
+
+        lines = []
+        for item in data[&quot;results&quot;]:
+            lines.append(
+                f&quot;- {item[&#39;part_number&#39;]}: {item[&#39;quantity&#39;]} in stock &quot;
+                f&quot;at ${item[&#39;price&#39;]:.2f} (Location: {item[&#39;location&#39;]})&quot;
+            )
+        return &quot;\n&quot;.join(lines)
+</code></pre>
+<h3>Key Concepts</h3>
+<p><strong>Valves</strong> are administrator-configurable settings. They appear in the SecureAI admin panel when the tool is installed. Use valves for API URLs, credentials, and other settings that vary by deployment. Never hardcode secrets in tool code.</p>
+<p><strong>The <code>__user__</code> parameter</strong> is injected automatically by SecureAI. It contains information about the user making the request (<code>id</code>, <code>name</code>, <code>email</code>, <code>role</code>). Use it for access control or audit logging.</p>
+<p><strong>Docstrings matter.</strong> The assistant uses the method&#39;s docstring and parameter descriptions to decide when and how to call the tool. Write clear, specific descriptions.</p>
+<p><strong>Return strings.</strong> Tool methods return plain text that the assistant weaves into its response. For structured data, format it as readable text or Markdown.</p>
+<h3>Installing a Tool</h3>
+<ol>
+<li>Go to <strong>Admin Panel &gt; Tools</strong>.</li>
+<li>Click <strong>Add Tool</strong> (the <code>+</code> button).</li>
+<li>Paste the tool code into the editor.</li>
+<li>Click <strong>Save</strong>.</li>
+<li>Configure the valves -- fill in the API URL, API key, and any other settings.</li>
+<li>Assign the tool to one or more assistants, or enable it globally.</li>
+</ol>
+<h3>Example: Cross-Reference Tool</h3>
+<p>This tool calls an external parts compatibility API to cross-reference OEM part numbers across manufacturers:</p>
+<pre><code class="language-python">&quot;&quot;&quot;
+title: Parts Cross-Reference
+description: Cross-references OEM part numbers across aftermarket manufacturers.
+author: Your Name
+version: 0.1.0
+&quot;&quot;&quot;
+
+from pydantic import BaseModel, Field
+import requests
+
+
+class Tools:
+    class Valves(BaseModel):
+        api_url: str = Field(
+            default=&quot;https://parts-api.example.com/v2&quot;,
+            description=&quot;Parts data API URL&quot;
+        )
+        api_key: str = Field(default=&quot;&quot;, description=&quot;Parts data API key&quot;)
+
+    def __init__(self):
+        self.valves = self.Valves()
+
+    def cross_reference(
+        self,
+        part_number: str,
+        target_brand: str = &quot;&quot;,
+        __user__: dict = {}
+    ) -&gt; str:
+        &quot;&quot;&quot;
+        Find equivalent parts across manufacturers for a given part number.
+
+        :param part_number: The source OEM or aftermarket part number.
+        :param target_brand: Optional brand to filter results (e.g., &quot;Bosch&quot;, &quot;ACDelco&quot;).
+        :return: List of cross-referenced part numbers with compatibility notes.
+        &quot;&quot;&quot;
+        params = {&quot;part_number&quot;: part_number}
+        if target_brand:
+            params[&quot;brand&quot;] = target_brand
+
+        response = requests.get(
+            f&quot;{self.valves.api_url}/cross-reference&quot;,
+            params=params,
+            headers={&quot;Authorization&quot;: f&quot;Bearer {self.valves.api_key}&quot;},
+            timeout=10
+        )
+        response.raise_for_status()
+        data = response.json()
+
+        if not data.get(&quot;matches&quot;):
+            return f&quot;No cross-references found for {part_number}.&quot;
+
+        lines = [f&quot;Cross-references for {part_number}:&quot;]
+        for match in data[&quot;matches&quot;]:
+            note = f&quot; -- {match[&#39;note&#39;]}&quot; if match.get(&quot;note&quot;) else &quot;&quot;
+            lines.append(f&quot;- {match[&#39;brand&#39;]} {match[&#39;part_number&#39;]}{note}&quot;)
+        return &quot;\n&quot;.join(lines)
+</code></pre>
+<h3>Testing Tools</h3>
+<p>Before deploying a tool to production:</p>
+<ol>
+<li><strong>Test in the admin panel.</strong> After saving the tool, open a chat with the assigned assistant and try queries that should trigger the tool.</li>
+<li><strong>Check the tool execution log.</strong> Go to Admin Panel &gt; Tools &gt; (your tool) &gt; Logs to see invocation history, inputs, outputs, and errors.</li>
+<li><strong>Handle errors gracefully.</strong> Wrap external API calls in try/except blocks and return user-friendly error messages. The assistant will relay whatever the tool returns.</li>
+</ol>
+<pre><code class="language-python">def check_inventory(self, part_number: str, __user__: dict = {}) -&gt; str:
+    &quot;&quot;&quot;Check real-time inventory for a specific part number.&quot;&quot;&quot;
+    try:
+        response = requests.get(
+            f&quot;{self.valves.api_url}/inventory&quot;,
+            params={&quot;part_number&quot;: part_number},
+            headers={&quot;Authorization&quot;: f&quot;Bearer {self.valves.api_key}&quot;},
+            timeout=10
+        )
+        response.raise_for_status()
+    except requests.exceptions.Timeout:
+        return &quot;The inventory system is taking too long to respond. Please try again in a moment.&quot;
+    except requests.exceptions.HTTPError as e:
+        return f&quot;Could not check inventory: the system returned an error ({e.response.status_code}).&quot;
+    # ... process response
+</code></pre>
+<h2>Workflow Automation via API</h2>
+<p>Beyond chat, the SecureAI API supports automating repetitive tasks -- generating reports, processing batches of parts queries, triggering actions based on conversation outcomes.</p>
+<h3>Batch Parts Lookup</h3>
+<p>Process a list of part numbers through SecureAI in a script:</p>
+<pre><code class="language-python">import requests
+import csv
+import time
+
+SECUREAI_URL = &quot;https://your-secureai-instance.com&quot;
+API_KEY = &quot;sk-your-api-key-here&quot;
+HEADERS = {
+    &quot;Authorization&quot;: f&quot;Bearer {API_KEY}&quot;,
+    &quot;Content-Type&quot;: &quot;application/json&quot;
+}
+
+def lookup_part(part_number: str) -&gt; str:
+    &quot;&quot;&quot;Send a parts query to SecureAI and return the response.&quot;&quot;&quot;
+    response = requests.post(
+        f&quot;{SECUREAI_URL}/api/v1/chats/new&quot;,
+        headers=HEADERS,
+        json={
+            &quot;assistant_id&quot;: &quot;asst_parts_lookup_v2&quot;,
+            &quot;messages&quot;: [
+                {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: f&quot;Find compatible replacements for {part_number}&quot;}
+            ]
+        },
+        timeout=60
+    )
+    response.raise_for_status()
+    return response.json()[&quot;message&quot;][&quot;content&quot;]
+
+# Process a CSV of part numbers
+with open(&quot;parts_to_lookup.csv&quot;) as infile, open(&quot;results.csv&quot;, &quot;w&quot;, newline=&quot;&quot;) as outfile:
+    reader = csv.DictReader(infile)
+    writer = csv.writer(outfile)
+    writer.writerow([&quot;Part Number&quot;, &quot;Results&quot;])
+
+    for row in reader:
+        result = lookup_part(row[&quot;part_number&quot;])
+        writer.writerow([row[&quot;part_number&quot;], result])
+        time.sleep(1)  # Respect rate limits
+</code></pre>
+<h3>Webhook-Triggered Automation</h3>
+<p>Set up a webhook endpoint that receives events from your shop management system and queries SecureAI automatically:</p>
+<pre><code class="language-python">from flask import Flask, request, jsonify
+import requests
+
+app = Flask(__name__)
+
+SECUREAI_URL = &quot;https://your-secureai-instance.com&quot;
+API_KEY = &quot;sk-your-api-key-here&quot;
+
+@app.route(&quot;/webhook/new-repair-order&quot;, methods=[&quot;POST&quot;])
+def handle_repair_order():
+    &quot;&quot;&quot;When a new repair order arrives, query SecureAI for parts recommendations.&quot;&quot;&quot;
+    order = request.json
+    vin = order.get(&quot;vin&quot;)
+    complaint = order.get(&quot;customer_complaint&quot;)
+
+    response = requests.post(
+        f&quot;{SECUREAI_URL}/api/v1/chats/new&quot;,
+        headers={
+            &quot;Authorization&quot;: f&quot;Bearer {API_KEY}&quot;,
+            &quot;Content-Type&quot;: &quot;application/json&quot;
+        },
+        json={
+            &quot;assistant_id&quot;: &quot;asst_diagnostic_v1&quot;,
+            &quot;messages&quot;: [
+                {
+                    &quot;role&quot;: &quot;user&quot;,
+                    &quot;content&quot;: (
+                        f&quot;New repair order for VIN {vin}. &quot;
+                        f&quot;Customer complaint: {complaint}. &quot;
+                        f&quot;What parts might be needed and what diagnostic steps should the technician start with?&quot;
+                    )
+                }
+            ]
+        },
+        timeout=60
+    )
+    response.raise_for_status()
+    recommendation = response.json()[&quot;message&quot;][&quot;content&quot;]
+
+    return jsonify({
+        &quot;vin&quot;: vin,
+        &quot;recommendation&quot;: recommendation
+    })
+</code></pre>
+<h3>Scheduled Reports</h3>
+<p>Use a cron job or task scheduler to generate periodic reports with SecureAI:</p>
+<pre><code class="language-python">import requests
+import smtplib
+from email.mime.text import MIMEText
+from datetime import datetime
+
+SECUREAI_URL = &quot;https://your-secureai-instance.com&quot;
+API_KEY = &quot;sk-your-api-key-here&quot;
+
+def generate_weekly_summary():
+    &quot;&quot;&quot;Ask SecureAI to summarize the week&#39;s parts trends.&quot;&quot;&quot;
+    response = requests.post(
+        f&quot;{SECUREAI_URL}/api/v1/chats/new&quot;,
+        headers={
+            &quot;Authorization&quot;: f&quot;Bearer {API_KEY}&quot;,
+            &quot;Content-Type&quot;: &quot;application/json&quot;
+        },
+        json={
+            &quot;assistant_id&quot;: &quot;asst_analytics_v1&quot;,
+            &quot;messages&quot;: [
+                {
+                    &quot;role&quot;: &quot;user&quot;,
+                    &quot;content&quot;: (
+                        f&quot;Generate a weekly parts demand summary for the week ending &quot;
+                        f&quot;{datetime.now().strftime(&#39;%Y-%m-%d&#39;)}. &quot;
+                        f&quot;Include top requested parts, trending categories, and any &quot;
+                        f&quot;supply concerns based on recent queries.&quot;
+                    )
+                }
+            ]
+        },
+        timeout=120
+    )
+    response.raise_for_status()
+    return response.json()[&quot;message&quot;][&quot;content&quot;]
+
+summary = generate_weekly_summary()
+
+msg = MIMEText(summary)
+msg[&quot;Subject&quot;] = f&quot;Weekly Parts Demand Summary - {datetime.now().strftime(&#39;%Y-%m-%d&#39;)}&quot;
+msg[&quot;From&quot;] = &quot;secureai@yourshop.com&quot;
+msg[&quot;To&quot;] = &quot;parts-team@yourshop.com&quot;
+
+with smtplib.SMTP(&quot;smtp.yourshop.com&quot;, 587) as server:
+    server.starttls()
+    server.login(&quot;secureai@yourshop.com&quot;, &quot;email-password&quot;)
+    server.send_message(msg)
+</code></pre>
+<h3>Rate Limits and Best Practices</h3>
+<p>When automating API calls, keep these guidelines in mind:</p>
+<table>
+<thead>
+<tr>
+<th>Guideline</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Respect rate limits</strong></td>
+<td>Default: 60 requests/minute per API key. Add delays between batch requests. Check <code>X-RateLimit-Remaining</code> headers.</td>
+</tr>
+<tr>
+<td><strong>Use appropriate timeouts</strong></td>
+<td>Set request timeouts to at least 30 seconds for chat completions. Complex queries with knowledge base searches may take longer.</td>
+</tr>
+<tr>
+<td><strong>Handle errors and retries</strong></td>
+<td>Implement exponential backoff for <code>429 Too Many Requests</code> and <code>5xx</code> errors. Do not retry <code>4xx</code> client errors without fixing the request.</td>
+</tr>
+<tr>
+<td><strong>Use dedicated API keys</strong></td>
+<td>Create separate keys for each automation script. This makes it easy to revoke or rate-limit individual scripts without affecting others.</td>
+</tr>
+<tr>
+<td><strong>Log API usage</strong></td>
+<td>Track request counts and response times. This helps identify scripts that are consuming disproportionate resources.</td>
+</tr>
+<tr>
+<td><strong>Prefer assistants over raw prompts</strong></td>
+<td>Route automation through assistants so that system prompts, knowledge bases, and tools are applied consistently.</td>
+</tr>
+</tbody></table>
+<h2>What&#39;s Next</h2>
+<ul>
+<li><a href="api-authentication-guide.md">API Authentication Guide</a> -- detailed coverage of API keys and OAuth 2.0.</li>
+<li><a href="../admin/building-custom-tool-integrations.md">Building Custom Tool Integrations</a> -- admin-focused guide for installing and managing tools.</li>
+<li><a href="integration-overview.md">Integration Overview</a> -- all available integrations and how they connect.</li>
+<li><a href="shop-management-system-integration.md">Shop Management System Integration</a> -- connecting SecureAI to Mitchell, CCC, and Audatex.</li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

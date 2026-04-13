@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>User Management Guide - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>User Management Guide</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> admin </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span> <span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> administration </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> users </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> roles </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Permissions </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> onboarding </span> </div> <article class="content" data-astro-cid-xw3clhsd><p>This guide covers how administrators manage users in SecureAI -- inviting new users, assigning roles, deactivating accounts, resetting passwords, and understanding how user data is handled throughout the lifecycle.</p>
+<h2>Prerequisites</h2>
+<p>Before you begin, ensure you have:</p>
+<ul>
+<li><strong>Admin access</strong> to your SecureAI instance.</li>
+<li>The <strong>email addresses</strong> of the users you want to add.</li>
+<li>A plan for <strong>role assignment</strong> -- decide who needs admin access versus standard user access before you start adding people.</li>
+</ul>
+<h2>Understanding Roles</h2>
+<p>SecureAI has two roles. Every user is assigned exactly one.</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>What They Can Do</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>User</strong></td>
+<td>Start conversations, upload documents, search the knowledge base, use assigned tools and assistants, manage their own profile and settings</td>
+</tr>
+<tr>
+<td><strong>Admin</strong></td>
+<td>Everything a User can do, plus: manage users (invite, deactivate, change roles), view analytics and usage reports, configure models and providers, manage tools and assistants, adjust system settings (SSO, data retention, content filtering)</td>
+</tr>
+</tbody></table>
+<h3>When to Assign the Admin Role</h3>
+<p>Assign the admin role only to people who need to manage the SecureAI instance. In most organizations, this means IT administrators or team leads responsible for the platform. A typical deployment has 2-5 admins and the rest as standard users.</p>
+<p>Admins can see usage analytics and conversation metadata (which users are active, token consumption, model usage) but cannot read the content of other users&#39; conversations.</p>
+<h2>Inviting a Single User</h2>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Users</strong>.</li>
+<li>Click <strong>Add User</strong>.</li>
+<li>Fill in the user details:<ul>
+<li><strong>Email</strong>: The user&#39;s work email address. Must be unique across the instance.</li>
+<li><strong>Name</strong>: Display name shown in the interface.</li>
+<li><strong>Role</strong>: Select <code>User</code> or <code>Admin</code>.</li>
+</ul>
+</li>
+<li>Click <strong>Send Invitation</strong>.</li>
+</ol>
+<p>The user receives an email with a link to set their password and activate their account. Invitation links expire after <strong>72 hours</strong>. If the link expires before the user activates, you can re-send the invitation from the user list.</p>
+<h3>SSO Users</h3>
+<p>If your organization uses SAML or OIDC SSO, invited users do not need to set a password. They authenticate through your identity provider on first login. The invitation email still goes out to notify them that access is ready, but they sign in using their existing corporate credentials.</p>
+<p>See <a href="configuring-saml-sso.md">Configuring SAML SSO</a> or <a href="configure-oidc-sso.md">Configure OIDC SSO</a> for setup instructions.</p>
+<h2>Inviting Multiple Users</h2>
+<p>For onboarding more than a handful of users, use the bulk import feature instead of adding users one by one.</p>
+<ol>
+<li>Prepare a CSV file with <code>email</code>, <code>name</code>, <code>role</code>, and (optionally) <code>department</code> columns.</li>
+<li>Navigate to <strong>Admin Panel &gt; Users</strong>.</li>
+<li>Click <strong>Import Users</strong> and upload the CSV.</li>
+</ol>
+<p>SecureAI validates the file, shows a preview, and imports valid rows. Rows with errors are skipped and reported.</p>
+<p>See <a href="bulk-import-users.md">How to Bulk Import Users</a> for the full CSV format, validation rules, error handling, and API-based import.</p>
+<h2>Viewing and Searching Users</h2>
+<p>The <strong>Admin Panel &gt; Users</strong> page shows all users in your instance. From this page you can:</p>
+<ul>
+<li><strong>Search</strong> by name or email using the search bar at the top.</li>
+<li><strong>Filter</strong> by role (User, Admin) or status (Active, Deactivated).</li>
+<li><strong>Sort</strong> by name, email, role, last active date, or date added.</li>
+<li><strong>Export</strong> the user list as a CSV for reporting or auditing.</li>
+</ul>
+<p>Click any user&#39;s name to open their profile and see their details, activity summary, and management options.</p>
+<h2>Changing a User&#39;s Role</h2>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Users</strong>.</li>
+<li>Click the user&#39;s name to open their profile.</li>
+<li>Under <strong>Role</strong>, select the new role (<code>User</code> or <code>Admin</code>).</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>The change takes effect immediately. If you promote a user to Admin, they will see the Admin Panel on their next page load. If you demote an Admin to User, they lose access to the Admin Panel immediately.</p>
+<h3>Protecting Against Lockout</h3>
+<p>SecureAI prevents you from removing the admin role from the last remaining admin account. There must always be at least one admin in the system. If you need to transfer admin responsibility, promote the new admin first, then demote yourself.</p>
+<h2>Deactivating a User</h2>
+<p>Deactivation prevents a user from logging in while preserving their data.</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Users</strong>.</li>
+<li>Click the user&#39;s name.</li>
+<li>Toggle <strong>Active</strong> to off.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<h3>What Happens When a User Is Deactivated</h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Login</strong></td>
+<td>Blocked. Active sessions are terminated.</td>
+</tr>
+<tr>
+<td><strong>Conversation history</strong></td>
+<td>Preserved. Admins can view metadata in analytics.</td>
+</tr>
+<tr>
+<td><strong>Uploaded documents</strong></td>
+<td>Preserved in the knowledge base.</td>
+</tr>
+<tr>
+<td><strong>Seat count</strong></td>
+<td>Deactivated users do not count toward your seat limit.</td>
+</tr>
+<tr>
+<td><strong>SSO</strong></td>
+<td>If the user tries to log in through SSO, they are blocked at the SecureAI level even if their IdP session is active.</td>
+</tr>
+</tbody></table>
+<h3>Reactivating a User</h3>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Users</strong>.</li>
+<li>Use the status filter to find deactivated users.</li>
+<li>Click the user&#39;s name.</li>
+<li>Toggle <strong>Active</strong> to on.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>The user can log in again immediately. Their conversation history and documents are intact.</p>
+<h3>Deactivation vs. Deletion</h3>
+<p>SecureAI does not offer a user deletion feature in the admin panel. Deactivation is the standard way to revoke access. This is intentional:</p>
+<ul>
+<li><strong>Compliance</strong>: Many organizations must retain user activity records for audit purposes (SOC 2, GDPR). Deletion would destroy audit trails.</li>
+<li><strong>Data integrity</strong>: Conversations and documents linked to a user remain consistent. Deleting a user would orphan that data.</li>
+<li><strong>Reversibility</strong>: Deactivation is reversible. If someone returns to the organization or was deactivated by mistake, reactivation restores full access instantly.</li>
+</ul>
+<p>If you need to permanently remove a user&#39;s data for GDPR data subject deletion requests, contact SecureAI support. Data deletion requests are processed manually to ensure compliance with your data retention policies.</p>
+<h2>Resetting a User&#39;s Password</h2>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Users</strong>.</li>
+<li>Click the user&#39;s name.</li>
+<li>Click <strong>Reset Password</strong>.</li>
+<li>Confirm the action.</li>
+</ol>
+<p>The user receives an email with a password reset link. The link expires after <strong>72 hours</strong>. The user&#39;s current password continues to work until they complete the reset.</p>
+<h3>SSO Environments</h3>
+<p>If your organization uses SSO, password resets are handled by your identity provider, not SecureAI. The <strong>Reset Password</strong> button is hidden for SSO-authenticated users. Direct users to your organization&#39;s standard password reset process (e.g., Okta self-service, Azure AD SSPR).</p>
+<h2>Managing User Sessions</h2>
+<p>Admins can terminate a user&#39;s active sessions if needed -- for example, if a user&#39;s account may be compromised or if a deactivated user has a session that has not yet expired.</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Users</strong>.</li>
+<li>Click the user&#39;s name.</li>
+<li>Click <strong>Terminate Sessions</strong>.</li>
+<li>Confirm the action.</li>
+</ol>
+<p>All active sessions for that user are invalidated immediately. The user must log in again.</p>
+<h2>Monitoring User Activity</h2>
+<p>The <strong>Admin Panel &gt; Analytics</strong> section provides an overview of user activity:</p>
+<ul>
+<li><strong>Active users</strong>: How many users have logged in over a given time period.</li>
+<li><strong>Token usage</strong>: Per-user and per-model token consumption.</li>
+<li><strong>Conversation volume</strong>: Number of conversations started per user.</li>
+<li><strong>Last active</strong>: When each user last interacted with the system.</li>
+</ul>
+<p>For detailed audit logging and compliance reporting, see <a href="../articles/how-to-audit-user-activity.md">How to Audit User Activity</a>.</p>
+<h2>Common User Management Scenarios</h2>
+<h3>Onboarding a New Employee</h3>
+<ol>
+<li><a href="#inviting-a-single-user">Add the user</a> with the appropriate role.</li>
+<li>If using SSO, no further action -- they can log in with their corporate credentials.</li>
+<li>If not using SSO, confirm they received the invitation email and activated their account.</li>
+</ol>
+<h3>Offboarding an Employee</h3>
+<ol>
+<li><a href="#deactivating-a-user">Deactivate the user</a> to block login immediately.</li>
+<li>Their seat is freed for a new user.</li>
+<li>Their conversation history and documents are preserved for compliance.</li>
+</ol>
+<h3>Transferring Admin Responsibilities</h3>
+<ol>
+<li><a href="#changing-a-users-role">Promote the new admin</a> by changing their role to Admin.</li>
+<li>Demote the outgoing admin to User (or deactivate if they are leaving the organization).</li>
+</ol>
+<h3>User Reports They Cannot Log In</h3>
+<ol>
+<li>Check if the user&#39;s account is <strong>active</strong> in the user list.</li>
+<li>If active, try <a href="#resetting-a-users-password">resetting their password</a>.</li>
+<li>If using SSO, verify the user exists in your identity provider and is assigned to the SecureAI application.</li>
+<li>For persistent login issues, see the <a href="../faq/i-cant-log-in.md">I Can&#39;t Log In</a> FAQ.</li>
+</ol>
+<h2>Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Invitation email not received</td>
+<td>Check spam/junk folders. Verify the email address is correct in the user list. Check email delivery settings in <strong>Admin Panel &gt; Settings &gt; Email</strong>.</td>
+</tr>
+<tr>
+<td>User sees &quot;account deactivated&quot; after SSO login</td>
+<td>The user&#39;s SecureAI account is deactivated. Reactivate it in the admin panel. SSO authentication alone does not override deactivation.</td>
+</tr>
+<tr>
+<td>Cannot remove admin role from a user</td>
+<td>You may be the last admin. Promote another user to admin first, then demote yourself.</td>
+</tr>
+<tr>
+<td>Seat limit reached</td>
+<td>Deactivate users who no longer need access. Deactivated users do not count toward the seat limit. See <a href="../faq/what-happens-if-i-exceed-my-seat-limit.md">What Happens If I Exceed My Seat Limit</a>.</td>
+</tr>
+<tr>
+<td>Bulk import errors</td>
+<td>See <a href="bulk-import-users.md">How to Bulk Import Users</a> for CSV format requirements and error handling.</td>
+</tr>
+</tbody></table>
+<h2>Next Steps</h2>
+<ul>
+<li><a href="bulk-import-users.md">How to Bulk Import Users</a> -- onboard many users at once via CSV.</li>
+<li><a href="configuring-saml-sso.md">Configuring SAML SSO</a> or <a href="configure-oidc-sso.md">Configure OIDC SSO</a> -- let users sign in with corporate credentials.</li>
+<li><a href="../articles/how-to-audit-user-activity.md">How to Audit User Activity</a> -- review usage logs and generate compliance reports.</li>
+<li><a href="content-filtering-and-safety-settings.md">Content Filtering and Safety Settings</a> -- control what models can generate for your users.</li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

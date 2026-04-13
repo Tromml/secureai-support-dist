@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>How to Configure OIDC SSO - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>How to Configure OIDC SSO</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> admin </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span>  </div> <article class="content" data-astro-cid-xw3clhsd><p>This guide walks administrators through configuring OpenID Connect (OIDC) single sign-on for SecureAI. Once configured, users in your organization can sign in with their existing identity provider credentials.</p>
+<h2>Prerequisites</h2>
+<p>Before you begin, ensure you have:</p>
+<ul>
+<li><strong>Admin access</strong> to your SecureAI instance.</li>
+<li><strong>An OIDC-compatible identity provider</strong> (e.g., Okta, Azure AD, Google Workspace, Keycloak, Auth0).</li>
+<li>The following details from your identity provider:<ul>
+<li><strong>Client ID</strong></li>
+<li><strong>Client Secret</strong></li>
+<li><strong>Discovery URL</strong> (also called the well-known endpoint, e.g., <code>https://your-idp.example.com/.well-known/openid-configuration</code>)</li>
+</ul>
+</li>
+</ul>
+<h2>Step 1: Register SecureAI in Your Identity Provider</h2>
+<p>In your identity provider&#39;s admin console, create a new OIDC application:</p>
+<ol>
+<li>Set the <strong>Application type</strong> to &quot;Web application.&quot;</li>
+<li>Set the <strong>Redirect URI</strong> (callback URL) to:<pre><code>https://&lt;your-secureai-domain&gt;/oauth/oidc/callback
+</code></pre>
+</li>
+<li>Set the <strong>Post-logout redirect URI</strong> to:<pre><code>https://&lt;your-secureai-domain&gt;
+</code></pre>
+</li>
+<li>Under <strong>Scopes</strong>, ensure the following are enabled:<ul>
+<li><code>openid</code></li>
+<li><code>profile</code></li>
+<li><code>email</code></li>
+</ul>
+</li>
+<li>Save the application and copy the <strong>Client ID</strong> and <strong>Client Secret</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong>: The exact steps vary by provider. See <a href="#provider-specific-examples">Provider-Specific Examples</a> below for common configurations.</p>
+</blockquote>
+<h2>Step 2: Configure OIDC in SecureAI</h2>
+<ol>
+<li>Log in to SecureAI as an administrator.</li>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Authentication</strong>.</li>
+<li>Under <strong>Single Sign-On</strong>, select <strong>OIDC</strong> as the provider type.</li>
+<li>Fill in the following fields:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Provider Name</strong></td>
+<td>A display name for the sign-in button (e.g., &quot;Sign in with Okta&quot;)</td>
+</tr>
+<tr>
+<td><strong>Client ID</strong></td>
+<td>The Client ID from your identity provider</td>
+</tr>
+<tr>
+<td><strong>Client Secret</strong></td>
+<td>The Client Secret from your identity provider</td>
+</tr>
+<tr>
+<td><strong>Discovery URL</strong></td>
+<td>Your provider&#39;s OpenID Connect discovery URL</td>
+</tr>
+<tr>
+<td><strong>Scopes</strong></td>
+<td><code>openid profile email</code> (space-separated)</td>
+</tr>
+</tbody></table>
+<ol start="5">
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<h2>Step 3: Configure User Provisioning</h2>
+<p>Choose how new SSO users are handled when they sign in for the first time:</p>
+<ol>
+<li>In <strong>Admin Panel &gt; Settings &gt; Authentication</strong>, scroll to <strong>User Provisioning</strong>.</li>
+<li>Select one of the following:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Auto-create users</strong></td>
+<td>A new SecureAI account is created automatically on first SSO login. Users are assigned the default role.</td>
+</tr>
+<tr>
+<td><strong>Require pre-registration</strong></td>
+<td>Only users who already have a SecureAI account (matching by email) can sign in via SSO.</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<h2>Step 4: Test the Configuration</h2>
+<ol>
+<li>Open a <strong>private/incognito browser window</strong>.</li>
+<li>Navigate to your SecureAI login page.</li>
+<li>You should see a button labeled with your <strong>Provider Name</strong> (e.g., &quot;Sign in with Okta&quot;).</li>
+<li>Click it and sign in with a test account from your identity provider.</li>
+<li>Verify that:<ul>
+<li>You are redirected back to SecureAI after authentication.</li>
+<li>Your name and email appear correctly in your SecureAI profile.</li>
+<li>The correct role is assigned.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>Important</strong>: Test with a non-admin account first. Keep a separate browser session with local admin credentials open in case you need to adjust settings.</p>
+</blockquote>
+<h2>Step 5: Roll Out to Your Organization</h2>
+<p>Once testing is complete:</p>
+<ol>
+<li>Communicate the new sign-in process to your users.</li>
+<li>Optionally, disable password-based login in <strong>Admin Panel &gt; Settings &gt; Authentication</strong> by toggling <strong>Allow password login</strong> to off.</li>
+<li>If you disable password login, ensure at least one admin account retains local credentials as a fallback.</li>
+</ol>
+<h2>Provider-Specific Examples</h2>
+<h3>Okta</h3>
+<ol>
+<li>In Okta Admin, go to <strong>Applications &gt; Create App Integration</strong>.</li>
+<li>Select <strong>OIDC - OpenID Connect</strong> and <strong>Web Application</strong>.</li>
+<li>Set the redirect URI to <code>https://&lt;your-secureai-domain&gt;/oauth/oidc/callback</code>.</li>
+<li>Assign users or groups to the application.</li>
+<li>Discovery URL: <code>https://&lt;your-okta-domain&gt;/.well-known/openid-configuration</code></li>
+</ol>
+<h3>Azure AD (Entra ID)</h3>
+<ol>
+<li>In Azure Portal, go to <strong>Azure Active Directory &gt; App registrations &gt; New registration</strong>.</li>
+<li>Set the redirect URI to <code>https://&lt;your-secureai-domain&gt;/oauth/oidc/callback</code> (type: Web).</li>
+<li>Under <strong>Certificates &amp; secrets</strong>, create a new client secret.</li>
+<li>Under <strong>API permissions</strong>, ensure <code>openid</code>, <code>profile</code>, and <code>email</code> are granted.</li>
+<li>Discovery URL: <code>https://login.microsoftonline.com/&lt;tenant-id&gt;/v2.0/.well-known/openid-configuration</code></li>
+</ol>
+<h3>Google Workspace</h3>
+<ol>
+<li>In Google Cloud Console, go to <strong>APIs &amp; Services &gt; Credentials &gt; Create OAuth client ID</strong>.</li>
+<li>Set the application type to <strong>Web application</strong>.</li>
+<li>Add the redirect URI: <code>https://&lt;your-secureai-domain&gt;/oauth/oidc/callback</code>.</li>
+<li>Discovery URL: <code>https://accounts.google.com/.well-known/openid-configuration</code></li>
+</ol>
+<h3>Keycloak</h3>
+<ol>
+<li>In your Keycloak realm, go to <strong>Clients &gt; Create</strong>.</li>
+<li>Set <strong>Client Protocol</strong> to <code>openid-connect</code> and <strong>Access Type</strong> to <code>confidential</code>.</li>
+<li>Set the redirect URI to <code>https://&lt;your-secureai-domain&gt;/oauth/oidc/callback</code>.</li>
+<li>Discovery URL: <code>https://&lt;keycloak-host&gt;/realms/&lt;realm-name&gt;/.well-known/openid-configuration</code></li>
+</ol>
+<h2>Troubleshooting</h2>
+<h3>&quot;Redirect URI mismatch&quot; error</h3>
+<p>The redirect URI in your identity provider does not match the one SecureAI sends. Verify that the callback URL is exactly:</p>
+<pre><code>https://&lt;your-secureai-domain&gt;/oauth/oidc/callback
+</code></pre>
+<p>Trailing slashes and protocol (http vs. https) matter.</p>
+<h3>User is authenticated but gets &quot;Access Denied&quot;</h3>
+<p>If <strong>Require pre-registration</strong> is enabled, the user must have an existing SecureAI account with a matching email address. Either create the account first or switch to <strong>Auto-create users</strong>.</p>
+<h3>SSO button does not appear on the login page</h3>
+<p>Verify that you saved the OIDC configuration and that the <strong>Discovery URL</strong> is reachable from your SecureAI instance. Check <strong>Admin Panel &gt; Settings &gt; Authentication</strong> to confirm the configuration is active.</p>
+<h3>Claims mapping issues</h3>
+<p>If user names or emails are not populating correctly, your identity provider may use non-standard claim names. Contact support with your provider&#39;s token sample (with sensitive values redacted) for assistance.</p>
+<h2>Related Articles</h2>
+<ul>
+<li><a href="/admin/user-management">User Management</a></li>
+<li><a href="/security/data-handling">How SecureAI Handles Your Data</a></li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

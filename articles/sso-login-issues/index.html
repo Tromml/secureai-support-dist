@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Troubleshooting SSO Login Issues - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>Troubleshooting SSO Login Issues</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Troubleshooting </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span>  </div> <article class="content" data-astro-cid-xw3clhsd><p>If you are unable to log in to SecureAI through your organization&#39;s Single Sign-On (SSO) provider, work through the following sections to identify and resolve the issue.</p>
+<h2>Redirect Loop After SSO Login</h2>
+<p><strong>Symptom:</strong> After authenticating with your identity provider, the browser cycles between the SSO provider and SecureAI without ever reaching the dashboard.</p>
+<p><strong>Causes and Fixes:</strong></p>
+<ol>
+<li><p><strong>Mismatched callback URL.</strong> The callback (redirect) URL configured in your identity provider must exactly match the one SecureAI expects.</p>
+<ul>
+<li>In your identity provider (Okta, Azure AD, Google Workspace, etc.), verify the authorized redirect URI is set to <code>https://&lt;your-secureai-domain&gt;/oauth/&lt;provider&gt;/callback</code>.</li>
+<li>Trailing slashes matter. <code>https://example.com/oauth/oidc/callback</code> and <code>https://example.com/oauth/oidc/callback/</code> are treated as different URLs.</li>
+</ul>
+</li>
+<li><p><strong>Browser cookies blocked or expired.</strong> SSO relies on session cookies to complete the handshake.</p>
+<ul>
+<li>Clear your browser cookies for both your SSO provider domain and your SecureAI domain.</li>
+<li>Ensure third-party cookies are not blocked if your SSO provider and SecureAI are on different domains.</li>
+<li>Try an incognito/private window to rule out browser extensions interfering.</li>
+</ul>
+</li>
+<li><p><strong>Clock skew.</strong> If the server or your device clock is significantly out of sync, SAML assertions or OIDC tokens may be rejected as expired.</p>
+<ul>
+<li>Verify your device time is accurate (Settings &gt; Date &amp; Time &gt; Set Automatically).</li>
+<li>Ask your administrator to verify the SecureAI server time is synchronized via NTP.</li>
+</ul>
+</li>
+</ol>
+<h2>Certificate Mismatch (SAML)</h2>
+<p><strong>Symptom:</strong> Login fails with an error referencing an invalid signature, certificate, or trust chain. Some providers show &quot;Response signature verification failed.&quot;</p>
+<p><strong>Causes and Fixes:</strong></p>
+<ol>
+<li><p><strong>Expired or rotated IdP certificate.</strong> Identity providers periodically rotate their signing certificates. If the new certificate was not uploaded to SecureAI, signature verification fails.</p>
+<ul>
+<li>Ask your administrator to download the current signing certificate from the identity provider and update it in SecureAI&#39;s SAML configuration (Admin Panel &gt; Settings &gt; SSO &gt; SAML Certificate).</li>
+</ul>
+</li>
+<li><p><strong>Wrong certificate uploaded.</strong> Some identity providers offer multiple certificates (signing vs. encryption). SecureAI requires the <strong>signing</strong> certificate.</p>
+<ul>
+<li>In your IdP metadata, look for the certificate with <code>use=&quot;signing&quot;</code>. Upload that certificate only.</li>
+</ul>
+</li>
+<li><p><strong>Self-signed certificate not trusted.</strong> If your identity provider uses a self-signed certificate, the SecureAI server must be configured to trust it.</p>
+<ul>
+<li>Ask your administrator to add the certificate to the server&#39;s trusted CA store or upload it in SecureAI&#39;s SSO settings.</li>
+</ul>
+</li>
+</ol>
+<h2>Domain Restriction Errors</h2>
+<p><strong>Symptom:</strong> SSO authentication succeeds at the identity provider, but SecureAI rejects the login with a message like &quot;Email domain not allowed&quot; or &quot;User not authorized.&quot;</p>
+<p><strong>Causes and Fixes:</strong></p>
+<ol>
+<li><p><strong>Email domain not in the allowlist.</strong> SecureAI can restrict logins to specific email domains. If your email domain is not listed, access is denied.</p>
+<ul>
+<li>Ask your administrator to add your email domain to the allowed domains list (Admin Panel &gt; Settings &gt; SSO &gt; Allowed Domains).</li>
+</ul>
+</li>
+<li><p><strong>User account not pre-provisioned.</strong> Some organizations disable automatic account creation via SSO. If your account does not already exist in SecureAI, the login is rejected.</p>
+<ul>
+<li>Ask your administrator to either create your account manually or enable automatic provisioning (Admin Panel &gt; Settings &gt; SSO &gt; Auto-Provision Users).</li>
+</ul>
+</li>
+<li><p><strong>Group or role mapping mismatch.</strong> If your organization maps SSO groups to SecureAI roles, your identity provider account may lack the required group membership.</p>
+<ul>
+<li>Verify with your IT team that your SSO account is in a group that maps to a SecureAI role.</li>
+</ul>
+</li>
+</ol>
+<h2>MFA Conflicts</h2>
+<p><strong>Symptom:</strong> Multi-factor authentication prompts fail, loop, or block login entirely when using SSO.</p>
+<p><strong>Causes and Fixes:</strong></p>
+<ol>
+<li><p><strong>Duplicate MFA enforcement.</strong> If your identity provider enforces MFA <em>and</em> SecureAI has its own MFA enabled, users may be prompted twice or encounter conflicts.</p>
+<ul>
+<li>When using SSO, MFA should be enforced at the identity provider level only. Ask your administrator to disable SecureAI&#39;s built-in MFA for SSO users (Admin Panel &gt; Settings &gt; Authentication &gt; Disable Local MFA for SSO).</li>
+</ul>
+</li>
+<li><p><strong>MFA timeout too short.</strong> Some identity providers set aggressive session timeouts for MFA. If the MFA challenge expires before the SSO handshake completes, the login fails.</p>
+<ul>
+<li>Ask your administrator to check the identity provider&#39;s MFA timeout settings. A minimum of 120 seconds is recommended.</li>
+</ul>
+</li>
+<li><p><strong>Authenticator app out of sync.</strong> Time-based one-time passwords (TOTP) rely on your device clock being accurate.</p>
+<ul>
+<li>Verify your phone&#39;s date and time are set to automatic.</li>
+<li>If using Google Authenticator, go to Settings &gt; Time correction for codes &gt; Sync now.</li>
+</ul>
+</li>
+</ol>
+<h2>OIDC-Specific Issues</h2>
+<p><strong>Symptom:</strong> OIDC login fails with errors referencing scopes, claims, or token validation.</p>
+<p><strong>Causes and Fixes:</strong></p>
+<ol>
+<li><p><strong>Missing required scopes.</strong> SecureAI requires <code>openid</code>, <code>email</code>, and <code>profile</code> scopes.</p>
+<ul>
+<li>In your identity provider&#39;s OIDC client configuration, ensure all three scopes are granted.</li>
+</ul>
+</li>
+<li><p><strong>Client secret mismatch.</strong> If the client secret in SecureAI does not match the one in the identity provider, token exchange fails silently or with a generic &quot;authentication failed&quot; error.</p>
+<ul>
+<li>Regenerate the client secret in your identity provider and update it in SecureAI&#39;s OIDC settings.</li>
+</ul>
+</li>
+<li><p><strong>Issuer URL mismatch.</strong> The issuer URL configured in SecureAI must exactly match what the identity provider returns in its discovery document.</p>
+<ul>
+<li>Check the <code>.well-known/openid-configuration</code> endpoint of your provider and compare the <code>issuer</code> value with what is configured in SecureAI.</li>
+</ul>
+</li>
+</ol>
+<h2>General Diagnostic Steps</h2>
+<p>If the sections above do not resolve your issue, collect the following information before contacting support:</p>
+<ol>
+<li><strong>Browser console logs.</strong> Open Developer Tools (F12) &gt; Console tab, reproduce the login attempt, and copy any errors.</li>
+<li><strong>Network trace.</strong> In Developer Tools &gt; Network tab, look for failed requests (status 4xx or 5xx) during the SSO flow.</li>
+<li><strong>Identity provider logs.</strong> Most providers (Okta, Azure AD, Google Workspace) have an audit log that shows whether authentication succeeded on their side.</li>
+<li><strong>SecureAI admin logs.</strong> Ask your administrator to check the OpenWebUI logs for SSO-related errors around the time of the failed login attempt.</li>
+<li><strong>Exact error message.</strong> Copy the full error text shown in the browser, including any error codes.</li>
+</ol>
+<p>Submit these details to your administrator or to SecureAI support for further investigation.</p>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

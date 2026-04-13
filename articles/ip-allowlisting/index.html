@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Setting Up IP Allowlisting for Enterprise Access - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>Setting Up IP Allowlisting for Enterprise Access</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> admin </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span> <span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> security </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> enterprise </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> access-control </span> </div> <article class="content" data-astro-cid-xw3clhsd><p>IP allowlisting restricts access to your SecureAI instance so that only connections from approved IP addresses or ranges can reach the platform. This is a common requirement for enterprise security policies and compliance frameworks.</p>
+<h2>Prerequisites</h2>
+<p>Before you begin, ensure you have:</p>
+<ul>
+<li><strong>Admin access</strong> to your SecureAI instance.</li>
+<li>A list of <strong>approved IP addresses or CIDR ranges</strong> for your organization (e.g., office networks, VPN exit points, cloud infrastructure).</li>
+<li>Knowledge of whether your users connect through a <strong>NAT gateway, proxy, or VPN</strong> (this affects which IPs to allowlist).</li>
+</ul>
+<h2>How IP Allowlisting Works</h2>
+<p>When IP allowlisting is enabled, SecureAI checks the source IP of every incoming request against your allowlist. Requests from IPs not on the list receive a <code>403 Forbidden</code> response and cannot access the application.</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Request from allowlisted IP</td>
+<td>Access granted normally</td>
+</tr>
+<tr>
+<td>Request from non-allowlisted IP</td>
+<td>Blocked with 403 Forbidden</td>
+</tr>
+<tr>
+<td>Allowlist is empty (feature enabled)</td>
+<td><strong>All access blocked</strong> -- see <a href="#lockout-recovery">Lockout Recovery</a></td>
+</tr>
+<tr>
+<td>Feature disabled</td>
+<td>All IPs can access the instance</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Important</strong>: IP allowlisting applies to all users, including administrators. If you misconfigure the allowlist, you can lock yourself out. Always include your current IP before saving.</p>
+</blockquote>
+<h2>Step 1: Identify Your IP Addresses</h2>
+<p>Before configuring the allowlist, gather the IP addresses your organization uses:</p>
+<ol>
+<li><strong>Office networks</strong>: Check your corporate firewall or router for your public IP. Visit a service like <code>https://checkip.amazonaws.com</code> from your office network.</li>
+<li><strong>VPN exit points</strong>: Get the egress IP ranges from your VPN provider or IT team.</li>
+<li><strong>Remote workers</strong>: If remote employees connect without a VPN, you may need to allowlist their ISP-assigned IPs or require VPN usage.</li>
+<li><strong>Cloud services</strong>: If automated systems (CI/CD, monitoring) access SecureAI via API, include their outbound IPs.</li>
+</ol>
+<blockquote>
+<p><strong>Tip</strong>: Use CIDR notation for ranges (e.g., <code>203.0.113.0/24</code> covers <code>203.0.113.0</code> through <code>203.0.113.255</code>). This is more maintainable than listing individual IPs.</p>
+</blockquote>
+<h2>Step 2: Enable IP Allowlisting</h2>
+<ol>
+<li>Log in to SecureAI as an administrator.</li>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Security</strong>.</li>
+<li>Locate the <strong>IP Allowlisting</strong> section.</li>
+<li>Toggle <strong>Enable IP Allowlisting</strong> to on.</li>
+</ol>
+<h2>Step 3: Add IP Addresses or Ranges</h2>
+<ol>
+<li>In the <strong>IP Allowlisting</strong> section, click <strong>Add Entry</strong>.</li>
+<li>Enter an IP address or CIDR range:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Example</th>
+<th>What It Covers</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Single IPv4</td>
+<td><code>203.0.113.10</code></td>
+<td>One address</td>
+</tr>
+<tr>
+<td>CIDR range</td>
+<td><code>203.0.113.0/24</code></td>
+<td>256 addresses (203.0.113.0--203.0.113.255)</td>
+</tr>
+<tr>
+<td>Single IPv6</td>
+<td><code>2001:db8::1</code></td>
+<td>One address</td>
+</tr>
+<tr>
+<td>IPv6 CIDR</td>
+<td><code>2001:db8::/32</code></td>
+<td>Full IPv6 prefix</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li>Add a <strong>description</strong> for each entry (e.g., &quot;HQ office,&quot; &quot;AWS us-east-1 NAT gateway&quot;). This helps when auditing or updating the list later.</li>
+<li>Repeat for all required IPs and ranges.</li>
+<li><strong>Verify your current IP is included</strong> -- the admin panel displays your current IP at the top of the allowlist section.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Warning</strong>: Double-check that your current IP address is in the allowlist before saving. If it is not, you will be locked out immediately.</p>
+</blockquote>
+<h2>Step 4: Test the Configuration</h2>
+<ol>
+<li>From an <strong>allowlisted IP</strong>, confirm you can access SecureAI normally.</li>
+<li>From a <strong>non-allowlisted IP</strong> (e.g., a mobile phone on cellular data), confirm that access is blocked with a 403 error.</li>
+<li>Test <strong>API access</strong> if your organization uses the SecureAI API -- API requests are also subject to the allowlist.</li>
+</ol>
+<h2>Managing the Allowlist</h2>
+<h3>Adding New IPs</h3>
+<p>When your organization adds a new office, VPN endpoint, or cloud service:</p>
+<ol>
+<li>Go to <strong>Admin Panel &gt; Settings &gt; Security &gt; IP Allowlisting</strong>.</li>
+<li>Click <strong>Add Entry</strong>, enter the IP or CIDR range with a description.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<h3>Removing IPs</h3>
+<p>When an office closes or a VPN endpoint is decommissioned:</p>
+<ol>
+<li>Go to <strong>Admin Panel &gt; Settings &gt; Security &gt; IP Allowlisting</strong>.</li>
+<li>Find the entry and click <strong>Remove</strong>.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<h3>Auditing the Allowlist</h3>
+<p>Review your allowlist quarterly or whenever your network topology changes. Remove entries for decommissioned infrastructure and verify descriptions are accurate.</p>
+<h2>Lockout Recovery</h2>
+<p>If you accidentally lock yourself out by misconfiguring the allowlist:</p>
+<ol>
+<li><strong>Contact your SecureAI account team</strong> -- they can modify the allowlist from the infrastructure level.</li>
+<li><strong>Use a known allowlisted network</strong> -- connect from an IP that is on the list (e.g., your office VPN) and correct the configuration.</li>
+<li><strong>Cloud Run console</strong> (self-hosted deployments) -- if you manage your own deployment, update the environment variable or configuration file that defines the allowlist, then redeploy.</li>
+</ol>
+<blockquote>
+<p><strong>Best Practice</strong>: Before making changes to the allowlist, note your current IP and confirm it will remain on the list after the change.</p>
+</blockquote>
+<h2>Common CIDR Ranges</h2>
+<table>
+<thead>
+<tr>
+<th>CIDR</th>
+<th>Number of IPs</th>
+<th>Typical Use</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>/32</code></td>
+<td>1</td>
+<td>Single server or device</td>
+</tr>
+<tr>
+<td><code>/28</code></td>
+<td>16</td>
+<td>Small office</td>
+</tr>
+<tr>
+<td><code>/24</code></td>
+<td>256</td>
+<td>Medium office or subnet</td>
+</tr>
+<tr>
+<td><code>/16</code></td>
+<td>65,536</td>
+<td>Large corporate network</td>
+</tr>
+</tbody></table>
+<h2>Integration with Other Security Features</h2>
+<p>IP allowlisting works alongside other SecureAI security features:</p>
+<ul>
+<li><strong>SSO (SAML/OIDC)</strong>: Users must pass both IP allowlisting and SSO authentication. Even with valid SSO credentials, requests from non-allowlisted IPs are blocked.</li>
+<li><strong>API keys</strong>: API requests are subject to the same IP restrictions. Ensure your API clients&#39; egress IPs are allowlisted.</li>
+<li><strong>Audit logging</strong>: Blocked access attempts from non-allowlisted IPs are logged in the audit log under <strong>Admin Panel &gt; Monitoring &gt; Audit Log</strong>.</li>
+</ul>
+<h2>Troubleshooting</h2>
+<h3>Users report intermittent access issues</h3>
+<p>If users are sometimes blocked and sometimes not, they may be connecting through a load balancer or NAT with multiple egress IPs. Check with your IT team for the full range of possible egress IPs and add the entire CIDR range.</p>
+<h3>VPN users cannot connect</h3>
+<p>Verify that the VPN exit node IPs are on the allowlist. Some VPN providers rotate exit IPs -- in this case, allowlist the provider&#39;s published IP range.</p>
+<h3>API calls fail with 403 after enabling allowlisting</h3>
+<p>Ensure that the IPs of your API clients (servers, CI/CD pipelines, monitoring tools) are included in the allowlist. Check the audit log to see which IP was blocked.</p>
+<h3>IPv6 connections blocked</h3>
+<p>If your network uses IPv6, ensure you have added the relevant IPv6 addresses or ranges to the allowlist. SecureAI checks both IPv4 and IPv6 addresses.</p>
+<h2>Related Articles</h2>
+<ul>
+<li><a href="/admin/audit-logging-setup">Audit Logging Setup</a></li>
+<li><a href="/admin/configure-oidc-sso">How to Configure OIDC SSO</a></li>
+<li><a href="/admin/configuring-saml-sso">How to Configure SAML SSO</a></li>
+<li><a href="/security/data-handling">How SecureAI Handles Your Data</a></li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

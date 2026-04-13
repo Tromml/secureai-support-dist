@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>How to Create an Assistant - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>How to Create an Assistant</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> chat-basics </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span> <span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Assistants </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> custom-models </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> modelfiles </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> configuration </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> prompts </span> </div> <article class="content" data-astro-cid-xw3clhsd><p>Assistants in SecureAI are custom AI configurations that combine a base model with specific instructions, knowledge, and behavior settings. Think of them as specialized versions of the AI tailored for particular tasks — a parts lookup specialist, a warranty claim helper, or a technical service bulletin interpreter.</p>
+<p>This guide walks through creating, configuring, and sharing assistants in your SecureAI workspace.</p>
+<h2>What Is an Assistant?</h2>
+<p>An assistant wraps a base AI model with:</p>
+<ul>
+<li><strong>System prompt</strong> — persistent instructions that shape how the model responds</li>
+<li><strong>Knowledge base</strong> — documents the assistant can reference for grounded answers</li>
+<li><strong>Model parameters</strong> — temperature, context window, and other generation settings</li>
+<li><strong>Name and description</strong> — so your team knows what the assistant does</li>
+</ul>
+<p>When a user starts a conversation with an assistant, these settings are applied automatically. The user doesn&#39;t need to write setup prompts or attach documents each time.</p>
+<h2>Creating a New Assistant</h2>
+<h3>Step 1: Open the Assistant Builder</h3>
+<ol>
+<li>Click the <strong>Workspace</strong> icon in the left sidebar</li>
+<li>Select the <strong>Assistants</strong> tab (you may see it labeled &quot;Modelfiles&quot; in some versions)</li>
+<li>Click <strong>Create New Assistant</strong> (or the <strong>+</strong> button)</li>
+</ol>
+<h3>Step 2: Set the Basics</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What to Enter</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Name</strong></td>
+<td>A clear, descriptive name</td>
+<td>&quot;Brake Parts Lookup&quot;</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>One-line summary of what the assistant does</td>
+<td>&quot;Finds brake component part numbers and cross-references across manufacturers&quot;</td>
+</tr>
+<tr>
+<td><strong>Avatar</strong></td>
+<td>Optional icon or image</td>
+<td>Upload a brake icon or leave default</td>
+</tr>
+</tbody></table>
+<p>Choose a name that tells users exactly what the assistant is for. Avoid generic names like &quot;Helper&quot; or &quot;Assistant 1.&quot;</p>
+<h3>Step 3: Write the System Prompt</h3>
+<p>The system prompt is the most important part of your assistant. It defines the assistant&#39;s role, behavior, and constraints.</p>
+<p><strong>A good system prompt includes:</strong></p>
+<ul>
+<li><strong>Role definition</strong> — who the assistant is and what it does</li>
+<li><strong>Response format</strong> — how answers should be structured</li>
+<li><strong>Boundaries</strong> — what the assistant should and shouldn&#39;t do</li>
+<li><strong>Domain context</strong> — industry-specific terms and expectations</li>
+</ul>
+<p><strong>Example system prompt for a parts lookup assistant:</strong></p>
+<pre><code>You are a brake parts specialist for the automotive aftermarket industry.
+
+When a user asks about a part:
+1. Identify the specific component (rotor, pad, caliper, hose, etc.)
+2. Check the knowledge base for matching part numbers
+3. Provide the part number, manufacturer, and compatible vehicles
+4. If cross-references exist, list alternative manufacturer part numbers
+
+Response format:
+- Lead with the most likely match
+- Include vehicle fitment (year, make, model, engine)
+- Note any superseded or discontinued part numbers
+- Flag if the part requires additional components for installation
+
+Do not guess part numbers. If the knowledge base does not contain a match, say so clearly and suggest the user verify with the manufacturer catalog.
+</code></pre>
+<p><strong>System prompt tips:</strong></p>
+<ul>
+<li>Be specific rather than general. &quot;Answer questions about brakes&quot; is too vague. Define exactly how the assistant should handle different query types.</li>
+<li>Include output format instructions. If you want tables, bullet lists, or specific data fields in every response, say so explicitly.</li>
+<li>Set boundaries. Tell the assistant what NOT to do — this prevents unhelpful tangents.</li>
+<li>Keep it under 1,000 words. Extremely long system prompts can reduce the effective context window available for conversation.</li>
+</ul>
+<h3>Step 4: Attach a Knowledge Base</h3>
+<p>If your assistant should reference specific documents:</p>
+<ol>
+<li>In the assistant configuration, find the <strong>Knowledge</strong> section</li>
+<li>Click <strong>Add Knowledge Base</strong> or <strong>Select Collection</strong></li>
+<li>Choose from your existing knowledge bases, or create a new one</li>
+</ol>
+<p>The assistant will use RAG (retrieval-augmented generation) to search these documents when answering questions. For best results, follow the <a href="knowledge-base-design-best-practices.md">Knowledge Base Design Best Practices</a> guide.</p>
+<p><strong>When to attach a knowledge base:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Knowledge Base Needed?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Parts lookup with specific catalogs</td>
+<td>Yes — attach the relevant catalogs</td>
+</tr>
+<tr>
+<td>General automotive Q&amp;A</td>
+<td>Optional — the base model has broad knowledge</td>
+</tr>
+<tr>
+<td>Internal process assistant</td>
+<td>Yes — attach SOPs, procedures, policies</td>
+</tr>
+<tr>
+<td>Writing/formatting helper</td>
+<td>No — relies on the model&#39;s built-in capabilities</td>
+</tr>
+</tbody></table>
+<h3>Step 5: Configure Model Settings</h3>
+<p>Adjust these parameters based on your assistant&#39;s purpose:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>What It Does</th>
+<th>Recommended Setting</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Base Model</strong></td>
+<td>The underlying AI model</td>
+<td>Choose based on task complexity (see <a href="how-to-choose-the-right-ai-model.md">How to Choose the Right AI Model</a>)</td>
+</tr>
+<tr>
+<td><strong>Temperature</strong></td>
+<td>Controls randomness (0 = deterministic, 1 = creative)</td>
+<td>0.1-0.3 for factual lookups, 0.5-0.7 for writing tasks</td>
+</tr>
+<tr>
+<td><strong>Context Length</strong></td>
+<td>How much conversation history the model considers</td>
+<td>Default is usually fine; increase for long technical discussions</td>
+</tr>
+<tr>
+<td><strong>Top P</strong></td>
+<td>Controls diversity of word choices</td>
+<td>Leave at default (1.0) unless you have a specific reason to change</td>
+</tr>
+</tbody></table>
+<p>For parts lookup and technical assistants, use <strong>low temperature</strong> (0.1-0.3). You want consistent, accurate answers, not creative variation.</p>
+<p>For writing or brainstorming assistants, use <strong>moderate temperature</strong> (0.5-0.7). This allows more varied and interesting outputs.</p>
+<h3>Step 6: Save and Test</h3>
+<ol>
+<li>Click <strong>Save</strong> to create the assistant</li>
+<li>Start a new conversation and select your assistant from the model dropdown</li>
+<li>Test with realistic queries your team would actually ask</li>
+<li>Refine the system prompt based on the results</li>
+</ol>
+<p><strong>Testing checklist:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Does the assistant stay in character with the system prompt?</li>
+<li><input disabled="" type="checkbox"> Does it correctly reference knowledge base documents?</li>
+<li><input disabled="" type="checkbox"> Does it handle edge cases (unknown parts, ambiguous queries)?</li>
+<li><input disabled="" type="checkbox"> Are response formats consistent?</li>
+<li><input disabled="" type="checkbox"> Does it respect the boundaries you set?</li>
+</ul>
+<h2>Sharing Assistants with Your Team</h2>
+<p>Once you&#39;ve built and tested an assistant:</p>
+<ol>
+<li>Go to the assistant&#39;s settings</li>
+<li>Set <strong>Visibility</strong> to &quot;Public&quot; to make it available to all users in your workspace, or &quot;Private&quot; to keep it personal</li>
+<li>Optionally, add the assistant to a <strong>Workspace</strong> group so specific teams can find it</li>
+</ol>
+<p>Public assistants appear in the model dropdown for all workspace users. Consider creating a naming convention so team members can quickly identify relevant assistants (e.g., prefix with the department or function: &quot;Parts - Brake Lookup&quot;, &quot;Service - TSB Search&quot;).</p>
+<h2>Managing and Updating Assistants</h2>
+<h3>When to Update</h3>
+<ul>
+<li><strong>Knowledge base changes</strong> — new catalogs, updated part numbers, revised procedures</li>
+<li><strong>Workflow changes</strong> — new response formats, additional fields, updated policies</li>
+<li><strong>User feedback</strong> — if users report incorrect behavior, adjust the system prompt</li>
+<li><strong>Model updates</strong> — when new base models become available, test and potentially switch</li>
+</ul>
+<h3>Editing an Existing Assistant</h3>
+<ol>
+<li>Navigate to <strong>Workspace</strong> &gt; <strong>Assistants</strong></li>
+<li>Click on the assistant you want to modify</li>
+<li>Make your changes to the system prompt, knowledge base, or settings</li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<p>Changes take effect for new conversations immediately. Existing conversations continue using the settings that were active when the conversation started.</p>
+<h3>Cloning an Assistant</h3>
+<p>To create a variant of an existing assistant:</p>
+<ol>
+<li>Open the assistant you want to clone</li>
+<li>Click <strong>Clone</strong> (or manually create a new assistant and copy the system prompt)</li>
+<li>Modify the clone for its specific purpose</li>
+<li>Save with a new name</li>
+</ol>
+<p>This is useful when you need similar assistants for different product lines or departments.</p>
+<h2>Example Assistants for Automotive Aftermarket</h2>
+<p>Here are starter configurations you can adapt:</p>
+<h3>Parts Cross-Reference Assistant</h3>
+<ul>
+<li><strong>System prompt focus</strong>: Cross-reference OEM and aftermarket part numbers across manufacturers</li>
+<li><strong>Knowledge base</strong>: Manufacturer cross-reference tables, interchange guides</li>
+<li><strong>Temperature</strong>: 0.1</li>
+<li><strong>Use case</strong>: Parts counter staff looking up equivalent parts</li>
+</ul>
+<h3>Warranty Claim Helper</h3>
+<ul>
+<li><strong>System prompt focus</strong>: Guide users through warranty claim documentation requirements</li>
+<li><strong>Knowledge base</strong>: Warranty policies, claim forms, coverage terms by manufacturer</li>
+<li><strong>Temperature</strong>: 0.2</li>
+<li><strong>Use case</strong>: Service advisors preparing warranty submissions</li>
+</ul>
+<h3>Technical Bulletin Search</h3>
+<ul>
+<li><strong>System prompt focus</strong>: Find and summarize relevant TSBs and recalls for a given vehicle</li>
+<li><strong>Knowledge base</strong>: TSB database, recall notices, service campaigns</li>
+<li><strong>Temperature</strong>: 0.1</li>
+<li><strong>Use case</strong>: Technicians diagnosing recurring issues</li>
+</ul>
+<h3>Customer Communication Drafter</h3>
+<ul>
+<li><strong>System prompt focus</strong>: Draft professional customer communications for estimates, approvals, follow-ups</li>
+<li><strong>Knowledge base</strong>: Communication templates, company style guide</li>
+<li><strong>Temperature</strong>: 0.6</li>
+<li><strong>Use case</strong>: Service advisors writing customer-facing messages</li>
+</ul>
+<h2>Troubleshooting</h2>
+<h3>Assistant doesn&#39;t use the knowledge base</h3>
+<ul>
+<li>Verify the knowledge base is attached in the assistant settings</li>
+<li>Check that the knowledge base contains relevant documents (not empty)</li>
+<li>Try rephrasing your query to use terms that appear in the documents</li>
+<li>See <a href="knowledge-base-design-best-practices.md">Knowledge Base Design Best Practices</a> for document preparation tips</li>
+</ul>
+<h3>Responses are inconsistent</h3>
+<ul>
+<li>Lower the temperature setting (try 0.1 for factual tasks)</li>
+<li>Add more specific instructions to the system prompt about expected output format</li>
+<li>Include examples of good responses in the system prompt</li>
+</ul>
+<h3>Assistant ignores system prompt instructions</h3>
+<ul>
+<li>Check that the system prompt is saved (reopen the assistant settings to verify)</li>
+<li>Simplify the system prompt — conflicting instructions can cause the model to ignore some of them</li>
+<li>Move the most critical instructions to the beginning of the system prompt</li>
+<li>Ensure instructions are stated positively (&quot;always include part numbers&quot;) rather than only negatively (&quot;don&#39;t forget part numbers&quot;)</li>
+</ul>
+<h3>Assistant is too slow</h3>
+<ul>
+<li>Consider switching to a faster base model (see <a href="how-to-choose-the-right-ai-model.md">How to Choose the Right AI Model</a>)</li>
+<li>Reduce the attached knowledge base size — smaller, focused collections retrieve faster</li>
+<li>Shorten the system prompt if it&#39;s very long</li>
+</ul>
+<h2>Next Steps</h2>
+<ul>
+<li><a href="knowledge-base-design-best-practices.md">Knowledge Base Design Best Practices</a> — optimize the documents your assistants reference</li>
+<li><a href="how-to-choose-the-right-ai-model.md">How to Choose the Right AI Model</a> — pick the right base model for your assistant</li>
+<li><a href="team-collaboration-with-secureai.md">Team Collaboration with SecureAI</a> — share assistants and workflows across your organization</li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

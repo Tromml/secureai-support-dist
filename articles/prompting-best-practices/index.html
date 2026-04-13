@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Prompting Best Practices for SecureAI - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>Prompting Best Practices for SecureAI</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Best Practices </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span> <span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> prompting </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> best-practices </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> productivity </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> automotive </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> tips </span> </div> <article class="content" data-astro-cid-xw3clhsd><p>How you phrase your questions to SecureAI directly affects the quality of the answers you get back. This guide covers practical prompting techniques that help you get accurate, useful results -- whether you are looking up parts, analyzing documents, or researching repair procedures.</p>
+<p>These techniques apply to every SecureAI conversation. For domain-specific prompting (VIN lookups, OEM cross-referencing), see the related articles at the bottom of this page.</p>
+<h2>The Basics: Be Specific</h2>
+<p>The single most impactful thing you can do is be specific. Vague questions get vague answers.</p>
+<table>
+<thead>
+<tr>
+<th>Instead of...</th>
+<th>Try...</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&quot;What brake pads fit a Camry?&quot;</td>
+<td>&quot;What ceramic brake pads fit a 2023 Toyota Camry LE 2.5L? Include front and rear part numbers.&quot;</td>
+</tr>
+<tr>
+<td>&quot;Tell me about this part&quot;</td>
+<td>&quot;What vehicles is Dorman part #523-252 compatible with? Is it an OEM replacement or aftermarket alternative?&quot;</td>
+</tr>
+<tr>
+<td>&quot;How do I fix an AC problem?&quot;</td>
+<td>&quot;What are the diagnostic steps for a 2021 Ford F-150 3.5L EcoBoost with intermittent AC compressor clutch engagement?&quot;</td>
+</tr>
+</tbody></table>
+<p>Specificity means including:</p>
+<ul>
+<li><strong>Year, make, model, and trim</strong> when asking about vehicles</li>
+<li><strong>Engine size or option package</strong> when it affects parts fitment</li>
+<li><strong>Part numbers</strong> when you have them</li>
+<li><strong>Symptoms or conditions</strong> when asking about diagnostics</li>
+<li><strong>What you have already tried</strong> when troubleshooting</li>
+</ul>
+<h2>Structure Your Prompts</h2>
+<p>For complex questions, break them into clear parts. SecureAI handles structured requests better than long run-on sentences.</p>
+<p><strong>Structured prompt (good):</strong></p>
+<pre><code>I need help with a brake job quote for a customer.
+
+Vehicle: 2022 Honda Civic EX 1.5T
+Work requested: Front brake pads and rotors
+
+Please provide:
+1. Recommended part numbers (ceramic pads, OEM-equivalent rotors)
+2. Estimated labor time
+3. Any related items to inspect (calipers, hardware, brake fluid)
+</code></pre>
+<p><strong>Unstructured prompt (less effective):</strong></p>
+<pre><code>customer has a 2022 civic needs brakes what parts do I need and how long
+does it take and is there anything else I should look at while I&#39;m in there
+</code></pre>
+<p>Both prompts ask the same question, but the structured version produces a more organized, complete answer.</p>
+<h3>Use Lists and Bullet Points</h3>
+<p>When you need multiple pieces of information, list them explicitly:</p>
+<pre><code>For a 2024 Ram 1500 5.7L Hemi, I need:
+- Oil filter part number (Wix or Fram equivalent to Mopar)
+- Oil capacity with filter
+- Recommended oil weight
+- Drain plug torque spec
+</code></pre>
+<p>This prevents SecureAI from answering part of your question and forgetting the rest.</p>
+<h2>Give Context About Your Situation</h2>
+<p>SecureAI cannot see your shop, your inventory, or your customer&#39;s vehicle. The more relevant context you provide, the better the answer.</p>
+<p><strong>Context that helps:</strong></p>
+<ul>
+<li><strong>Your role</strong>: &quot;I&#39;m a parts counter specialist&quot; vs. &quot;I&#39;m a technician&quot; changes whether the answer focuses on part numbers and pricing or on installation procedures.</li>
+<li><strong>What you are trying to accomplish</strong>: &quot;I&#39;m building a quote&quot; vs. &quot;I&#39;m diagnosing a noise&quot; leads to different answer formats.</li>
+<li><strong>Constraints</strong>: &quot;The customer wants budget-friendly options&quot; or &quot;We only stock Dorman and Moog&quot; narrows the recommendations usefully.</li>
+<li><strong>What you already know</strong>: &quot;I&#39;ve already checked the TSBs and there&#39;s nothing relevant&quot; prevents SecureAI from suggesting something you have already ruled out.</li>
+</ul>
+<p><strong>Example with good context:</strong></p>
+<pre><code>I&#39;m a service advisor building a repair estimate. Customer complaint:
+clunking noise from front end over bumps on a 2020 Jeep Wrangler JL
+Unlimited Sahara 3.6L with 62,000 miles.
+
+Tech inspected and found worn front sway bar end links (both sides).
+No other suspension issues.
+
+I need aftermarket part numbers (Moog preferred) and estimated labor time
+for the quote.
+</code></pre>
+<h2>Use Follow-Up Questions</h2>
+<p>You do not need to get everything right in a single prompt. SecureAI remembers the conversation, so you can refine and dig deeper.</p>
+<p><strong>First prompt</strong>: &quot;What are the common causes of a P0300 random misfire on a 2019 Subaru Outback 2.5L?&quot;</p>
+<p><strong>Follow-up</strong>: &quot;The customer says the misfire is worse on cold starts and goes away after the engine warms up. Does that narrow it down?&quot;</p>
+<p><strong>Follow-up</strong>: &quot;What&#39;s the part number for the ignition coil if we want to replace all four as a set?&quot;</p>
+<p>Each follow-up builds on the previous answer without needing to restate the vehicle or problem. This conversational approach often reaches a better answer than trying to write one perfect prompt.</p>
+<h3>When to Start a New Conversation</h3>
+<p>Start a new conversation when:</p>
+<ul>
+<li>You are switching to a completely different vehicle or topic</li>
+<li>The conversation has gotten long and responses are slowing down</li>
+<li>You want SecureAI to start fresh without assumptions from earlier messages</li>
+</ul>
+<p>Stay in the same conversation when:</p>
+<ul>
+<li>You are asking follow-up questions about the same vehicle or repair</li>
+<li>You want to reference something SecureAI said earlier</li>
+<li>You are refining a parts list or quote</li>
+</ul>
+<h2>Working with Knowledge Bases</h2>
+<p>If your organization has uploaded knowledge bases (parts catalogs, technical bulletins, internal procedures), you can reference them directly in your prompts.</p>
+<p><strong>Activating a knowledge base</strong>: Select the relevant knowledge base from the interface before asking your question. SecureAI searches the knowledge base content and uses it to ground the answer.</p>
+<p><strong>Prompting with knowledge bases active:</strong></p>
+<pre><code>Using our Dorman chassis catalog, what is the control arm part number
+for a 2021 Toyota RAV4 LE front lower? Include any related hardware kits.
+</code></pre>
+<p>Mentioning the knowledge base by name in your prompt is not strictly required (selection in the UI is what matters), but it can help SecureAI focus on the right source when multiple knowledge bases are active.</p>
+<p><strong>When knowledge base answers seem wrong:</strong></p>
+<ul>
+<li>Check that you selected the correct knowledge base</li>
+<li>Try rephrasing with more specific terms that match how the catalog describes the part</li>
+<li>The catalog may use different terminology (e.g., &quot;lower control arm assembly&quot; vs. &quot;front lower arm&quot;)</li>
+</ul>
+<h2>Prompting for Specific Tasks</h2>
+<h3>Parts Lookup</h3>
+<p>Include the full vehicle application and specify what you need:</p>
+<pre><code>Part number for rear brake rotors on a 2023 Kia Telluride SX AWD.
+Need: Centric or DuraGo equivalent to OEM. Include rotor diameter
+and minimum thickness spec.
+</code></pre>
+<h3>Repair Procedures</h3>
+<p>State the specific job and ask for the details you need:</p>
+<pre><code>Walk me through the procedure for replacing the timing chain on a
+2018 Chevy Equinox 1.5T (L2Y engine). Include:
+- Special tools needed
+- Critical torque specs
+- Any TSBs related to this repair
+- Common mistakes to avoid
+</code></pre>
+<h3>Quote Building</h3>
+<p>Tell SecureAI you are building a quote so it formats the response accordingly:</p>
+<pre><code>I&#39;m building a customer quote. Format the response as a line-item list.
+
+Vehicle: 2022 Nissan Altima SR 2.5L, 45,000 miles
+Service: 60,000-mile major service
+
+Include all manufacturer-recommended maintenance items for the
+60k interval with part numbers (Wix filters, NGK plugs, OEM fluids).
+</code></pre>
+<h3>Comparing Parts or Options</h3>
+<p>Ask for a comparison format when evaluating alternatives:</p>
+<pre><code>Compare ceramic vs. semi-metallic brake pads for a 2024 Ford Explorer
+ST 3.0L EcoBoost. Cover:
+- Noise level
+- Dust production
+- Rotor wear
+- Typical price difference
+- Best fit for this vehicle&#39;s use case (daily driver, some towing)
+</code></pre>
+<h2>Common Mistakes to Avoid</h2>
+<h3>Being Too Vague</h3>
+<p>&quot;What do I need for a brake job?&quot; -- SecureAI does not know the vehicle, whether you mean pads only or a full brake overhaul, or what brands you stock.</p>
+<h3>Asking Multiple Unrelated Questions</h3>
+<p>&quot;What brake pads fit a 2023 Camry, also what&#39;s the oil capacity on a 2019 F-150, and can you explain how to program a key fob for a Dodge?&quot; -- Split these into separate messages or conversations.</p>
+<h3>Assuming SecureAI Remembers Previous Conversations</h3>
+<p>Each new conversation starts fresh. If you looked up a part yesterday and start a new conversation today, re-state the vehicle and context.</p>
+<h3>Not Reviewing the Answer</h3>
+<p>SecureAI is a tool, not a parts database with guaranteed accuracy. Always verify part numbers against your catalog or ordering system before quoting a customer. Cross-check fitment for critical safety components (brakes, steering, suspension).</p>
+<h3>Ignoring the Source</h3>
+<p>When SecureAI cites a knowledge base document, check the source. If the answer comes from a 2023 catalog and you need current pricing or availability, the information may be outdated.</p>
+<h2>Quick Reference: Prompt Formula</h2>
+<p>For most automotive queries, this formula produces good results:</p>
+<pre><code>[Vehicle: Year Make Model Trim Engine]
+[Task: What you&#39;re trying to accomplish]
+[Details: Specific requirements, constraints, preferences]
+[Format: How you want the answer structured]
+</code></pre>
+<p><strong>Example applying the formula:</strong></p>
+<pre><code>Vehicle: 2021 Toyota Tacoma TRD Off-Road 3.5L V6
+Task: I need to quote a customer for a full front brake job
+Details: Customer wants quality parts (not economy), we prefer
+Akebono or Centric brands. Include hardware if sold separately.
+Format: Line-item list with part numbers, quantities, and
+estimated labor time.
+</code></pre>
+<h2>Related Articles</h2>
+<ul>
+<li><a href="/articles/getting-started">Getting Started with SecureAI</a> -- first-time setup and basic usage</li>
+<li><a href="/articles/knowledge-base-design-best-practices">Knowledge Base Design Best Practices</a> -- organizing your documents for better AI answers</li>
+<li><a href="/articles/vin-based-parts-lookup">VIN-Based Parts Lookup</a> -- using VINs for precise fitment</li>
+<li><a href="/articles/understanding-token-usage-and-costs">Understanding Token Usage and Costs</a> -- how prompt length affects usage</li>
+<li><a href="/articles/multi-model-conversations">Multi-Model Conversations</a> -- choosing the right model for your task</li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

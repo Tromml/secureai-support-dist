@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Configuring Data Retention Policies - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>Configuring Data Retention Policies</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> admin </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span> <span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> data-retention </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> compliance </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> security </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> administration </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> audit-logs </span> </div> <article class="content" data-astro-cid-xw3clhsd><p>Data retention policies control how long SecureAI stores chat history, uploaded documents, and audit logs. Configuring these policies helps your organization meet compliance requirements and manage storage costs.</p>
+<h2>Prerequisites</h2>
+<p>Before you begin, ensure you have:</p>
+<ul>
+<li><strong>Admin access</strong> to your SecureAI instance.</li>
+<li>An understanding of your organization&#39;s <strong>data retention requirements</strong> (industry regulations, internal policies, or customer contracts).</li>
+<li>Knowledge of which <strong>data categories</strong> your organization needs to retain and for how long.</li>
+</ul>
+<h2>Data Categories</h2>
+<p>SecureAI manages retention for three categories of data:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>What It Includes</th>
+<th>Default Retention</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Chat history</strong></td>
+<td>User conversations, AI responses, conversation metadata</td>
+<td>90 days</td>
+</tr>
+<tr>
+<td><strong>Uploaded documents</strong></td>
+<td>PDFs, images, spreadsheets, and other files uploaded for analysis</td>
+<td>180 days</td>
+</tr>
+<tr>
+<td><strong>Audit logs</strong></td>
+<td>Admin actions, login events, permission changes, API access records</td>
+<td>365 days</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Important</strong>: Reducing retention periods deletes data permanently once the policy takes effect. This action cannot be undone.</p>
+</blockquote>
+<h2>Step 1: Access Retention Settings</h2>
+<ol>
+<li>Log in to SecureAI as an administrator.</li>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Data &amp; Privacy</strong>.</li>
+<li>Select the <strong>Retention Policies</strong> tab.</li>
+</ol>
+<h2>Step 2: Configure Chat History Retention</h2>
+<p>Chat history includes all user conversations and AI responses. Consider your compliance needs when setting this value.</p>
+<ol>
+<li>Under <strong>Chat History</strong>, select a retention period:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>30 days</strong></td>
+<td>Minimum retention. Suitable for organizations with strict data minimization policies.</td>
+</tr>
+<tr>
+<td><strong>90 days</strong></td>
+<td>Default. Balances usability (users can reference recent conversations) with data minimization.</td>
+</tr>
+<tr>
+<td><strong>180 days</strong></td>
+<td>Extended retention for organizations that need longer access to conversation history.</td>
+</tr>
+<tr>
+<td><strong>365 days</strong></td>
+<td>Maximum standard retention. Common for regulated industries.</td>
+</tr>
+<tr>
+<td><strong>Custom</strong></td>
+<td>Enter a specific number of days (minimum 7, maximum 730).</td>
+</tr>
+<tr>
+<td><strong>Indefinite</strong></td>
+<td>Chat history is retained until manually deleted. Not recommended for compliance-sensitive environments.</td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li>Optionally, enable <strong>User self-deletion</strong> to allow individual users to delete their own chat history before the retention period expires.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Compliance note</strong>: Some automotive industry regulations require that customer interaction records be retained for a minimum period. Consult your compliance team before setting retention below your regulatory minimum.</p>
+</blockquote>
+<h2>Step 3: Configure Document Retention</h2>
+<p>Uploaded documents may contain sensitive data such as VIN records, parts catalogs, or customer information.</p>
+<ol>
+<li>Under <strong>Uploaded Documents</strong>, select a retention period:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>30 days</strong></td>
+<td>Short retention for transient analysis. Documents are deleted 30 days after upload.</td>
+</tr>
+<tr>
+<td><strong>90 days</strong></td>
+<td>Suitable for project-based work where documents are referenced briefly.</td>
+</tr>
+<tr>
+<td><strong>180 days</strong></td>
+<td>Default. Covers most use cases where documents are referenced across multiple sessions.</td>
+</tr>
+<tr>
+<td><strong>365 days</strong></td>
+<td>Extended retention for long-running projects or regulatory requirements.</td>
+</tr>
+<tr>
+<td><strong>Custom</strong></td>
+<td>Enter a specific number of days (minimum 7, maximum 730).</td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li>Choose a <strong>deletion scope</strong>:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>File and embeddings</strong></td>
+<td>Deletes the uploaded file and all vector embeddings generated from it. This is the recommended default.</td>
+</tr>
+<tr>
+<td><strong>File only</strong></td>
+<td>Deletes the original file but retains vector embeddings for continued search functionality.</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong>: When documents are deleted, any conversations that referenced those documents will still exist but the inline document previews and re-download links will no longer work.</p>
+</blockquote>
+<h2>Step 4: Configure Audit Log Retention</h2>
+<p>Audit logs are critical for security investigations and compliance audits. Consider retaining these for the longest period your organization requires.</p>
+<ol>
+<li>Under <strong>Audit Logs</strong>, select a retention period:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>90 days</strong></td>
+<td>Minimum retention for audit logs.</td>
+</tr>
+<tr>
+<td><strong>180 days</strong></td>
+<td>Suitable for organizations with moderate audit requirements.</td>
+</tr>
+<tr>
+<td><strong>365 days</strong></td>
+<td>Default. Meets most compliance frameworks (SOC 2, ISO 27001).</td>
+</tr>
+<tr>
+<td><strong>730 days</strong></td>
+<td>Extended retention for highly regulated industries.</td>
+</tr>
+<tr>
+<td><strong>Custom</strong></td>
+<td>Enter a specific number of days (minimum 90, maximum 2555).</td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li>Optionally, enable <strong>Audit log export</strong> to automatically export logs to an external system (SIEM, S3 bucket, or log aggregator) before deletion. See <a href="#exporting-audit-logs">Exporting Audit Logs</a> below.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Important</strong>: Audit logs have a minimum retention of 90 days regardless of the configured value. This protects against accidental misconfiguration that could compromise incident investigation.</p>
+</blockquote>
+<h2>Step 5: Review and Apply</h2>
+<ol>
+<li>After configuring all three categories, review the <strong>Policy Summary</strong> at the bottom of the page. It shows:<ul>
+<li>Current retention period for each category.</li>
+<li>Estimated data affected if a retention period was shortened.</li>
+<li>Next scheduled cleanup run.</li>
+</ul>
+</li>
+<li>Click <strong>Apply Retention Policies</strong>.</li>
+<li>A confirmation dialog will appear showing exactly what data will be affected. Type the confirmation phrase to proceed.</li>
+</ol>
+<blockquote>
+<p><strong>Warning</strong>: Shortened retention policies take effect at the next scheduled cleanup (runs daily at 02:00 UTC by default). Data older than the new retention period will be permanently deleted.</p>
+</blockquote>
+<h2>Exporting Audit Logs</h2>
+<p>To retain audit data beyond the configured retention period, set up automatic export:</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Data &amp; Privacy &gt; Retention Policies</strong>.</li>
+<li>Under <strong>Audit Logs</strong>, click <strong>Configure Export</strong>.</li>
+<li>Select an export destination:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Destination</th>
+<th>Configuration Required</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>S3-compatible storage</strong></td>
+<td>Bucket name, region, access key, secret key</td>
+</tr>
+<tr>
+<td><strong>SIEM integration</strong></td>
+<td>Endpoint URL, authentication token, format (JSON or CEF)</td>
+</tr>
+<tr>
+<td><strong>Webhook</strong></td>
+<td>Endpoint URL, authentication header</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>Set the <strong>export frequency</strong> (daily or weekly).</li>
+<li>Click <strong>Test Connection</strong> to verify the destination is reachable.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>Exported logs are sent before deletion occurs, ensuring no data is lost during the retention cleanup process.</p>
+<h2>Compliance Considerations</h2>
+<h3>Automotive Aftermarket Regulations</h3>
+<p>If your organization handles customer vehicle data, parts information, or service records through SecureAI:</p>
+<ul>
+<li><strong>Customer data retention</strong>: Some jurisdictions require customer interaction records to be retained for a minimum of 1-3 years. Set chat history and document retention accordingly.</li>
+<li><strong>Right to erasure</strong>: Even with long retention periods, individual data subject requests (e.g., GDPR Article 17) may require earlier deletion. The <strong>User self-deletion</strong> feature can help fulfill these requests.</li>
+<li><strong>Audit trail requirements</strong>: Many compliance frameworks require immutable audit trails. Use the audit log export feature to archive logs to a system with immutable storage.</li>
+</ul>
+<h3>Per-User Overrides</h3>
+<p>If different user groups have different compliance requirements (e.g., customer-facing roles vs. internal analysts):</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Data &amp; Privacy &gt; Retention Policies</strong>.</li>
+<li>Click <strong>Add Override</strong>.</li>
+<li>Select a <strong>user role</strong> or <strong>user group</strong>.</li>
+<li>Configure retention periods specific to that group.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>Per-user overrides take precedence over the global retention policy.</p>
+<h2>Verifying Your Configuration</h2>
+<p>After applying retention policies:</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Data &amp; Privacy &gt; Retention Policies</strong>.</li>
+<li>Check the <strong>Last Cleanup Run</strong> timestamp and <strong>Records Affected</strong> count.</li>
+<li>Review the <strong>Retention Policy Audit Log</strong> (under <strong>Audit Logs &gt; Filter &gt; Retention Policy Changes</strong>) to confirm your changes were recorded.</li>
+</ol>
+<h2>Troubleshooting</h2>
+<h3>Data is not being deleted after the retention period</h3>
+<p>The cleanup process runs daily at 02:00 UTC. If data persists beyond the expected date:</p>
+<ul>
+<li>Verify the policy is set to <strong>Active</strong> (not Draft).</li>
+<li>Check that the cleanup scheduler is running in <strong>Admin Panel &gt; System &gt; Background Jobs</strong>.</li>
+<li>If using per-user overrides, confirm the override is not setting a longer retention period for the affected users.</li>
+</ul>
+<h3>&quot;Insufficient permissions&quot; when configuring retention</h3>
+<p>Only users with the <strong>Super Admin</strong> or <strong>Data Privacy Officer</strong> role can modify retention policies. Check your role assignment in <strong>Admin Panel &gt; Users &gt; Your Profile</strong>.</p>
+<h3>Exported audit logs are not arriving</h3>
+<ul>
+<li>Verify the export destination credentials in <strong>Retention Policies &gt; Audit Logs &gt; Configure Export</strong>.</li>
+<li>Click <strong>Test Connection</strong> to diagnose connectivity issues.</li>
+<li>Check that the destination system is not rejecting payloads due to size limits or format mismatches.</li>
+</ul>
+<h2>Related Articles</h2>
+<ul>
+<li><a href="/security/data-handling">How SecureAI Handles Your Data</a></li>
+<li><a href="/admin/audit-logging-setup">Audit Logging Setup</a></li>
+<li><a href="/admin/user-management">User Management</a></li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

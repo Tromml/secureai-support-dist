@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Building Custom Tool Integrations - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>Building Custom Tool Integrations</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Integrations </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span> <span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Integrations </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> tools </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> API </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> custom-tools </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> administration </span> </div> <article class="content" data-astro-cid-xw3clhsd><p>Custom tools let your SecureAI assistants call external APIs, query internal databases, and perform actions beyond text generation. This guide covers how to create, configure, test, and deploy custom tool integrations in your SecureAI OpenWebUI instance.</p>
+<h2>Prerequisites</h2>
+<p>Before you begin, ensure you have:</p>
+<ul>
+<li><strong>Admin access</strong> to your SecureAI instance.</li>
+<li>The <strong>external API or service</strong> you want to integrate is accessible from your SecureAI deployment (network, firewall, DNS).</li>
+<li><strong>API credentials</strong> (API key, OAuth token, or service account) for the target service.</li>
+<li>Basic familiarity with <strong>Python</strong> -- custom tools are written as Python functions.</li>
+</ul>
+<h2>How Custom Tools Work</h2>
+<p>OpenWebUI tools are Python functions that the assistant can invoke during a conversation. When a user asks a question that requires external data, the assistant calls the tool, receives the result, and incorporates it into its response.</p>
+<p>The flow works like this:</p>
+<ol>
+<li>An admin creates a tool with a Python function and a description of what it does.</li>
+<li>The admin assigns the tool to one or more assistants (models).</li>
+<li>A user asks a question that matches the tool&#39;s purpose.</li>
+<li>The assistant decides to call the tool based on the description and the user&#39;s query.</li>
+<li>The tool function executes, calls the external API, and returns data.</li>
+<li>The assistant uses the returned data in its response to the user.</li>
+</ol>
+<p>Tools are the primary way to give assistants access to live, organization-specific data -- parts inventory, shop management systems, pricing databases, or internal knowledge bases.</p>
+<h2>Step 1: Create a New Tool</h2>
+<ol>
+<li>Log in to SecureAI as an administrator.</li>
+<li>Navigate to <strong>Workspace</strong> &gt; <strong>Tools</strong> in the left sidebar.</li>
+<li>Click <strong>+ Create a New Tool</strong>.</li>
+<li>Fill in the tool metadata:<ul>
+<li><strong>Name</strong>: A short, descriptive name (e.g., &quot;Parts Inventory Lookup&quot;).</li>
+<li><strong>Description</strong>: Explain what the tool does in plain language. The assistant reads this description to decide when to use the tool, so be specific. Example: &quot;Looks up current inventory levels and pricing for a given part number in the company parts database.&quot;</li>
+<li><strong>Icon</strong> (optional): Choose an icon for visual identification.</li>
+</ul>
+</li>
+</ol>
+<h2>Step 2: Write the Tool Function</h2>
+<p>The tool editor opens with a Python template. Each tool is a Python class with one or more methods that the assistant can call.</p>
+<h3>Basic Structure</h3>
+<pre><code class="language-python">class Tools:
+    def __init__(self):
+        &quot;&quot;&quot;Initialize the tool. Set up any configuration here.&quot;&quot;&quot;
+        self.api_base_url = &quot;https://api.example.com/v1&quot;
+
+    def lookup_part(self, part_number: str) -&gt; str:
+        &quot;&quot;&quot;
+        Look up inventory and pricing for a specific part number.
+
+        :param part_number: The OEM or aftermarket part number to search.
+        :return: Inventory count and current price, or an error message.
+        &quot;&quot;&quot;
+        import requests
+
+        try:
+            response = requests.get(
+                f&quot;{self.api_base_url}/parts/{part_number}&quot;,
+                headers={&quot;Authorization&quot;: f&quot;Bearer {self.valves.api_key}&quot;},
+                timeout=10
+            )
+            response.raise_for_status()
+            data = response.json()
+            return (
+                f&quot;Part: {data[&#39;name&#39;]}\n&quot;
+                f&quot;Part Number: {data[&#39;part_number&#39;]}\n&quot;
+                f&quot;In Stock: {data[&#39;quantity&#39;]}\n&quot;
+                f&quot;Price: ${data[&#39;price&#39;]:.2f}\n&quot;
+                f&quot;Location: {data[&#39;warehouse&#39;]}&quot;
+            )
+        except requests.exceptions.Timeout:
+            return &quot;Error: The parts database did not respond in time. Try again.&quot;
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 404:
+                return f&quot;Part number {part_number} was not found in the database.&quot;
+            return f&quot;Error querying parts database: {e}&quot;
+</code></pre>
+<h3>Key Rules for Tool Functions</h3>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Docstring required</strong></td>
+<td>Every method must have a docstring. The assistant uses it to understand when and how to call the tool.</td>
+</tr>
+<tr>
+<td><strong>Type hints required</strong></td>
+<td>Parameters and return types must have type annotations. The assistant uses these to format its tool calls.</td>
+</tr>
+<tr>
+<td><strong>Return a string</strong></td>
+<td>Tool methods should return a string. The assistant incorporates the returned text into its response.</td>
+</tr>
+<tr>
+<td><strong>Handle errors</strong></td>
+<td>Always catch exceptions and return a user-friendly error message. An unhandled exception breaks the conversation flow.</td>
+</tr>
+<tr>
+<td><strong>Imports inside methods</strong></td>
+<td>Place <code>import</code> statements inside the method body, not at the top of the file. This avoids import failures blocking tool registration.</td>
+</tr>
+<tr>
+<td><strong>Timeout external calls</strong></td>
+<td>Always set a timeout on HTTP requests. A hanging request blocks the conversation indefinitely.</td>
+</tr>
+</tbody></table>
+<h2>Step 3: Configure Valves (Settings)</h2>
+<p>Valves are configurable settings that admins can change without editing the tool code. Use valves for API keys, base URLs, feature flags, and other values that differ between environments.</p>
+<h3>Defining Valves</h3>
+<p>Add a <code>Valves</code> inner class to your tool:</p>
+<pre><code class="language-python">from pydantic import BaseModel, Field
+
+class Tools:
+    class Valves(BaseModel):
+        api_key: str = Field(default=&quot;&quot;, description=&quot;API key for the parts database&quot;)
+        api_base_url: str = Field(
+            default=&quot;https://api.example.com/v1&quot;,
+            description=&quot;Base URL of the parts API&quot;
+        )
+        timeout_seconds: int = Field(default=10, description=&quot;Request timeout in seconds&quot;)
+
+    def __init__(self):
+        self.valves = self.Valves()
+
+    def lookup_part(self, part_number: str) -&gt; str:
+        &quot;&quot;&quot;Look up inventory and pricing for a specific part number.
+
+        :param part_number: The OEM or aftermarket part number to search.
+        :return: Inventory count and current price.
+        &quot;&quot;&quot;
+        import requests
+
+        response = requests.get(
+            f&quot;{self.valves.api_base_url}/parts/{part_number}&quot;,
+            headers={&quot;Authorization&quot;: f&quot;Bearer {self.valves.api_key}&quot;},
+            timeout=self.valves.timeout_seconds
+        )
+        response.raise_for_status()
+        data = response.json()
+        return f&quot;Part: {data[&#39;name&#39;]} | Stock: {data[&#39;quantity&#39;]} | Price: ${data[&#39;price&#39;]:.2f}&quot;
+</code></pre>
+<h3>Setting Valve Values</h3>
+<p>After saving the tool, configure valve values:</p>
+<ol>
+<li>In the <strong>Tools</strong> list, click the gear icon next to your tool.</li>
+<li>Fill in the valve fields (API key, base URL, etc.).</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>Valve values are stored securely and are not visible to end users. They are only accessible to administrators through the tool settings panel.</p>
+<h2>Step 4: Assign the Tool to an Assistant</h2>
+<p>Tools are not available to users until assigned to a model or assistant.</p>
+<ol>
+<li>Navigate to <strong>Workspace</strong> &gt; <strong>Models</strong>.</li>
+<li>Select the assistant (model) you want to equip with the tool.</li>
+<li>Under the <strong>Tools</strong> section, toggle on your new tool.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>The assistant can now call the tool during conversations. Users do not need to take any action -- the assistant decides when to invoke the tool based on the conversation context and the tool&#39;s description.</p>
+<h3>Controlling Tool Availability</h3>
+<ul>
+<li><strong>Per-model assignment</strong>: Assign tools only to assistants that need them. A general-purpose assistant may not need access to your inventory API.</li>
+<li><strong>Multiple tools per assistant</strong>: An assistant can have several tools. It will choose the appropriate one based on the user&#39;s query.</li>
+<li><strong>Same tool on multiple assistants</strong>: You can assign the same tool to multiple assistants.</li>
+</ul>
+<h2>Step 5: Test the Tool</h2>
+<p>Test your tool before making it available to users.</p>
+<h3>Manual Testing in the Tool Editor</h3>
+<ol>
+<li>Open the tool in <strong>Workspace</strong> &gt; <strong>Tools</strong>.</li>
+<li>Use the <strong>Test</strong> panel (if available) to call the function with sample inputs.</li>
+<li>Verify the output matches your expectations.</li>
+</ol>
+<h3>Conversation Testing</h3>
+<ol>
+<li>Start a new conversation with the assistant that has the tool assigned.</li>
+<li>Ask a question that should trigger the tool. For a parts lookup tool, try: &quot;What is the current inventory for part number 12345-AB678?&quot;</li>
+<li>Verify that:<ul>
+<li>The assistant calls the tool (you may see a tool call indicator in the UI).</li>
+<li>The response includes data from the external API, not a generic answer.</li>
+<li>Error cases are handled gracefully (try an invalid part number, or a number that does not exist).</li>
+</ul>
+</li>
+</ol>
+<h3>Common Testing Issues</h3>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Assistant does not call the tool</td>
+<td>Tool description is too vague or does not match the user&#39;s query</td>
+<td>Rewrite the description to be more specific about when the tool should be used</td>
+</tr>
+<tr>
+<td>&quot;Tool execution error&quot; in response</td>
+<td>Unhandled exception in the tool function</td>
+<td>Check the tool logs in <strong>Admin</strong> &gt; <strong>Logs</strong>, fix the exception, and re-save</td>
+</tr>
+<tr>
+<td>Tool returns empty or unexpected data</td>
+<td>API response format does not match what the code expects</td>
+<td>Print or log the raw API response, then update the parsing logic</td>
+</tr>
+<tr>
+<td>Timeout errors</td>
+<td>External API is slow or unreachable</td>
+<td>Check network connectivity from the SecureAI server; increase the timeout value in valves</td>
+</tr>
+<tr>
+<td>Valve values not applied</td>
+<td>Valves were not saved after editing</td>
+<td>Re-open valve settings, confirm values are filled in, and click Save</td>
+</tr>
+</tbody></table>
+<h2>Practical Examples for Automotive Aftermarket</h2>
+<h3>Parts Inventory Lookup</h3>
+<p>Connect to your warehouse or distributor API to let the assistant check real-time stock levels, pricing, and warehouse locations for specific part numbers.</p>
+<h3>VIN Decoder Integration</h3>
+<p>Integrate a VIN decoding service (such as NHTSA vPIC or a commercial VIN API) so the assistant can decode a VIN and return year, make, model, engine, and trim details without the user leaving the conversation.</p>
+<h3>Repair Procedure Lookup</h3>
+<p>Connect to your repair information provider (e.g., ALLDATA, Mitchell, Identifix) to let the assistant retrieve OEM repair procedures, torque specs, or TSBs for a specific vehicle and system.</p>
+<h3>Shop Management System Query</h3>
+<p>Build a read-only integration with your SMS (Mitchell 1, CCC ONE, Audatex) to let the assistant pull repair order status, customer history, or estimate details by RO number.</p>
+<h3>Parts Cross-Reference</h3>
+<p>Integrate a parts cross-reference database to let the assistant map between OEM and aftermarket part numbers across manufacturers (Dorman, Standard Motor Products, Denso, etc.).</p>
+<h2>Security Considerations</h2>
+<p>Custom tools execute server-side code and connect to external services. Follow these guidelines:</p>
+<ul>
+<li><strong>Never hardcode credentials</strong> in tool code. Always use valves for API keys, tokens, and secrets.</li>
+<li><strong>Use read-only API access</strong> where possible. If the integration only needs to look up data, do not grant write permissions.</li>
+<li><strong>Validate inputs</strong> before passing them to external APIs. Sanitize part numbers, VINs, and other user-provided values to prevent injection attacks.</li>
+<li><strong>Set timeouts</strong> on all external HTTP calls. A missing timeout can hang the conversation and consume server resources.</li>
+<li><strong>Limit tool scope</strong> to what is needed. Do not create a single tool that can access everything -- split into focused tools with clear purposes.</li>
+<li><strong>Review tool code</strong> before deploying. Have a second administrator review custom tool code, especially if it connects to sensitive systems.</li>
+<li><strong>Monitor tool usage</strong> in the admin logs. Watch for unexpected call patterns that might indicate misuse.</li>
+</ul>
+<h2>Troubleshooting</h2>
+<h3>Tool Does Not Appear in Assistant Settings</h3>
+<ul>
+<li>Confirm the tool was saved successfully (check for syntax errors in the code).</li>
+<li>Refresh the page -- the tools list may be cached.</li>
+<li>Ensure you have admin permissions.</li>
+</ul>
+<h3>Tool Calls Fail Silently</h3>
+<ul>
+<li>Check <strong>Admin</strong> &gt; <strong>Logs</strong> for error messages from the tool execution.</li>
+<li>Verify valve values are configured (empty API key is a common cause).</li>
+<li>Test the external API independently (e.g., with <code>curl</code>) to confirm it is reachable from the server.</li>
+</ul>
+<h3>Assistant Calls the Wrong Tool</h3>
+<ul>
+<li>Review the descriptions of all tools assigned to the assistant. Overlapping or vague descriptions cause the model to pick the wrong one.</li>
+<li>Make each tool&#39;s description specific about the type of query it handles.</li>
+</ul>
+<h3>Rate Limiting from External APIs</h3>
+<ul>
+<li>Add rate limiting logic in the tool function (e.g., track call count and return a cached result if the limit is near).</li>
+<li>Consider caching frequently requested data to reduce API calls.</li>
+<li>Monitor your API usage dashboard for the external service.</li>
+</ul>
+<h2>Next Steps</h2>
+<ul>
+<li>Review the <a href="../articles/shop-management-system-integration.md">Shop Management System Integration</a> article for workflow context on connecting SecureAI with SMS platforms.</li>
+<li>Check the <a href="../articles/parts-ordering-platform-integration.md">Parts Ordering Platform Integration</a> article for context on parts ordering workflows.</li>
+<li>Review the API keys article for managing the credentials your tools consume.</li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

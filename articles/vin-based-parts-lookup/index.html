@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>VIN-Based Parts Lookup with SecureAI - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>VIN-Based Parts Lookup with SecureAI</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Best Practices </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span>  </div> <article class="content" data-astro-cid-xw3clhsd><p>SecureAI can decode a Vehicle Identification Number (VIN) and use it to narrow parts searches to the exact year, make, model, engine, and trim. This guide covers how to structure your prompts, what to expect in the results, and how to handle common edge cases.</p>
+<h2>Why Use a VIN for Parts Lookup?</h2>
+<p>A VIN eliminates guesswork. Instead of searching by year/make/model and hoping you have the right submodel, the VIN tells SecureAI exactly which vehicle you are working on. This matters most when:</p>
+<ul>
+<li>A part varies by engine code, transmission type, or production date.</li>
+<li>The customer is unsure of the exact trim level.</li>
+<li>You need to cross-reference OEM and aftermarket part numbers for a specific application.</li>
+</ul>
+<h2>Basic VIN Lookup</h2>
+<p>Paste the full 17-character VIN and ask for the part you need.</p>
+<p><strong>Prompt:</strong></p>
+<pre><code>VIN: 1FTFW1E88NFA12345
+I need the front brake rotor for this vehicle. Give me the OEM part number
+and any compatible aftermarket alternatives.
+</code></pre>
+<p>SecureAI will:</p>
+<ol>
+<li>Decode the VIN to identify the vehicle (e.g., 2022 Ford F-150 XLT, 3.5L EcoBoost, 4WD).</li>
+<li>Look up the front brake rotor for that specific application.</li>
+<li>Return the OEM part number and cross-referenced aftermarket options with fitment notes.</li>
+</ol>
+<h2>Prompt Patterns That Work</h2>
+<h3>Single Part by VIN</h3>
+<pre><code>VIN: [17-char VIN]
+What is the [part name] for this vehicle?
+</code></pre>
+<h3>Multiple Parts for One VIN</h3>
+<pre><code>VIN: [17-char VIN]
+I need the following parts for this vehicle:
+- Front brake pads
+- Front brake rotors
+- Brake caliper hardware kit
+List OEM and aftermarket options for each.
+</code></pre>
+<h3>VIN with Specific Constraints</h3>
+<pre><code>VIN: [17-char VIN]
+I need an oil filter for this vehicle. Only show me options from
+Wix, Mann, or Purolator.
+</code></pre>
+<h3>VIN Comparison Across Vehicles</h3>
+<pre><code>I have two vehicles:
+VIN 1: 1FTFW1E88NFA12345
+VIN 2: 1FTFW1E88NFA67890
+Do they use the same serpentine belt? If not, list the correct part
+for each.
+</code></pre>
+<h2>Reading Your Results</h2>
+<p>SecureAI returns structured information for each part found. Here is what to look for:</p>
+<ul>
+<li><strong>OEM Part Number</strong>: The manufacturer&#39;s original part number. Use this as your primary reference.</li>
+<li><strong>Aftermarket Cross-References</strong>: Equivalent parts from aftermarket brands, with the cross-reference source noted.</li>
+<li><strong>Fitment Notes</strong>: Any conditions that affect compatibility (e.g., &quot;4WD only&quot;, &quot;production date before 03/2022&quot;, &quot;requires heavy-duty option package&quot;).</li>
+<li><strong>Confidence Indicator</strong>: SecureAI may flag results as &quot;verified&quot; (exact match in the database) or &quot;probable&quot; (inferred from similar applications). Always double-check &quot;probable&quot; matches against your catalog.</li>
+</ul>
+<h2>Common Issues and Fixes</h2>
+<h3>&quot;I cannot identify this VIN&quot;</h3>
+<ul>
+<li>Verify the VIN is exactly 17 characters with no extra spaces or typos.</li>
+<li>Check that you are using the letter O, not the number 0 (or vice versa). VINs do not contain I, O, or Q.</li>
+<li>If the vehicle is pre-1981, VINs may be shorter. Provide the year, make, and model alongside the VIN.</li>
+</ul>
+<h3>Results Do Not Match the Vehicle</h3>
+<ul>
+<li>The VIN may decode correctly but the vehicle was modified after production. Include known modifications in your prompt: &quot;VIN: ... This truck has a 6.2L engine swap from a Raptor.&quot;</li>
+<li>Some fleet vehicles have non-standard configurations. Add context if you know the vehicle deviates from factory spec.</li>
+</ul>
+<h3>Too Many or Too Few Results</h3>
+<ul>
+<li>If SecureAI returns too many options, add constraints: brand preferences, price range, or &quot;OEM equivalent quality only.&quot;</li>
+<li>If SecureAI returns nothing, broaden the request: &quot;What brake rotors fit a 2022 F-150 3.5L EcoBoost 4WD?&quot; (without the VIN) to see if the issue is VIN decoding or parts data coverage.</li>
+</ul>
+<h3>Partial VIN</h3>
+<p>If you only have a partial VIN (common when reading from a damaged plate or a work order):</p>
+<pre><code>Partial VIN: 1FTFW1E88N******
+I know this is a 2022 Ford F-150. Can you identify the trim and engine
+from what is available, or tell me what additional characters I need?
+</code></pre>
+<h2>Tips for Best Results</h2>
+<ul>
+<li><strong>Always use the full VIN</strong> when available. Year/make/model lookups work, but VIN lookups are more precise.</li>
+<li><strong>One VIN per conversation thread</strong> keeps context clean. If you switch vehicles, start a new conversation or clearly state you are changing vehicles.</li>
+<li><strong>Ask for fitment verification</strong> when the part is safety-critical: &quot;Confirm this pad set is correct for my VIN before I order.&quot;</li>
+<li><strong>Upload the work order or estimate</strong> if you have it as a PDF. SecureAI can extract VINs and parts lists from uploaded documents and cross-reference them.</li>
+<li><strong>Combine with image upload</strong>: If you are unsure of the part name, photograph the old part and upload it alongside the VIN. SecureAI can use visual identification together with VIN data.</li>
+</ul>
+<h2>Related Topics</h2>
+<ul>
+<li>Basic parts lookup queries</li>
+<li>Cross-referencing OEM part numbers across manufacturers</li>
+<li>Uploading documents for analysis</li>
+<li>Interpreting compatibility results</li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SecureAI Security Architecture - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>SecureAI Security Architecture</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Security &amp; Compliance </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span> <span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> security </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> architecture </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> encryption </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> data-protection </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> infrastructure </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> model-providers </span> </div> <article class="content" data-astro-cid-xw3clhsd><p>SecureAI&#39;s security architecture is designed to protect automotive aftermarket data at every layer — from the browser to the database to external AI model providers. This article explains the technical security controls, encryption standards, storage architecture, and data flow protections that secure your organization&#39;s information.</p>
+<h2>Architecture Overview</h2>
+<p>SecureAI runs on Google Cloud Platform (GCP) Cloud Run and follows a layered security model:</p>
+<pre><code>┌─────────────────────────────────────────────────┐
+│  Users (Browser / API Clients)                  │
+│  ── TLS 1.2+ ──────────────────────────────     │
+├─────────────────────────────────────────────────┤
+│  Cloud Run Frontend (HTTPS-only)                │
+│  ── mTLS ───────────────────────────────────    │
+├─────────────────────────────────────────────────┤
+│  API Server (Authentication + Authorization)    │
+│  ── mTLS ───────────────────────────────────    │
+├─────────────────────────────────────────────────┤
+│  Data Layer            │  Model Providers       │
+│  (Encrypted at rest)   │  (TLS, no retention)   │
+└─────────────────────────────────────────────────┘
+</code></pre>
+<p>Each layer enforces its own security boundary. A compromise at one layer does not automatically grant access to another.</p>
+<h2>Encryption in Transit</h2>
+<p>All data moving between components is encrypted:</p>
+<table>
+<thead>
+<tr>
+<th>Connection</th>
+<th>Protocol</th>
+<th>Minimum Version</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Browser → SecureAI</td>
+<td>TLS</td>
+<td>1.2</td>
+<td>HTTP automatically redirected to HTTPS. HSTS headers enforced.</td>
+</tr>
+<tr>
+<td>API clients → SecureAI</td>
+<td>TLS</td>
+<td>1.2</td>
+<td>Bearer token authentication required for all API endpoints.</td>
+</tr>
+<tr>
+<td>Frontend → API server</td>
+<td>mTLS</td>
+<td>1.2</td>
+<td>Mutual TLS between internal services within the Cloud Run environment.</td>
+</tr>
+<tr>
+<td>API server → Database</td>
+<td>mTLS</td>
+<td>1.2</td>
+<td>Database connections authenticated and encrypted.</td>
+</tr>
+<tr>
+<td>API server → Model providers</td>
+<td>TLS</td>
+<td>1.2</td>
+<td>All outbound requests to AI model APIs use encrypted connections.</td>
+</tr>
+<tr>
+<td>API server → Cloud Storage</td>
+<td>TLS</td>
+<td>1.2</td>
+<td>Document upload and retrieval over encrypted channels.</td>
+</tr>
+</tbody></table>
+<h3>TLS Configuration</h3>
+<ul>
+<li><strong>Cipher suites</strong>: Only strong cipher suites are permitted. Weak ciphers (RC4, DES, 3DES) and protocols (SSLv3, TLS 1.0, TLS 1.1) are disabled.</li>
+<li><strong>Certificate management</strong>: TLS certificates are managed automatically through GCP&#39;s certificate infrastructure. Certificates are rotated before expiration without manual intervention.</li>
+<li><strong>HSTS</strong>: HTTP Strict Transport Security headers are set with a minimum max-age of one year, preventing protocol downgrade attacks.</li>
+</ul>
+<h2>Encryption at Rest</h2>
+<p>All stored data is encrypted using AES-256:</p>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Storage Location</th>
+<th>Encryption Method</th>
+<th>Key Management</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Conversation history</td>
+<td>Cloud SQL (PostgreSQL)</td>
+<td>AES-256 server-side</td>
+<td>GCP-managed keys (default) or CMEK</td>
+</tr>
+<tr>
+<td>Uploaded documents</td>
+<td>Cloud Storage</td>
+<td>AES-256 server-side</td>
+<td>GCP-managed keys (default) or CMEK</td>
+</tr>
+<tr>
+<td>User account data</td>
+<td>Cloud SQL (PostgreSQL)</td>
+<td>AES-256 server-side</td>
+<td>GCP-managed keys (default) or CMEK</td>
+</tr>
+<tr>
+<td>Audit logs</td>
+<td>Cloud SQL (PostgreSQL)</td>
+<td>AES-256 server-side</td>
+<td>GCP-managed keys (default) or CMEK</td>
+</tr>
+<tr>
+<td>Database backups</td>
+<td>Cloud Storage</td>
+<td>AES-256 server-side</td>
+<td>Same key policy as source data</td>
+</tr>
+<tr>
+<td>Temporary processing files</td>
+<td>In-memory only</td>
+<td>Not persisted to disk</td>
+<td>N/A — cleared after request completes</td>
+</tr>
+</tbody></table>
+<h3>Customer-Managed Encryption Keys (CMEK)</h3>
+<p>Organizations with stricter key management requirements can use CMEK through GCP&#39;s Key Management Service (KMS):</p>
+<ul>
+<li><strong>How CMEK works</strong>: Your organization controls the encryption keys used to protect your data. GCP KMS stores and manages the keys, but your organization controls their lifecycle — including creation, rotation, and revocation.</li>
+<li><strong>Key rotation</strong>: Automatic key rotation is configured by default (every 90 days). Your organization can adjust the rotation period or trigger manual rotation through GCP KMS.</li>
+<li><strong>Key revocation</strong>: Revoking your CMEK renders all data encrypted with that key permanently inaccessible. Use this as an emergency measure only.</li>
+<li><strong>Availability</strong>: CMEK is available for enterprise service agreements. Contact your account representative during onboarding to configure CMEK.</li>
+</ul>
+<h2>Storage Architecture</h2>
+<h3>Data Storage Locations</h3>
+<p>SecureAI stores data in three primary locations:</p>
+<p><strong>1. Cloud SQL (PostgreSQL)</strong></p>
+<ul>
+<li>Stores conversation history, user accounts, system configuration, and audit logs.</li>
+<li>Runs in a high-availability configuration with automatic failover.</li>
+<li>Point-in-time recovery enabled, with backups retained according to your service agreement.</li>
+<li>Database access restricted to the API server — no direct external connections are permitted.</li>
+</ul>
+<p><strong>2. Cloud Storage</strong></p>
+<ul>
+<li>Stores uploaded documents (PDFs, images, spreadsheets) and processed document embeddings.</li>
+<li>Objects are organized by organization ID, enforcing tenant isolation at the storage level.</li>
+<li>Lifecycle policies automatically delete objects according to your data retention configuration.</li>
+<li>Versioning is disabled by default to prevent unintended data retention. Deleted files are permanently removed.</li>
+</ul>
+<p><strong>3. In-Memory Processing</strong></p>
+<ul>
+<li>AI model requests and responses are processed in memory and are not persisted to disk.</li>
+<li>Temporary data (file parsing buffers, embedding generation intermediates) exists only for the duration of the request.</li>
+<li>Cloud Run instances are ephemeral — when an instance scales down, all in-memory data is destroyed.</li>
+</ul>
+<h3>Data Residency</h3>
+<p>Data storage is region-specific:</p>
+<table>
+<thead>
+<tr>
+<th>Region</th>
+<th>GCP Location</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>United States (default)</td>
+<td>us-central1 (Iowa)</td>
+<td>Default for all organizations</td>
+</tr>
+<tr>
+<td>European Union</td>
+<td>europe-west1 (Belgium)</td>
+<td>Available for organizations with EU data residency requirements</td>
+</tr>
+<tr>
+<td>Additional regions</td>
+<td>Contact account representative</td>
+<td>Available for enterprise agreements</td>
+</tr>
+</tbody></table>
+<p>All stored data — conversations, documents, user accounts, audit logs, and backups — resides in the selected region. Changing regions after deployment requires a planned migration coordinated with your account representative.</p>
+<h2>Model Provider Data Handling</h2>
+<p>When SecureAI sends a prompt to an AI model provider, specific protections apply:</p>
+<h3>What Is Sent to Model Providers</h3>
+<ul>
+<li>The user&#39;s prompt (question or instruction).</li>
+<li>Relevant conversation context (prior messages in the current conversation, subject to the model&#39;s context window).</li>
+<li>Retrieved document content when knowledge base or RAG features are used.</li>
+<li>System instructions configured by your organization&#39;s administrator.</li>
+</ul>
+<h3>What Is NOT Sent to Model Providers</h3>
+<ul>
+<li>User account credentials or authentication tokens.</li>
+<li>Data from other users&#39; conversations or other organizations.</li>
+<li>Audit log content.</li>
+<li>Administrative configuration details.</li>
+</ul>
+<h3>Provider Data Protection Guarantees</h3>
+<table>
+<thead>
+<tr>
+<th>Protection</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>No training on your data</strong></td>
+<td>SecureAI&#39;s agreements with model providers prohibit using your input or output data for model training, fine-tuning, or improvement.</td>
+</tr>
+<tr>
+<td><strong>No data retention</strong></td>
+<td>Model providers are contractually required to delete your data after generating a response. No input or output is retained beyond the API request lifecycle.</td>
+</tr>
+<tr>
+<td><strong>Prompt isolation</strong></td>
+<td>Each API request is independent. Your prompts are not mixed with other users&#39; or organizations&#39; data.</td>
+</tr>
+<tr>
+<td><strong>Transport encryption</strong></td>
+<td>All communication with model providers uses TLS 1.2+.</td>
+</tr>
+</tbody></table>
+<h3>Supported Model Providers</h3>
+<p>SecureAI supports multiple model providers. Each provider&#39;s data handling is governed by SecureAI&#39;s data processing agreements:</p>
+<ul>
+<li><strong>OpenAI</strong>: API requests processed under OpenAI&#39;s enterprise API terms (zero data retention).</li>
+<li><strong>Anthropic</strong>: API requests processed under Anthropic&#39;s commercial API terms (zero data retention).</li>
+<li><strong>Azure OpenAI</strong>: Requests processed within your organization&#39;s Azure tenant when configured (data stays in your Azure environment).</li>
+<li><strong>Local models (Ollama, vLLM)</strong>: When configured, prompts are processed on infrastructure you control. No data leaves your environment.</li>
+</ul>
+<p>Your administrator selects which providers are available. See <a href="/admin/adding-custom-model-providers">Adding Custom Model Providers</a> for configuration details.</p>
+<h2>Network Security</h2>
+<h3>Perimeter Controls</h3>
+<ul>
+<li><strong>Cloud Run ingress</strong>: Configured to accept traffic only from authorized sources. Internal services are not exposed to the public internet.</li>
+<li><strong>IP allowlisting</strong>: Organizations can restrict access to specific IP ranges. See <a href="/admin/ip-allowlisting">Setting Up IP Allowlisting for Enterprise Access</a>.</li>
+<li><strong>DDoS protection</strong>: GCP Cloud Armor provides automatic DDoS mitigation for all incoming traffic.</li>
+<li><strong>WAF rules</strong>: Web Application Firewall rules block common attack patterns (SQL injection, XSS, path traversal) at the edge.</li>
+</ul>
+<h3>Internal Network</h3>
+<ul>
+<li>All internal service communication uses mTLS.</li>
+<li>Database access is restricted to the API server via private networking (VPC). No public IP is assigned to the database.</li>
+<li>Secrets (API keys, database credentials, encryption keys) are stored in GCP Secret Manager, not in application code or environment variables.</li>
+</ul>
+<h2>Authentication and Authorization</h2>
+<h3>Authentication</h3>
+<p>SecureAI supports multiple authentication methods:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Local accounts</strong></td>
+<td>Email/password with optional MFA. Passwords are hashed using bcrypt with a minimum cost factor of 12.</td>
+</tr>
+<tr>
+<td><strong>SAML SSO</strong></td>
+<td>Federated authentication via your organization&#39;s identity provider (Okta, Azure AD, Auth0).</td>
+</tr>
+<tr>
+<td><strong>OIDC SSO</strong></td>
+<td>OpenID Connect-based authentication for compatible identity providers.</td>
+</tr>
+<tr>
+<td><strong>API tokens</strong></td>
+<td>Bearer tokens for programmatic access. Tokens are scoped to specific permissions and can be revoked by administrators.</td>
+</tr>
+</tbody></table>
+<h3>Authorization</h3>
+<ul>
+<li><strong>Role-based access control (RBAC)</strong>: Users are assigned roles (User, Admin) that determine access levels.</li>
+<li><strong>Tenant isolation</strong>: All authorization checks include the organization ID. A user in one organization cannot access another organization&#39;s resources regardless of role.</li>
+<li><strong>API scope enforcement</strong>: API tokens are limited to the permissions granted at creation. Tokens cannot exceed the creating user&#39;s permissions.</li>
+</ul>
+<h2>Vulnerability Management</h2>
+<ul>
+<li><strong>Dependency scanning</strong>: Automated scanning of application dependencies for known vulnerabilities (CVEs). Critical vulnerabilities are patched within 48 hours of disclosure.</li>
+<li><strong>Container image scanning</strong>: Cloud Run container images are scanned before deployment. Images with critical or high-severity vulnerabilities are blocked from deployment.</li>
+<li><strong>Penetration testing</strong>: Independent security assessments are conducted regularly. Summary reports are available under NDA — contact your account representative.</li>
+<li><strong>Incident response</strong>: Defined incident response procedures with documented escalation paths. Security incidents are communicated to affected organizations according to contractual SLAs and regulatory requirements.</li>
+</ul>
+<h2>Security Monitoring</h2>
+<ul>
+<li><strong>Audit logging</strong>: All administrative and security-relevant actions are logged with timestamps, user identity, source IP, and action details.</li>
+<li><strong>Anomaly detection</strong>: Automated alerting on suspicious patterns — repeated authentication failures, unusual data access volumes, configuration changes outside business hours.</li>
+<li><strong>Log retention</strong>: Security logs are retained independently of conversation data, typically for a longer period as defined in your service agreement.</li>
+<li><strong>SIEM integration</strong>: Audit logs can be exported for integration with your organization&#39;s security information and event management (SIEM) tools.</li>
+</ul>
+<h2>Frequently Asked Questions</h2>
+<h3>Is my data encrypted?</h3>
+<p>Yes. All data is encrypted both in transit (TLS 1.2+) and at rest (AES-256). Organizations requiring additional key control can use Customer-Managed Encryption Keys (CMEK).</p>
+<h3>Can AI model providers see my data?</h3>
+<p>Model providers process your prompts to generate responses, but they cannot retain, store, or use your data for training. This is enforced by SecureAI&#39;s data processing agreements with each provider.</p>
+<h3>Where is my data physically stored?</h3>
+<p>By default, in GCP&#39;s us-central1 region (United States). EU data residency (europe-west1, Belgium) is available on request. Additional regions are available for enterprise agreements.</p>
+<h3>Can I use my own encryption keys?</h3>
+<p>Yes. CMEK support is available for enterprise service agreements. Your organization controls key lifecycle through GCP&#39;s Key Management Service.</p>
+<h3>How does SecureAI prevent cross-tenant data access?</h3>
+<p>Tenant isolation is enforced at multiple layers — application-level authorization checks, database-level row isolation, and storage-level object organization by organization ID. All queries include organization scope, and there is no mechanism for cross-tenant access.</p>
+<h3>Does SecureAI store data on local devices?</h3>
+<p>No. All data is stored server-side in GCP. No conversation data, documents, or credentials are persisted on end-user devices.</p>
+<h2>Related Articles</h2>
+<ul>
+<li><a href="/security/data-handling">How SecureAI Handles Your Data</a></li>
+<li><a href="/security/compliance-certifications">Compliance Certifications — SOC 2, GDPR, HIPAA</a></li>
+<li><a href="/admin/ip-allowlisting">Setting Up IP Allowlisting for Enterprise Access</a></li>
+<li><a href="/admin/configuring-data-retention-policies">Configuring Data Retention Policies</a></li>
+<li><a href="/admin/adding-custom-model-providers">Adding Custom Model Providers</a></li>
+<li><a href="/admin/configuring-saml-sso">How to Configure SAML SSO</a></li>
+</ul>
+<h2>Questions</h2>
+<p>For security architecture questions, to request penetration test reports, or to discuss CMEK configuration, contact your account representative.</p>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Setting Usage Limits and Budgets - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>Setting Usage Limits and Budgets</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> admin </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span> <span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> administration </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> usage </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> budgets </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> limits </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> tokens </span> </div> <article class="content" data-astro-cid-xw3clhsd><p>This guide explains how administrators configure token usage limits per user and team, allocate budgets across the organization, and monitor consumption in SecureAI.</p>
+<h2>Prerequisites</h2>
+<p>Before configuring usage limits, ensure you have:</p>
+<ul>
+<li><strong>Admin access</strong> to your SecureAI instance.</li>
+<li>An understanding of your organization&#39;s LLM provider contract, including pricing tiers and any vendor-imposed rate limits.</li>
+<li>A plan for how you want to distribute capacity -- by team, by role, or evenly across all users.</li>
+</ul>
+<h2>How Usage Limits Work</h2>
+<p>SecureAI tracks token consumption at three levels:</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>What It Controls</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Organization</strong></td>
+<td>Total token budget across your entire SecureAI instance</td>
+<td>10 million tokens per month</td>
+</tr>
+<tr>
+<td><strong>Team</strong></td>
+<td>Budget allocated to a department or group</td>
+<td>Parts team gets 4M tokens/month</td>
+</tr>
+<tr>
+<td><strong>User</strong></td>
+<td>Per-user cap within their team&#39;s allocation</td>
+<td>Each parts analyst gets up to 500K tokens/month</td>
+</tr>
+</tbody></table>
+<p>When a user reaches their limit, SecureAI blocks new conversations until the limit resets or an administrator raises the cap. Existing conversations remain visible but cannot accept new messages.</p>
+<h2>Accessing Usage Settings</h2>
+<ol>
+<li>Log in to SecureAI as an administrator.</li>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Usage &amp; Budgets</strong>.</li>
+<li>You will see three tabs: <strong>Organization Budget</strong>, <strong>Team Allocations</strong>, and <strong>User Limits</strong>.</li>
+</ol>
+<h2>Setting Organization-Level Budgets</h2>
+<p>The organization budget is the top-level cap for all token consumption.</p>
+<ol>
+<li>Open the <strong>Organization Budget</strong> tab.</li>
+<li>Set the <strong>Monthly Token Budget</strong> -- this is the total number of tokens available across all users and teams for the billing period.</li>
+<li>Optionally set a <strong>Daily Limit</strong> to prevent runaway usage from exhausting the monthly budget early. A reasonable default is your monthly budget divided by 22 (working days).</li>
+<li>Choose the <strong>Budget Reset Schedule</strong>:<ul>
+<li><strong>Monthly</strong> -- resets on the 1st of each month (most common).</li>
+<li><strong>Weekly</strong> -- resets every Monday.</li>
+<li><strong>Custom</strong> -- set a specific reset date to align with your billing cycle.</li>
+</ul>
+</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<h3>Soft Limits vs. Hard Limits</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Soft limit</strong></td>
+<td>Users see a warning banner but can continue sending messages. Usage is flagged for admin review.</td>
+</tr>
+<tr>
+<td><strong>Hard limit</strong></td>
+<td>Users are blocked from sending new messages once the limit is reached.</td>
+</tr>
+</tbody></table>
+<p>You can configure a soft limit threshold as a percentage of the hard limit. For example, set a soft limit at 80% so users are warned before they hit the cap.</p>
+<ol>
+<li>Under <strong>Organization Budget</strong>, enable <strong>Soft Limit Alerts</strong>.</li>
+<li>Set the <strong>Alert Threshold</strong> (e.g., 80%).</li>
+<li>Choose notification targets -- users themselves, their team leads, or both.</li>
+</ol>
+<h2>Allocating Budgets to Teams</h2>
+<p>Team budgets let you distribute the organization&#39;s total capacity across departments.</p>
+<ol>
+<li>Open the <strong>Team Allocations</strong> tab.</li>
+<li>Click <strong>Add Team Allocation</strong>.</li>
+<li>Select a team from the dropdown (teams are managed in the User Management settings).</li>
+<li>Set the team&#39;s <strong>Monthly Token Budget</strong>.</li>
+<li>Optionally enable <strong>Rollover</strong> -- unused tokens carry over to the next period (up to a configurable maximum).</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p><strong>Important</strong>: The sum of all team allocations cannot exceed the organization budget. SecureAI will warn you if allocations exceed available capacity.</p>
+<h3>Unallocated Pool</h3>
+<p>Tokens not assigned to any team form the <strong>Unallocated Pool</strong>. Users who are not assigned to a team draw from this pool. You can set a cap on the unallocated pool or leave it as the remainder of the organization budget.</p>
+<h3>Example Allocation</h3>
+<table>
+<thead>
+<tr>
+<th>Team</th>
+<th>Monthly Budget</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Parts Lookup</td>
+<td>4,000,000</td>
+<td>High-volume daily queries for part numbers and compatibility</td>
+</tr>
+<tr>
+<td>Technical Support</td>
+<td>3,000,000</td>
+<td>Diagnostic conversations tend to be longer</td>
+</tr>
+<tr>
+<td>Sales</td>
+<td>1,500,000</td>
+<td>Moderate usage for customer-facing product info</td>
+</tr>
+<tr>
+<td>Training</td>
+<td>500,000</td>
+<td>Periodic use for onboarding and learning</td>
+</tr>
+<tr>
+<td>Unallocated</td>
+<td>1,000,000</td>
+<td>Buffer for ad-hoc users and overflow</td>
+</tr>
+</tbody></table>
+<h2>Setting Per-User Limits</h2>
+<p>Per-user limits prevent any single user from consuming a disproportionate share of their team&#39;s budget.</p>
+<ol>
+<li>Open the <strong>User Limits</strong> tab.</li>
+<li>Choose how to set limits:<ul>
+<li><strong>Uniform</strong> -- all users get the same cap (e.g., 500K tokens/month).</li>
+<li><strong>Role-based</strong> -- different caps for different roles (e.g., admins get unlimited, standard users get 500K).</li>
+<li><strong>Custom</strong> -- set individual limits per user.</li>
+</ul>
+</li>
+<li>Set the <strong>Default User Limit</strong> for new users.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<h3>Overriding Limits for Specific Users</h3>
+<p>To raise or lower the limit for a specific user:</p>
+<ol>
+<li>Go to <strong>Admin Panel &gt; Users</strong>.</li>
+<li>Select the user.</li>
+<li>Under <strong>Usage Limits</strong>, toggle <strong>Custom Limit</strong>.</li>
+<li>Enter the new monthly token cap.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>Custom limits override both the team default and the uniform setting.</p>
+<h2>Model-Specific Limits</h2>
+<p>Different models have different costs. You may want to restrict access to expensive models while keeping cheaper models freely available.</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Usage &amp; Budgets &gt; Model Controls</strong>.</li>
+<li>For each model tier, configure:<ul>
+<li><strong>Access</strong> -- who can use this model (all users, specific teams, specific roles).</li>
+<li><strong>Per-User Token Limit</strong> -- a separate cap for this model tier specifically.</li>
+<li><strong>Daily Request Limit</strong> -- maximum number of conversations per day using this model.</li>
+</ul>
+</li>
+</ol>
+<h3>Example Model Controls</h3>
+<table>
+<thead>
+<tr>
+<th>Model Tier</th>
+<th>Access</th>
+<th>Per-User Monthly Limit</th>
+<th>Daily Request Limit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fast</td>
+<td>All users</td>
+<td>No limit</td>
+<td>No limit</td>
+</tr>
+<tr>
+<td>Balanced</td>
+<td>All users</td>
+<td>300,000</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Advanced</td>
+<td>Technical Support, Admins</td>
+<td>100,000</td>
+<td>20</td>
+</tr>
+</tbody></table>
+<p>This setup lets everyone use fast models freely while reserving expensive models for teams that need them.</p>
+<h2>Monitoring Usage</h2>
+<h3>Usage Dashboard</h3>
+<p>The admin usage dashboard provides real-time visibility into token consumption.</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Analytics &gt; Usage Dashboard</strong>.</li>
+<li>View usage by:<ul>
+<li><strong>Organization total</strong> -- overall consumption against the monthly budget.</li>
+<li><strong>Team breakdown</strong> -- which teams are consuming the most.</li>
+<li><strong>User breakdown</strong> -- individual user consumption rankings.</li>
+<li><strong>Model breakdown</strong> -- consumption by model tier.</li>
+<li><strong>Time series</strong> -- daily and weekly trends.</li>
+</ul>
+</li>
+</ol>
+<h3>Setting Up Alerts</h3>
+<p>Configure alerts to be notified before limits are reached.</p>
+<ol>
+<li>Go to <strong>Admin Panel &gt; Settings &gt; Usage &amp; Budgets &gt; Alerts</strong>.</li>
+<li>Click <strong>Add Alert</strong>.</li>
+<li>Configure:<ul>
+<li><strong>Scope</strong> -- organization, specific team, or specific user.</li>
+<li><strong>Threshold</strong> -- percentage of budget consumed (e.g., 75%, 90%, 100%).</li>
+<li><strong>Channel</strong> -- email, in-app notification, or both.</li>
+<li><strong>Recipients</strong> -- the alert target (admin, team lead, user, or a custom email list).</li>
+</ul>
+</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p><strong>Recommended alert setup</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Threshold</th>
+<th>Scope</th>
+<th>Recipients</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>75%</td>
+<td>Organization</td>
+<td>All admins</td>
+<td>Early warning to review consumption trends</td>
+</tr>
+<tr>
+<td>90%</td>
+<td>Each team</td>
+<td>Team lead + admins</td>
+<td>Team approaching limit, time to adjust if needed</td>
+</tr>
+<tr>
+<td>100%</td>
+<td>Each user</td>
+<td>The user + their team lead</td>
+<td>User has been blocked, may need limit raised</td>
+</tr>
+</tbody></table>
+<h3>Usage Reports</h3>
+<p>Export usage data for accounting, chargeback, or vendor reconciliation.</p>
+<ol>
+<li>Go to <strong>Admin Panel &gt; Analytics &gt; Usage Reports</strong>.</li>
+<li>Select the <strong>Date Range</strong> and <strong>Grouping</strong> (by team, user, or model).</li>
+<li>Click <strong>Export CSV</strong> or <strong>Export PDF</strong>.</li>
+</ol>
+<p>Reports include: total tokens consumed, estimated cost (based on configured model pricing), number of conversations, and average tokens per conversation.</p>
+<h2>Rate Limiting</h2>
+<p>In addition to budget-based limits, you can set rate limits to prevent short-term abuse or accidental flooding.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+<th>Recommended Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Requests per minute (per user)</strong></td>
+<td>Max messages a single user can send per minute</td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Requests per minute (organization)</strong></td>
+<td>Max messages across all users per minute</td>
+<td>200</td>
+</tr>
+<tr>
+<td><strong>Max input tokens per message</strong></td>
+<td>Reject messages exceeding this token count</td>
+<td>50,000</td>
+</tr>
+<tr>
+<td><strong>Max file upload size</strong></td>
+<td>Limit file uploads that would generate excessive tokens</td>
+<td>25 MB</td>
+</tr>
+</tbody></table>
+<p>Configure these under <strong>Admin Panel &gt; Settings &gt; Usage &amp; Budgets &gt; Rate Limits</strong>.</p>
+<p>When a rate limit is hit, the user sees a &quot;Please wait and try again&quot; message. Rate limit events are logged in the admin audit log.</p>
+<h2>Common Scenarios</h2>
+<h3>A team runs out of budget mid-month</h3>
+<ol>
+<li>Check the <strong>Usage Dashboard</strong> to see what drove the spike.</li>
+<li>If justified (e.g., seasonal demand), increase the team allocation under <strong>Team Allocations</strong>. Draw from the unallocated pool or reduce another team&#39;s allocation.</li>
+<li>If caused by a single user, review their usage and consider whether their workflows can be optimized.</li>
+</ol>
+<h3>A new department needs access</h3>
+<ol>
+<li>Create the team in <strong>User Management</strong> if it does not exist.</li>
+<li>Add a team allocation under <strong>Team Allocations</strong>.</li>
+<li>Set appropriate per-user defaults.</li>
+<li>Notify the team lead about their budget and any model restrictions.</li>
+</ol>
+<h3>You need to reduce costs across the organization</h3>
+<ol>
+<li>Review the <strong>Model Breakdown</strong> on the usage dashboard. If advanced models are being used for simple queries, restrict access or add guidance.</li>
+<li>Lower per-user limits to encourage more efficient usage.</li>
+<li>Enable soft limit warnings at a lower threshold (e.g., 60%) so users self-moderate earlier.</li>
+<li>Share the <a href="/articles/understanding-token-usage-and-costs">Understanding Token Usage and Costs</a> article with users so they understand how their behavior affects consumption.</li>
+</ol>
+<h3>Seasonal adjustments</h3>
+<p>Some months see higher demand (e.g., when new vehicle model years launch and parts catalogs need cross-referencing). Plan for this by:</p>
+<ol>
+<li>Setting higher limits for the high-demand months.</li>
+<li>Using the <strong>Rollover</strong> feature so quieter months build buffer for busier ones.</li>
+<li>Reviewing and adjusting allocations quarterly based on usage trends.</li>
+</ol>
+<h2>Best Practices</h2>
+<ul>
+<li><strong>Start generous, then tighten.</strong> Set higher limits initially and monitor actual usage for 2--3 months before optimizing. Overly restrictive limits frustrate users and discourage adoption.</li>
+<li><strong>Use soft limits first.</strong> Warnings are less disruptive than hard blocks. Most users self-moderate once they see they are approaching a limit.</li>
+<li><strong>Align budgets with business value.</strong> Teams that drive revenue or reduce costs through AI usage should get larger allocations.</li>
+<li><strong>Review monthly.</strong> Usage patterns shift as users become more proficient and workflows change. Revisit allocations at least monthly.</li>
+<li><strong>Communicate limits to users.</strong> Users should know their caps exist, what happens when they are reached, and who to contact for increases. Transparency prevents frustration.</li>
+<li><strong>Set model-specific limits before broad rollouts.</strong> When enabling a new, expensive model tier, start with tight limits for a pilot group before opening access to everyone.</li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

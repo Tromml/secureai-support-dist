@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Understanding Token Usage and Costs - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>Understanding Token Usage and Costs</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Using SecureAI </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span>  </div> <article class="content" data-astro-cid-xw3clhsd><p>Every time you send a message in SecureAI, the AI model processes your text by breaking it into small units called <strong>tokens</strong>. Understanding how tokens work helps you use SecureAI more efficiently and keeps costs predictable for your organization.</p>
+<h2>What Are Tokens?</h2>
+<p>A token is a chunk of text that the AI model reads and produces. Tokens are not the same as words — they are pieces that the model&#39;s internal dictionary recognizes. Some rough guidelines:</p>
+<ul>
+<li><strong>1 token ≈ 4 characters</strong> of English text (about ¾ of a word).</li>
+<li>Short common words like &quot;the&quot;, &quot;is&quot;, &quot;a&quot; are usually one token each.</li>
+<li>Longer or uncommon words get split into multiple tokens. &quot;Aftermarket&quot; might be two or three tokens.</li>
+<li>Numbers, punctuation, and special characters each consume tokens.</li>
+<li>Part numbers like <strong>AC-DELCO-PF48</strong> may use 5–8 tokens because they combine letters, hyphens, and digits.</li>
+</ul>
+<p><strong>Example</strong>: The sentence &quot;What is the OEM oil filter for a 2023 Toyota Camry?&quot; is roughly 14 tokens.</p>
+<h2>How Usage Is Measured</h2>
+<p>SecureAI tracks token usage in two directions for every exchange:</p>
+<table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>What It Counts</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Input tokens</strong></td>
+<td>Your message + the conversation history the model re-reads</td>
+<td>Longer conversations cost more because the model re-processes previous messages each turn</td>
+</tr>
+<tr>
+<td><strong>Output tokens</strong></td>
+<td>The model&#39;s response</td>
+<td>Detailed answers with tables, lists, or long explanations use more output tokens</td>
+</tr>
+</tbody></table>
+<p><strong>Total tokens per exchange</strong> = input tokens + output tokens.</p>
+<h3>Conversation History Adds Up</h3>
+<p>Each new message in a conversation includes the full history so the model remembers context. A 10-message conversation means message 10 re-sends messages 1–9 as input. This is why long conversations use significantly more tokens than short ones.</p>
+<h3>Uploaded Files Count Too</h3>
+<p>When you upload a PDF, image, or parts catalog, SecureAI converts the content into tokens for the model to read. A 10-page PDF might add thousands of input tokens to every subsequent message in that conversation.</p>
+<h2>Viewing Your Token Usage</h2>
+<p>Depending on how your administrator has configured SecureAI, you can see token usage in several places:</p>
+<h3>In the Chat Interface</h3>
+<p>After the model responds, look for a <strong>token count</strong> or <strong>usage indicator</strong> near the response. In OpenWebUI, this typically appears as a small label showing the number of tokens used for that exchange. Click or hover to see the breakdown of input versus output tokens.</p>
+<h3>In Your Usage Dashboard</h3>
+<p>If your organization has enabled the usage dashboard:</p>
+<ol>
+<li>Click your <strong>profile icon</strong> in the lower-left corner of the interface.</li>
+<li>Select <strong>Usage</strong> or <strong>Token Usage</strong> (the exact label depends on your organization&#39;s configuration).</li>
+<li>You will see a summary of your token consumption over time — daily, weekly, or monthly.</li>
+</ol>
+<p>This view helps you spot trends. If usage spikes on a particular day, you can check which conversations drove the increase.</p>
+<h3>Asking Your Administrator</h3>
+<p>Administrators have access to organization-wide usage analytics including per-user breakdowns, model-by-model costs, and trend reports. If you cannot see your own usage, ask your admin for a summary.</p>
+<h2>What Tokens Cost</h2>
+<p>Your organization pays for token usage based on the model tier:</p>
+<table>
+<thead>
+<tr>
+<th>Model Tier</th>
+<th>Relative Cost</th>
+<th>Typical Use Case</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Fast</strong> (smaller models)</td>
+<td>Lowest</td>
+<td>Quick lookups, simple Q&amp;A</td>
+</tr>
+<tr>
+<td><strong>Balanced</strong> (mid-size models)</td>
+<td>Moderate</td>
+<td>Cross-referencing, compatibility checks</td>
+</tr>
+<tr>
+<td><strong>Advanced</strong> (large frontier models)</td>
+<td>Highest</td>
+<td>Complex diagnostics, multi-document analysis</td>
+</tr>
+</tbody></table>
+<p>The exact pricing depends on your organization&#39;s contract with the LLM provider. Your administrator can tell you which models cost more and whether there are usage caps or quotas in place.</p>
+<p><strong>Key point</strong>: Output tokens typically cost more per token than input tokens. A long, detailed response costs more than a short, direct one — even if the question was the same.</p>
+<h2>Reducing Token Usage (and Costs)</h2>
+<p>You do not need to ration your usage, but these habits keep costs reasonable and often get you better answers:</p>
+<h3>1. Start New Conversations for New Topics</h3>
+<p>When you switch from looking up brake pads to asking about transmission fluid, start a fresh conversation. The old history adds input tokens to every message with no benefit for the new topic.</p>
+<h3>2. Be Specific in Your Questions</h3>
+<p>Vague questions produce long, general answers that consume more output tokens. Compare:</p>
+<ul>
+<li><strong>Vague</strong>: &quot;Tell me about oil filters.&quot; → Long, broad response (300+ tokens).</li>
+<li><strong>Specific</strong>: &quot;What is the OEM oil filter part number for a 2023 Toyota Camry 2.5L?&quot; → Short, direct response (30–50 tokens).</li>
+</ul>
+<h3>3. Choose the Right Model for the Task</h3>
+<p>Use the fast tier for straightforward lookups and save the advanced tier for complex analysis. See the <a href="/articles/model-comparison-and-selection-guide">Model Comparison and Selection Guide</a> for detailed recommendations by task type.</p>
+<h3>4. Summarize Before Continuing Long Conversations</h3>
+<p>If a conversation has gone on for many messages and you need to keep going, ask the model to summarize the key findings so far. Then start a new conversation with that summary as your opening message. This resets the input token count while preserving the essential context.</p>
+<h3>5. Avoid Uploading Unnecessary Files</h3>
+<p>Only attach documents that are directly relevant to your question. A full 200-page parts catalog uploaded &quot;just in case&quot; adds massive input tokens to every message in that conversation.</p>
+<h3>6. Use Tables and Structured Requests</h3>
+<p>When you need data for multiple parts or vehicles, ask for a table in a single message rather than asking one question at a time. One well-structured request is cheaper than five separate exchanges.</p>
+<pre><code>List the OEM brake pad part numbers for these vehicles in a table:
+- 2022 Honda Civic
+- 2023 Toyota Camry
+- 2021 Ford F-150
+</code></pre>
+<p>This produces one response instead of three separate conversations.</p>
+<h2>Token Limits and Context Windows</h2>
+<p>Every model has a <strong>context window</strong> — the maximum number of tokens it can process in a single exchange (input + output combined). When a conversation exceeds the context window, the model cannot see the oldest messages.</p>
+<p>Signs you have hit the context limit:</p>
+<ul>
+<li>The model &quot;forgets&quot; something you discussed earlier in the conversation.</li>
+<li>You see a warning about message length or context limits.</li>
+<li>Responses become less relevant to the earlier parts of your conversation.</li>
+</ul>
+<p>When this happens, start a new conversation. Copy over any critical details from the previous one.</p>
+<h2>Common Questions</h2>
+<p><strong>Does every message cost the same?</strong>
+No. Cost depends on the model tier, the length of your message, the length of the conversation history, any uploaded files, and the length of the model&#39;s response.</p>
+<p><strong>Can I see exactly how much each conversation cost in dollars?</strong>
+This depends on your organization&#39;s setup. Some administrators expose cost data; others show only token counts. Ask your admin what is available.</p>
+<p><strong>Does the model charge tokens for messages I delete?</strong>
+Tokens are consumed at the time of the exchange. Deleting a message afterward does not refund the tokens.</p>
+<p><strong>Are tokens shared across my team?</strong>
+Typically yes — your organization has a pool or budget. Your administrator manages allocation and can set per-user quotas if needed.</p>
+<h2>Tips for Automotive Aftermarket Users</h2>
+<p>Parts lookup queries tend to be token-efficient because they are short and specific. The biggest token consumers for aftermarket users are:</p>
+<ul>
+<li><strong>Uploading large PDFs</strong> (full parts catalogs, service manuals) — keep uploads targeted to relevant pages when possible.</li>
+<li><strong>Long diagnostic conversations</strong> where you are troubleshooting a complex issue step by step — summarize and restart when the conversation exceeds 15–20 messages.</li>
+<li><strong>Using advanced models for simple lookups</strong> — save budget by using the fast tier for catalog queries and reserving advanced models for multi-vehicle analysis or compatibility reasoning.</li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

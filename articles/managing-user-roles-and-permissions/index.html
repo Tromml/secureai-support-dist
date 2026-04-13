@@ -1,0 +1,464 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Managing User Roles and Permissions - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.content[data-astro-cid-xw3clhsd]{line-height:1.8}.content[data-astro-cid-xw3clhsd] h2[data-astro-cid-xw3clhsd]{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] h3[data-astro-cid-xw3clhsd]{margin-top:1.5rem;margin-bottom:.5rem}.content[data-astro-cid-xw3clhsd] p[data-astro-cid-xw3clhsd]{margin-bottom:1rem}.content[data-astro-cid-xw3clhsd] ul[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] ol[data-astro-cid-xw3clhsd]{margin:.5rem 0 1rem 1.5rem}.content[data-astro-cid-xw3clhsd] li[data-astro-cid-xw3clhsd]{margin-bottom:.3rem}.content[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd]{background:#1a1a2e;color:#e0e0e0;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0}.content[data-astro-cid-xw3clhsd] pre[data-astro-cid-xw3clhsd] code[data-astro-cid-xw3clhsd]{background:none;padding:0}.content[data-astro-cid-xw3clhsd] table[data-astro-cid-xw3clhsd]{width:100%;border-collapse:collapse;margin:1rem 0}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd],.content[data-astro-cid-xw3clhsd] td[data-astro-cid-xw3clhsd]{border:1px solid #ddd;padding:.5rem .75rem;text-align:left}.content[data-astro-cid-xw3clhsd] th[data-astro-cid-xw3clhsd]{background:#f5f5f5}.content[data-astro-cid-xw3clhsd] blockquote[data-astro-cid-xw3clhsd]{border-left:3px solid #1a1a2e;padding-left:1rem;margin:1rem 0;color:#555}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/articles" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-xw3clhsd>&larr; All Articles</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-xw3clhsd>Managing User Roles and Permissions</h1> <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0 1.5rem; flex-wrap: wrap;" data-astro-cid-xw3clhsd> <span style="background: #e8eaf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> admin </span> <span style="background: #e0f2f1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> beginner </span> <span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> administration </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> roles </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> Permissions </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> access-control </span><span style="background: #f3e5f5; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;" data-astro-cid-xw3clhsd> security </span> </div> <article class="content" data-astro-cid-xw3clhsd><p>This guide explains how SecureAI&#39;s role-based access control works, what each role can do, how to assign and change roles, and how to restrict specific features for users across your organization.</p>
+<h2>Role Overview</h2>
+<p>SecureAI uses a role-based access control (RBAC) model. Every user is assigned exactly one role, which determines what they can see and do in the platform. Roles are assigned at the time of invitation and can be changed at any time by an admin.</p>
+<p>SecureAI provides three built-in roles:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Intended For</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>User</strong></td>
+<td>General employees</td>
+<td>Chat with AI models, upload documents, use tools and assistants. No access to admin functions.</td>
+</tr>
+<tr>
+<td><strong>Pending</strong></td>
+<td>Newly registered users</td>
+<td>Limited access until an admin approves their account. Cannot start conversations or access the knowledge base.</td>
+</tr>
+<tr>
+<td><strong>Admin</strong></td>
+<td>IT administrators, platform managers</td>
+<td>Full access to all features plus the Admin Panel for managing users, models, settings, and security.</td>
+</tr>
+</tbody></table>
+<h3>Pending Role</h3>
+<p>When a user registers through the sign-up page (rather than being invited by an admin), they are assigned the <strong>Pending</strong> role by default. Pending users can log in but cannot use the platform until an admin reviews and approves their account.</p>
+<p>To approve a pending user:</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Users</strong>.</li>
+<li>Filter by <strong>Role: Pending</strong> to see users awaiting approval.</li>
+<li>Click the user&#39;s name.</li>
+<li>Change their role to <strong>User</strong> (or <strong>Admin</strong> if appropriate).</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>The user receives a notification that their account has been approved and can begin using SecureAI immediately.</p>
+<p>To disable open registration entirely, see <a href="#restricting-self-registration">Restricting Self-Registration</a> below.</p>
+<h2>Permission Matrix</h2>
+<p>The table below shows exactly which actions each role can perform.</p>
+<h3>Conversations and AI</h3>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Pending</th>
+<th>User</th>
+<th>Admin</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Start new conversations</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Continue existing conversations</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Use all available models</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Switch models mid-conversation</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Share conversations with other users</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Delete own conversations</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>View other users&#39; conversations</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>View conversation metadata in analytics</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+<h3>Knowledge Base and Documents</h3>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Pending</th>
+<th>User</th>
+<th>Admin</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Search the knowledge base</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Upload documents to personal workspace</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Upload documents to shared knowledge base</td>
+<td>No</td>
+<td>Configurable</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Delete own uploaded documents</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Delete any user&#39;s uploaded documents</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Manage knowledge base collections</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+<h3>Tools and Assistants</h3>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Pending</th>
+<th>User</th>
+<th>Admin</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Use assigned tools</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Use assigned assistants</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Create personal assistants</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Publish assistants to organization</td>
+<td>No</td>
+<td>Configurable</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Create and manage tools</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Manage tool integrations (valves)</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+<h3>Administration</h3>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Pending</th>
+<th>User</th>
+<th>Admin</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Access Admin Panel</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Invite and manage users</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Change user roles</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Configure models and providers</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Manage SSO settings</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Configure content filtering</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>View analytics and usage reports</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Manage data retention policies</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Configure IP allowlisting</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Export audit logs</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+<h3>Account Self-Management</h3>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Pending</th>
+<th>User</th>
+<th>Admin</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Update own profile (name, avatar)</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Change own password</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Manage own API keys</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>View own usage statistics</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+<h2>Assigning Roles</h2>
+<h3>During Invitation</h3>
+<p>When you invite a new user, you select their role as part of the invitation process:</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Users</strong>.</li>
+<li>Click <strong>Add User</strong>.</li>
+<li>Enter the user&#39;s email and name.</li>
+<li>Select <strong>Role</strong>: choose <code>User</code> or <code>Admin</code>.</li>
+<li>Click <strong>Send Invitation</strong>.</li>
+</ol>
+<p>For bulk imports via CSV, specify the role in the <code>role</code> column for each row. See <a href="bulk-import-users.md">How to Bulk Import Users</a> for details.</p>
+<h3>Changing an Existing User&#39;s Role</h3>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Users</strong>.</li>
+<li>Click the user&#39;s name to open their profile.</li>
+<li>Under <strong>Role</strong>, select the new role.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>Role changes take effect immediately:</p>
+<ul>
+<li><strong>Promoting User to Admin</strong>: The user sees the Admin Panel link on their next page load. No logout required.</li>
+<li><strong>Demoting Admin to User</strong>: The user loses Admin Panel access immediately. If they have the Admin Panel open, they are redirected to the main chat interface.</li>
+<li><strong>Approving a Pending user</strong>: The user gains full access to conversations, knowledge base, and tools.</li>
+</ul>
+<h3>Bulk Role Changes</h3>
+<p>To change roles for multiple users at once:</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Users</strong>.</li>
+<li>Select the checkboxes next to the users you want to update.</li>
+<li>Click <strong>Bulk Actions &gt; Change Role</strong>.</li>
+<li>Select the target role.</li>
+<li>Confirm the change.</li>
+</ol>
+<p>This is useful when onboarding a department or adjusting access for an entire team.</p>
+<h2>Restricting Features</h2>
+<p>Beyond the built-in role permissions, admins can further restrict what users can do through feature-level settings.</p>
+<h3>Model Access Restrictions</h3>
+<p>Control which models are available to users:</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Models</strong>.</li>
+<li>Each model has a <strong>Visibility</strong> setting:<ul>
+<li><strong>All users</strong> — any user can select this model.</li>
+<li><strong>Admins only</strong> — only admins can use this model (useful for expensive models or models still being evaluated).</li>
+</ul>
+</li>
+<li>Toggle visibility per model as needed.</li>
+</ol>
+<p>When a model is restricted to admins only, it does not appear in the model selector for standard users.</p>
+<h3>Knowledge Base Upload Restrictions</h3>
+<p>Control whether standard users can upload documents to the shared knowledge base:</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Knowledge Base</strong>.</li>
+<li>Under <strong>Shared uploads</strong>, choose:<ul>
+<li><strong>Allow all users</strong> — any user can upload to shared collections.</li>
+<li><strong>Admins only</strong> — only admins can add documents to shared collections. Users can still upload to their personal workspace.</li>
+</ul>
+</li>
+</ol>
+<p>This is useful for organizations that want to curate the shared knowledge base and prevent unvetted documents from being used as context.</p>
+<h3>Assistant Publishing Restrictions</h3>
+<p>Control whether users can publish assistants for the whole organization:</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Assistants</strong>.</li>
+<li>Under <strong>Publishing</strong>, choose:<ul>
+<li><strong>Allow all users</strong> — any user can publish assistants to the organization directory.</li>
+<li><strong>Admins only</strong> — only admins can publish. Users can still create personal assistants.</li>
+</ul>
+</li>
+</ol>
+<h3>Chat Feature Restrictions</h3>
+<p>Admins can toggle specific chat features on or off for all non-admin users:</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Interface</strong>.</li>
+<li>Available toggles:<ul>
+<li><strong>Web search</strong> — allow users to enable web search in conversations.</li>
+<li><strong>Image generation</strong> — allow users to request image generation.</li>
+<li><strong>Code execution</strong> — allow users to run code in sandboxed environments.</li>
+<li><strong>File uploads in chat</strong> — allow users to attach files to messages.</li>
+</ul>
+</li>
+</ol>
+<p>Disabled features are hidden from the interface entirely -- users do not see grayed-out buttons, the feature simply does not appear.</p>
+<h3>Restricting Self-Registration</h3>
+<p>By default, anyone with access to your SecureAI instance URL can register an account (assigned the Pending role). To restrict this:</p>
+<ol>
+<li>Navigate to <strong>Admin Panel &gt; Settings &gt; Authentication</strong>.</li>
+<li>Under <strong>Registration</strong>, choose:<ul>
+<li><strong>Open (with approval)</strong> — anyone can register, but they remain Pending until an admin approves. This is the default.</li>
+<li><strong>Invite only</strong> — the registration page is disabled. Only users invited by an admin can create accounts.</li>
+<li><strong>SSO only</strong> — users can only access the platform through your configured identity provider. The registration page and password login are both disabled.</li>
+</ul>
+</li>
+</ol>
+<p>For SSO configuration, see <a href="configuring-saml-sso.md">Configuring SAML SSO</a> or <a href="configure-oidc-sso.md">Configure OIDC SSO</a>.</p>
+<h2>Best Practices</h2>
+<h3>Principle of Least Privilege</h3>
+<p>Assign the minimum role needed for each user&#39;s job function. Most users in your organization should have the <strong>User</strong> role. Reserve <strong>Admin</strong> for people who genuinely need to manage the platform -- typically 2-5 people in a standard deployment.</p>
+<h3>Audit Role Assignments Regularly</h3>
+<p>Review your user list periodically to ensure roles are still appropriate:</p>
+<ul>
+<li>Former admins who changed roles or left the team should be demoted or deactivated.</li>
+<li>Pending users should be approved or removed promptly -- a backlog of pending accounts can indicate the registration page is attracting unwanted signups.</li>
+</ul>
+<p>Use <strong>Admin Panel &gt; Analytics &gt; Users</strong> to see a breakdown of users by role and activity level.</p>
+<h3>Document Your Access Policy</h3>
+<p>Establish clear criteria for when someone qualifies for Admin access. Common policies include:</p>
+<ul>
+<li>Only IT staff can be admins.</li>
+<li>Department leads can be admins if they manage model configuration for their team.</li>
+<li>Admin access requires manager approval.</li>
+</ul>
+<p>Documenting this makes it easier to stay consistent as your organization grows.</p>
+<h3>Use Feature Restrictions to Complement Roles</h3>
+<p>Roles define broad access levels, but feature restrictions let you fine-tune the experience. For example:</p>
+<ul>
+<li><strong>Cost control</strong>: Restrict expensive models to admins while evaluating them, then open to all users once budgets are approved.</li>
+<li><strong>Data governance</strong>: Restrict shared knowledge base uploads to admins to ensure only vetted documents are used as AI context.</li>
+<li><strong>Phased rollout</strong>: Disable new features (like code execution) for standard users until your team is comfortable with the safety controls.</li>
+</ul>
+<h2>Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>User cannot see a model in the model selector</td>
+<td>Check the model&#39;s visibility setting in <strong>Admin Panel &gt; Settings &gt; Models</strong>. It may be set to &quot;Admins only.&quot;</td>
+</tr>
+<tr>
+<td>User stuck in Pending status</td>
+<td>An admin must manually approve them by changing their role. Navigate to <strong>Admin Panel &gt; Users</strong>, filter by Pending, and change the role to User.</td>
+</tr>
+<tr>
+<td>Cannot demote yourself from Admin</td>
+<td>SecureAI requires at least one admin. Promote another user to Admin first, then change your own role.</td>
+</tr>
+<tr>
+<td>User can still access Admin Panel after demotion</td>
+<td>Ask the user to refresh their browser. The role change is immediate server-side, but cached UI state may persist until the next page load.</td>
+</tr>
+<tr>
+<td>Feature toggle not taking effect</td>
+<td>Feature restriction changes apply on the user&#39;s next page load. Active sessions may need a browser refresh to reflect the change.</td>
+</tr>
+<tr>
+<td>Registration page still accessible after switching to invite-only</td>
+<td>Clear your CDN or reverse proxy cache. The setting takes effect on the server immediately, but cached pages may still show the registration form.</td>
+</tr>
+</tbody></table>
+<h2>Next Steps</h2>
+<ul>
+<li><a href="user-management.md">User Management Guide</a> -- add, deactivate, and manage user accounts.</li>
+<li><a href="bulk-import-users.md">How to Bulk Import Users</a> -- onboard many users at once with role assignment via CSV.</li>
+<li><a href="../articles/how-to-audit-user-activity.md">How to Audit User Activity</a> -- review who did what and when.</li>
+<li><a href="content-filtering-and-safety-settings.md">Content Filtering and Safety Settings</a> -- control AI output for your organization.</li>
+<li><a href="configuring-saml-sso.md">Configuring SAML SSO</a> or <a href="configure-oidc-sso.md">Configure OIDC SSO</a> -- centralize authentication.</li>
+</ul>
+</article>  </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>

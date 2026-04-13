@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Enterprise Deployment - SecureAI Support</title><style>[data-astro-cid-5hce7sga]{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa}header[data-astro-cid-5hce7sga]{background:#1a1a2e;color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:2rem}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]{color:#fff;text-decoration:none}header[data-astro-cid-5hce7sga] a[data-astro-cid-5hce7sga]:hover{text-decoration:underline}nav[data-astro-cid-5hce7sga]{display:flex;gap:1.5rem}.logo[data-astro-cid-5hce7sga]{font-weight:700;font-size:1.2rem}main[data-astro-cid-5hce7sga]{max-width:900px;margin:2rem auto;padding:0 1.5rem}footer[data-astro-cid-5hce7sga]{text-align:center;padding:2rem;color:#666;font-size:.85rem;border-top:1px solid #eee;margin-top:3rem}
+.faq-answer[data-astro-cid-dqg6fwsj] p[data-astro-cid-dqg6fwsj]{margin-bottom:.8rem}.faq-answer[data-astro-cid-dqg6fwsj] ul[data-astro-cid-dqg6fwsj],.faq-answer[data-astro-cid-dqg6fwsj] ol[data-astro-cid-dqg6fwsj]{margin:.5rem 0 1rem 1.5rem}.faq-answer[data-astro-cid-dqg6fwsj] li[data-astro-cid-dqg6fwsj]{margin-bottom:.3rem}.faq-answer[data-astro-cid-dqg6fwsj] code[data-astro-cid-dqg6fwsj]{background:#f0f0f0;padding:.15rem .4rem;border-radius:3px;font-size:.9em}
+</style></head> <body data-astro-cid-5hce7sga> <header data-astro-cid-5hce7sga> <a href="/" class="logo" data-astro-cid-5hce7sga>SecureAI Support</a> <nav data-astro-cid-5hce7sga> <a href="/articles" data-astro-cid-5hce7sga>Articles</a> <a href="/faq" data-astro-cid-5hce7sga>FAQ</a> </nav> </header> <main data-astro-cid-5hce7sga>  <a href="/" style="color: #555; text-decoration: none; font-size: 0.9rem;" data-astro-cid-dqg6fwsj>&larr; Home</a> <h1 style="margin-top: 0.5rem;" data-astro-cid-dqg6fwsj>Enterprise Deployment</h1> <p style="color: #666; margin: 0.3rem 0 1.5rem;" data-astro-cid-dqg6fwsj>On-prem, cloud deployment, scaling</p><section style="margin-bottom: 2rem;" data-astro-cid-dqg6fwsj> <h2 style="font-size: 1.1rem; color: #444; border-bottom: 1px solid #eee; padding-bottom: 0.3rem; margin-bottom: 0.8rem;" data-astro-cid-dqg6fwsj>
+Articles (1)
+</h2> <ul style="list-style: none;" data-astro-cid-dqg6fwsj> <li style="margin-bottom: 0.8rem;" data-astro-cid-dqg6fwsj> <a href="/articles/managing-secureai-updates" style="text-decoration: none; color: #1a1a2e; font-weight: 500;" data-astro-cid-dqg6fwsj> Managing SecureAI Updates </a> <p style="color: #666; font-size: 0.85rem; margin-top: 0.2rem;" data-astro-cid-dqg6fwsj> SecureAI receives regular updates that include new AI model integrations, security patches, feature improvements, and bug fixes. As an administrator, ...
+</p> </li> </ul> </section><section style="margin-bottom: 2rem;" data-astro-cid-dqg6fwsj> <h2 style="font-size: 1.1rem; color: #444; border-bottom: 1px solid #eee; padding-bottom: 0.3rem; margin-bottom: 0.8rem;" data-astro-cid-dqg6fwsj>
+FAQs (1)
+</h2> <details style="margin-bottom: 0.8rem; background: white; border: 1px solid #e0e0e0; border-radius: 6px; padding: 0.8rem 1rem;" data-astro-cid-dqg6fwsj> <summary style="cursor: pointer; font-weight: 500;" data-astro-cid-dqg6fwsj>What infrastructure is required for SecureAI?</summary> <div class="faq-answer" style="margin-top: 0.8rem; color: #444;" data-astro-cid-dqg6fwsj><p>SecureAI is a fully managed service hosted on Google Cloud Platform. For most organizations, no on-premises infrastructure is required -- you access SecureAI through a web browser, and your SecureAI team handles hosting, scaling, and maintenance.</p>
+<p>This FAQ covers the infrastructure requirements for both the standard hosted deployment and optional self-hosted or hybrid configurations.</p>
+<h2>Standard hosted deployment (recommended)</h2>
+<p>With the standard deployment, SecureAI runs entirely on managed infrastructure. Your organization needs:</p>
+<ul>
+<li><strong>Modern web browser</strong> -- Chrome, Firefox, Edge, or Safari (latest two major versions). No desktop client or browser plugin is required.</li>
+<li><strong>Internet connectivity</strong> -- users need HTTPS access (port 443) to your SecureAI instance URL. If your organization uses a web proxy or firewall, allow outbound traffic to <code>*.secureai.app</code> (or your custom domain).</li>
+<li><strong>Identity provider (optional but recommended)</strong> -- if you use SSO, your IdP (Okta, Azure AD, Google Workspace, Auth0) must be reachable from SecureAI. See <a href="/faq/does-secureai-support-google-microsoft-okta-or-auth0-login">Does SecureAI support Google, Microsoft, Okta, or Auth0 login?</a> for setup details.</li>
+</ul>
+<p>There is no server, database, or container infrastructure to provision on your side.</p>
+<h2>Network and firewall requirements</h2>
+<p>Organizations with restrictive network policies should allow:</p>
+<table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>Destination</th>
+<th>Port</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Outbound</td>
+<td>Your SecureAI instance URL</td>
+<td>443 (HTTPS)</td>
+<td>User access to the application</td>
+</tr>
+<tr>
+<td>Outbound</td>
+<td>Your identity provider</td>
+<td>443 (HTTPS)</td>
+<td>SSO authentication (if configured)</td>
+</tr>
+<tr>
+<td>Inbound (optional)</td>
+<td>Your SCIM endpoint</td>
+<td>443 (HTTPS)</td>
+<td>Automated user provisioning (if configured)</td>
+</tr>
+</tbody></table>
+<p>If you use <a href="/admin/ip-allowlisting">IP allowlisting</a>, configure your corporate egress IPs in the SecureAI admin panel to restrict access to approved networks.</p>
+<h2>Self-hosted model providers (optional)</h2>
+<p>Some organizations choose to run their own AI model providers (such as Ollama or vLLM) to keep prompts entirely within their network. If you use self-hosted models, you need:</p>
+<ul>
+<li><strong>GPU-equipped server</strong> -- most LLMs require NVIDIA GPUs with sufficient VRAM. Requirements depend on the model:<ul>
+<li>7B parameter models: 1x NVIDIA A10 or equivalent (24 GB VRAM)</li>
+<li>13B--30B parameter models: 1x NVIDIA A100 (40--80 GB VRAM)</li>
+<li>70B+ parameter models: multiple A100s or H100s</li>
+</ul>
+</li>
+<li><strong>Model hosting software</strong> -- Ollama, vLLM, or a compatible OpenAI-format API server.</li>
+<li><strong>Network path</strong> -- SecureAI must be able to reach your model server&#39;s API endpoint over HTTPS. If your model server is behind a VPN or private network, you will need a secure tunnel or VPN peering with your SecureAI instance.</li>
+</ul>
+<p>For setup instructions, see <a href="/admin/adding-custom-model-providers">Adding Custom Model Providers</a>.</p>
+<h2>On-premises deployment (Enterprise plan)</h2>
+<p>For organizations that require full control over the deployment environment, SecureAI offers an on-premises option on Enterprise plans. On-premises deployment requires:</p>
+<h3>Compute</h3>
+<ul>
+<li><strong>Kubernetes cluster</strong> (v1.27+) -- EKS, GKE, AKS, or self-managed. Minimum 3 nodes.</li>
+<li><strong>Per-node minimum</strong>: 4 vCPUs, 16 GB RAM, 100 GB SSD.</li>
+<li><strong>Scaling</strong>: additional nodes for larger user bases. Your account team will provide sizing guidance based on expected concurrent users.</li>
+</ul>
+<h3>Storage</h3>
+<ul>
+<li><strong>PostgreSQL 15+</strong> -- managed (RDS, Cloud SQL, Azure Database) or self-hosted. Stores conversations, user data, audit logs, and configuration.</li>
+<li><strong>Object storage</strong> -- S3-compatible storage (AWS S3, GCS, MinIO) for uploaded documents and knowledge-base files.</li>
+<li><strong>Persistent volumes</strong> -- for Kubernetes pod storage (standard StorageClass with ReadWriteOnce support).</li>
+</ul>
+<h3>Networking</h3>
+<ul>
+<li><strong>Load balancer</strong> -- Layer 7 (ALB, Ingress controller, or equivalent) with TLS termination.</li>
+<li><strong>DNS</strong> -- a domain or subdomain pointed at the load balancer.</li>
+<li><strong>TLS certificate</strong> -- for HTTPS. Bring your own certificate or use cert-manager with Let&#39;s Encrypt.</li>
+<li><strong>Outbound internet</strong> (optional) -- required only if using cloud-hosted AI model providers (OpenAI, Anthropic, Google). Not needed if using exclusively self-hosted models.</li>
+</ul>
+<h3>GPU infrastructure (if running models locally)</h3>
+<p>If your on-premises deployment includes self-hosted model inference, provision GPU nodes in your Kubernetes cluster. See the &quot;Self-hosted model providers&quot; section above for GPU sizing.</p>
+<h2>Hybrid deployment</h2>
+<p>Some organizations use a hybrid approach:</p>
+<ul>
+<li><strong>SecureAI application</strong> runs on managed infrastructure (standard hosted deployment).</li>
+<li><strong>AI model inference</strong> runs on-premises or in a private cloud, keeping prompts within the corporate network.</li>
+</ul>
+<p>This gives you managed infrastructure for the application layer while maintaining data residency for model interactions. Contact your account team to configure VPN peering or private connectivity between SecureAI and your model servers.</p>
+<h2>How to deploy internally</h2>
+<ol>
+<li><strong>Choose your deployment model</strong> -- hosted (default), on-premises, or hybrid. Most organizations start with hosted.</li>
+<li><strong>Configure SSO</strong> -- connect your identity provider so users can log in with existing credentials. See <a href="/admin/configure-oidc-sso">How to Configure OIDC SSO</a> or <a href="/admin/configuring-saml-sso">How to Configure SAML SSO</a>.</li>
+<li><strong>Set up network access</strong> -- update firewalls and proxy rules per the table above.</li>
+<li><strong>Add model providers</strong> -- connect to cloud AI providers or your self-hosted models. See <a href="/admin/adding-custom-model-providers">Adding Custom Model Providers</a>.</li>
+<li><strong>Provision users</strong> -- add users manually, via CSV import, or through SCIM provisioning. See <a href="/admin/user-management">User Management</a>.</li>
+<li><strong>Configure security policies</strong> -- set up content filtering, data retention, and access controls. See <a href="/admin/content-filtering-and-safety-settings">Content Filtering and Safety Settings</a> and <a href="/admin/configuring-data-retention-policies">Configuring Data Retention Policies</a>.</li>
+</ol>
+<p>For on-premises deployments, your account team provides a deployment guide, Helm charts, and configuration templates specific to your infrastructure.</p>
+<h2>Related articles</h2>
+<ul>
+<li><a href="/faq/is-secureai-just-openwebui">Is SecureAI just OpenWebUI?</a> -- what SecureAI adds on top of OpenWebUI</li>
+<li><a href="/faq/how-is-data-encrypted-in-secureai">How is data encrypted in SecureAI?</a> -- encryption and data residency</li>
+<li><a href="/admin/adding-custom-model-providers">Adding Custom Model Providers</a> -- connecting cloud and self-hosted models</li>
+<li><a href="/admin/configure-oidc-sso">How to Configure OIDC SSO</a> -- single sign-on setup</li>
+<li><a href="/admin/ip-allowlisting">Setting Up IP Allowlisting</a> -- restricting access to approved networks</li>
+</ul>
+</div> </details> </section> </main> <footer data-astro-cid-5hce7sga>SecureAI Support Center</footer> </body></html>
